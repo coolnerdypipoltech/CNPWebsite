@@ -1,0 +1,38 @@
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: system-ui;
+  margin: 0;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.menu-Container{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.overlayMenu
+{
+  position: absolute;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  top: 20px;
+  left: 20px;
+  color: #4fc3f7;
+  width: 100%;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
