@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.4f314023.css",
-    "main.js": "/static/js/main.a96c2ab6.js",
-    "static/media/Video2.mp4": "/static/media/Video2.caae13fef2093eee3cdd.mp4",
-    "static/media/Video1.mp4": "/static/media/Video1.dbc25de7359b39809802.mp4",
-    "static/media/Video3.mp4": "/static/media/Video3.82e7fa9801806557aa52.mp4",
-    "static/media/City.png": "/static/media/City.4f6acd3f4e891d313423.png",
-    "static/media/edificios.png": "/static/media/edificios.430dc7e4f04f40f7f3ec.png",
-    "static/media/Edificio1.png": "/static/media/Edificio1.23ff246dbe3c1ed7fb78.png",
-    "static/media/Edificio2.png": "/static/media/Edificio2.96e6ee7075694bedec2e.png",
-    "static/media/CoffeBook.png": "/static/media/CoffeBook.66aad0d8a1fb314d1ecd.png",
-    "index.html": "/index.html",
-    "main.4f314023.css.map": "/static/css/main.4f314023.css.map",
-    "main.a96c2ab6.js.map": "/static/js/main.a96c2ab6.js.map"
+    "main.css": "/CNPWebsite/static/css/main.4f314023.css",
+    "main.js": "/CNPWebsite/static/js/main.dedf00d5.js",
+    "static/media/Video2.mp4": "/CNPWebsite/static/media/Video2.caae13fef2093eee3cdd.mp4",
+    "static/media/Video1.mp4": "/CNPWebsite/static/media/Video1.dbc25de7359b39809802.mp4",
+    "static/media/Video3.mp4": "/CNPWebsite/static/media/Video3.82e7fa9801806557aa52.mp4",
+    "static/media/City.png": "/CNPWebsite/static/media/City.4f6acd3f4e891d313423.png",
+    "static/media/edificios.png": "/CNPWebsite/static/media/edificios.430dc7e4f04f40f7f3ec.png",
+    "static/media/Edificio1.png": "/CNPWebsite/static/media/Edificio1.23ff246dbe3c1ed7fb78.png",
+    "static/media/Edificio2.png": "/CNPWebsite/static/media/Edificio2.96e6ee7075694bedec2e.png",
+    "static/media/CoffeBook.png": "/CNPWebsite/static/media/CoffeBook.66aad0d8a1fb314d1ecd.png",
+    "index.html": "/CNPWebsite/index.html",
+    "main.4f314023.css.map": "/CNPWebsite/static/css/main.4f314023.css.map",
+    "main.dedf00d5.js.map": "/CNPWebsite/static/js/main.dedf00d5.js.map"
   },
   "entrypoints": [
     "static/css/main.4f314023.css",
-    "static/js/main.a96c2ab6.js"
+    "static/js/main.dedf00d5.js"
   ]
 }
