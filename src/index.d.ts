@@ -14,3 +14,8 @@ declare module '*.webm' {
   const value: string;
   export default value;
 }
+
+declare module '*.TTF' {
+  const value: string;
+  export default value;
+}
