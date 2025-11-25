@@ -136,7 +136,7 @@ export default function Lobby() {
               className="lobby-Img"
               style={{ width: '100%', top: '7%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 2 }}
             />
-            <p style={{ paddingBottom: '63%', top: "26%", fontSize: "51px",  position: "absolute", zIndex: 3, color: "#00B8E6", left: '50%', transform: 'translate(-50%, -50%)' }} className='fontGoldenAge'>Que es CNP?</p>
+            <p style={{ fontSize: "51px", textAlign: "center",  position: "relative", zIndex: 3, color: "#00B8E6", left: '50%', transform: 'translate(-50%, -50%)' }} className='fontGoldenAge'>Que es CNP?</p>
             <img
               src={FunLab}
               className="lobby-Img"
@@ -233,7 +233,7 @@ export default function Lobby() {
                 className="lobby-Img"
                 style={{ width: '40%', position: 'relative', right: '-27%', top: '47%' }}
               />
-            </div>
+            </div> 
           </ParallaxLayer>
 
           <ParallaxLayer style={{ zIndex: 2 }} offset={4} speed={0} factor={1}>

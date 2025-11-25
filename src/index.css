@@ -38,8 +38,16 @@ body {
   top: 20px;
   color: #4fc3f7;
   width: 100%;
-  font-size: 2rem;
+  font-size: 5vw;
   text-decoration: none;
+}
+
+@media screen and (min-width: 650px) {
+  .overlayMenu
+  {
+    font-size: 2.5rem;
+  }
+  
 }
 
 

@@ -35,7 +35,7 @@ export default function Lobby() {
   const parallax = useRef<IParallax>(null!)
 
   useEffect(() => {
-    //parallax.current.scrollTo(4)
+    parallax.current.scrollTo(3)
   }, [])
 
   return (
@@ -138,7 +138,7 @@ export default function Lobby() {
               className="lobby-Img"
               style={{ width: '100%', top: '7%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 2 }}
             />
-            <p style={{ top: "2%", fontSize: "20px",  position: "absolute", zIndex: 3, color: "#00B8E6", left: '50%', transform: 'translate(-50%, -50%)'  }} className='fontGoldenAge'>Que es CNP?</p>
+            <p style={{ fontSize: "20px", textAlign: "center",  position: "relative", zIndex: 3, color: "#00B8E6", left: '50%', transform: 'translate(-50%, -50%)' }} className='fontGoldenAge'>Que es CNP?</p>
             <img
               src={FunLab}
               className="lobby-Img"
