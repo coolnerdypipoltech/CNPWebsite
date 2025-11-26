@@ -7,12 +7,13 @@ import Projects from './pages/Projects'
 import Founders from './pages/Founders'
 import Culture from './pages/Culture'
 import DinoGame from './pages/DinoGame'
+import Test from './pages/Test'
 
 export default function App() {
 
   let tempLobby = null;
 
-  if(window.innerWidth < 430){
+  if(window.innerWidth < 550){
     console.log("Mobil")
     tempLobby = <LobbyMobil />;
   } else {
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/founders" element={<Founders />} />
         <Route path="/culture" element={<Culture />} />
         <Route path="/dinogame" element={<DinoGame />} />
+        <Route path="/test" element={<Test />} />
       </Routes>
     </Router>
   )
