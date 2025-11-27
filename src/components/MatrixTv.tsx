@@ -54,7 +54,7 @@ export default function MatrixTv() {
               }}
               className="fontGoldenAge"
             >
-              ¿Qué es CNP?
+              ¿What is CNP?
             </p>
           )}
 

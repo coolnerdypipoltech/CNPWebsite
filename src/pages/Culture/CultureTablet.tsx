@@ -46,7 +46,9 @@ export default function CultureMobil() {
   },
 ]
   const parallax = useRef<IParallax>(null!)
+  const videoRef = useRef<HTMLVideoElement>(null!)
   const [currentVideo, setCurrentVideo] = useState(0)
+  const [isPlaying, setIsPlaying] = useState(true)
   const glitch: GlitchHandle = useGlitch({ glitchTimeSpan: false })
   useEffect(() => {
     //parallax.current.scrollTo(5.5)
@@ -56,7 +58,17 @@ export default function CultureMobil() {
     useEffect(() => {
       startGlitchAndStopWithTimeout()
     })
-    
+    const playPauseVideo = () => {
+      if (videoRef.current) {
+        if (isPlaying) {
+          videoRef.current.pause()
+          setIsPlaying(false)
+        } else {
+          videoRef.current.play()
+          setIsPlaying(true)
+        }
+      }
+    }
     
     const nextVideo = () => {
       setCurrentVideo(prev => (prev + 1) % videos.length)
@@ -164,6 +176,7 @@ export default function CultureMobil() {
             <div className="centerDiv" style={{ justifyContent: 'center', gap: '20px', paddingTop: '25%' }}>
               <div ref={glitch.ref} style={{ position: 'relative', width: '100%', height: '40vw', display: "flex", justifyContent: "center" }}>
                 <video
+                  ref={videoRef}
                   key={videos[currentVideo].url}
                   style={{
                     width: '100%',
@@ -196,6 +209,7 @@ export default function CultureMobil() {
               </p>
               <div className="splitCenterDiv" style={{ width: '50%', height: '40px' }}>
                 <img src={Back} onClick={previousVideo} style={{ width: '100px' }} />
+                <img src={Next} onClick={playPauseVideo} style={{ width: '100px' }} />
                 <img src={Next} onClick={nextVideo} style={{ width: '100px' }} />
               </div>
             </div>

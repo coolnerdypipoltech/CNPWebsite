@@ -95,7 +95,7 @@ export default function Lobby() {
             <img
               src={Godzilla}
               className="lobby-Img"
-              style={{ width: '45%', height: '40vw', bottom: '20%', right: '0px' }}
+              style={{ width: '45%', height: '40vw', bottom: '10%', right: '0px' }}
             />
             <img src={Gundam} className="lobby-Img" style={{ width: '27%', bottom: '30%', left: '10%' }} />
           </ParallaxLayer>

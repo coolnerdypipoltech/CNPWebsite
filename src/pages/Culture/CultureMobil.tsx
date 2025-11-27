@@ -32,21 +32,23 @@ export default function CultureMobil() {
   {
     title: 'Video 1',
     url: video1,
-    description: 'Primer video de ejemplo',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
   },
   {
     title: 'Video 2',
     url: video2,
-    description: 'Segundo video de ejemplo',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
   },
   {
     title: 'Video 3',
     url: video3,
-    description: 'Tercer video de ejemplo',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
   },
 ]
   const parallax = useRef<IParallax>(null!)
+  const videoRef = useRef<HTMLVideoElement>(null!)
   const [currentVideo, setCurrentVideo] = useState(0)
+  const [isPlaying, setIsPlaying] = useState(true)
   const glitch: GlitchHandle = useGlitch({ glitchTimeSpan: false })
   useEffect(() => {
     //parallax.current.scrollTo(5.5)
@@ -57,14 +59,27 @@ export default function CultureMobil() {
       startGlitchAndStopWithTimeout()
     })
     
+    const playPauseVideo = () => {
+      if (videoRef.current) {
+        if (isPlaying) {
+          videoRef.current.pause()
+          setIsPlaying(false)
+        } else {
+          videoRef.current.play()
+          setIsPlaying(true)
+        }
+      }
+    }
     
     const nextVideo = () => {
       setCurrentVideo(prev => (prev + 1) % videos.length)
+      setIsPlaying(true)
       startGlitchAndStopWithTimeout()
     }
   
     const previousVideo = () => {
       setCurrentVideo(prev => (prev - 1 + videos.length) % videos.length)
+      setIsPlaying(true)
       startGlitchAndStopWithTimeout()
     }
   
@@ -160,19 +175,22 @@ export default function CultureMobil() {
             }}
           />
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={0} speed={0.1} factor={0.5}>
-            <div className="centerDiv" style={{ justifyContent: 'center', gap: '20px', paddingTop: '0%' }}>
+          <ParallaxLayer style={{ zIndex: 3 }} offset={0.1} speed={0.1} factor={0.5}>
+            <div className="centerDiv" style={{ justifyContent: 'flex-start', gap: '0px', paddingTop: '0%' }}>
               <div ref={glitch.ref} style={{ position: 'relative', width: '100%', height: '50vw', display: "flex", justifyContent: "center" }}>
                 <video
+                  ref={videoRef}
                   key={videos[currentVideo].url}
                   style={{
                     width: '100%',
-                    height: '40vw',
+                    height: '44vw',
                     objectFit: 'contain',
-                    borderRadius: '40px',
+                    borderRadius: '20px',
+                    paddingTop: "4px"
                   }}
                   src={videos[currentVideo].url}
                   loop
+                  muted
                   autoPlay
                 />
                 <img 
@@ -182,20 +200,21 @@ export default function CultureMobil() {
                     top: 0,
                     left: 0,
                     width: '100%',
-                    height: '40vw',
+                    height: '45vw',
                     objectFit: 'contain',
                     pointerEvents: 'none'
                   }} 
                 />
               </div>
-              <p className="fontGoldenAge" style={{ color: 'white' }}>
+              <p className="fontGoldenAge" style={{ color: 'white', position: "relative", top: "-15px" }}>
                 {videos[currentVideo].title}
               </p>
-              <p className="fontGoldenAge" style={{ color: 'white', fontSize: '16px' }}>
+              <p className="fontGoldenAge" style={{ color: 'white', fontSize: '16px', textAlign: "center" , position: "relative", top: "0px"}}>
                 {videos[currentVideo].description}
               </p>
-              <div className="splitCenterDiv" style={{ width: '80%', height: '40px' }}>
+              <div className="splitCenterDiv" style={{ width: '80%', height: '40px', paddingTop: "30px" }}>
                 <img src={Back} onClick={previousVideo} style={{ width: '100px' }} />
+                <img src={Next} onClick={playPauseVideo} style={{ width: '100px' }} />
                 <img src={Next} onClick={nextVideo} style={{ width: '100px' }} />
               </div>
             </div>
@@ -203,7 +222,7 @@ export default function CultureMobil() {
 
           <ParallaxLayer style={{ zIndex: 2 }} offset={0.25} speed={0.25} factor={0.25}>
             <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
-              <img src={Flecha} style={{ height: '100px', position: 'relative', top: '40%' }} />
+              <img src={Flecha} style={{ height: '100px', position: 'relative', top: '60%' }} />
             </div>
           </ParallaxLayer>
 

@@ -29,52 +29,63 @@ import { useGlitch, GlitchHandle } from 'react-powerglitch'
 
 export default function Culture() {
   const videos = [
-  {
-    title: 'Video 1',
-    url: video1,
-    description: 'Primer video de ejemplo',
-  },
-  {
-    title: 'Video 2',
-    url: video2,
-    description: 'Segundo video de ejemplo',
-  },
-  {
-    title: 'Video 3',
-    url: video3,
-    description: 'Tercer video de ejemplo',
-  },
-]
+    {
+      title: 'Video 1',
+      url: video1,
+      description: 'Primer video de ejemplo',
+    },
+    {
+      title: 'Video 2',
+      url: video2,
+      description: 'Segundo video de ejemplo',
+    },
+    {
+      title: 'Video 3',
+      url: video3,
+      description: 'Tercer video de ejemplo',
+    },
+  ]
   const parallax = useRef<IParallax>(null!)
+  const videoRef = useRef<HTMLVideoElement>(null!)
+  const [isPlaying, setIsPlaying] = useState(true)
   const [currentVideo, setCurrentVideo] = useState(0)
   const glitch: GlitchHandle = useGlitch({ glitchTimeSpan: false })
   useEffect(() => {
     parallax.current.scrollTo(5.5)
   }, [])
 
-  
-    useEffect(() => {
-      startGlitchAndStopWithTimeout()
-    })
-    
-    
-    const nextVideo = () => {
-      setCurrentVideo(prev => (prev + 1) % videos.length)
-      startGlitchAndStopWithTimeout()
+  useEffect(() => {
+    startGlitchAndStopWithTimeout()
+  })
+
+  const playPauseVideo = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause()
+        setIsPlaying(false)
+      } else {
+        videoRef.current.play()
+        setIsPlaying(true)
+      }
     }
-  
-    const previousVideo = () => {
-      setCurrentVideo(prev => (prev - 1 + videos.length) % videos.length)
-      startGlitchAndStopWithTimeout()
-    }
-  
-    const startGlitchAndStopWithTimeout = () => {
-      glitch.startGlitch()
-      setTimeout(() => {
-        glitch.stopGlitch()
-      }, 500)
-    }
-  
+  }
+
+  const nextVideo = () => {
+    setCurrentVideo(prev => (prev + 1) % videos.length)
+    startGlitchAndStopWithTimeout()
+  }
+
+  const previousVideo = () => {
+    setCurrentVideo(prev => (prev - 1 + videos.length) % videos.length)
+    startGlitchAndStopWithTimeout()
+  }
+
+  const startGlitchAndStopWithTimeout = () => {
+    glitch.startGlitch()
+    setTimeout(() => {
+      glitch.stopGlitch()
+    }, 500)
+  }
 
   return (
     <>
@@ -151,9 +162,22 @@ export default function Culture() {
           />
 
           <ParallaxLayer style={{ zIndex: 2 }} offset={0.05} speed={0.1} factor={1}>
-            <div className="centerDiv" style={{ justifyContent: 'center', gap: '20px', paddingTop: '0%', justifyItems: 'center' }}>
-              <div ref={glitch.ref} style={{ position: 'relative', width: '100%', height: '30vw', display: "flex", justifyContent: "center" }}>
+            <div
+              className="centerDiv"
+              style={{ justifyContent: 'center', gap: '20px', paddingTop: '0%', justifyItems: 'center' }}
+            >
+              <div
+                ref={glitch.ref}
+                style={{
+                  position: 'relative',
+                  width: '100%',
+                  height: '30vw',
+                  display: 'flex',
+                  justifyContent: 'center',
+                }}
+              >
                 <video
+                  ref={videoRef}
                   key={videos[currentVideo].url}
                   style={{
                     width: '100%',
@@ -163,19 +187,20 @@ export default function Culture() {
                   }}
                   src={videos[currentVideo].url}
                   loop
+                  muted
                   autoPlay
                 />
-                <img 
-                  src={Marco} 
-                  style={{ 
+                <img
+                  src={Marco}
+                  style={{
                     position: 'absolute',
                     top: 0,
                     left: 0,
                     width: '100%',
                     height: '30vw',
                     objectFit: 'contain',
-                    pointerEvents: 'none'
-                  }} 
+                    pointerEvents: 'none',
+                  }}
                 />
               </div>
               <p className="fontGoldenAge" style={{ color: 'white' }}>
@@ -186,6 +211,7 @@ export default function Culture() {
               </p>
               <div className="splitCenterDiv" style={{ width: '45%', height: '40px' }}>
                 <img src={Back} onClick={previousVideo} style={{ width: '150px' }} />
+                <img src={Next} onClick={playPauseVideo} style={{ width: '150px' }} />
                 <img src={Next} onClick={nextVideo} style={{ width: '150px' }} />
               </div>
             </div>

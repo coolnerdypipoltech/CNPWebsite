@@ -8,11 +8,12 @@ const TXT = `Lorem Ipsum is simply dummy text of the printing and typesetting in
 const styles: Record<string, React.CSSProperties> = {
   container: {
     width: "80vw",
+    maxWidth: "800px",
     height: "24vw",
     position: "absolute",
     background: "#0000000",
     overflow: "hidden",
-    top: "14%",
+    top: "7vw",
     left: '50%',
     transform: 'translate(-50%, 0%)',
   },
