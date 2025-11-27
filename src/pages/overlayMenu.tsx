@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 const OverlayMenu: React.FC = () => {
     return (
         <nav className='overlayMenu'>
-            <Link to="/CNPWebsite" style={{ color: '#4fc3f7', textDecoration: 'none' }}>Home</Link>
-            <Link to="/work" style={{ color: '#4fc3f7', textDecoration: 'none' }}>Work</Link>
-            <Link to="/founders" style={{ color: '#4fc3f7', textDecoration: 'none' }}>Founders</Link>
-            <Link to="/culture" style={{ color: '#4fc3f7', textDecoration: 'none' }}>Culture</Link>
+            <Link to="/CNPWebsite" className='fontGoldenAgeOverlay' >Home</Link>
+            <Link to="/CNPWebsite/culture" className='fontGoldenAgeOverlay'>Culture</Link>
+            <Link to="/CNPWebsite/work" className='fontGoldenAgeOverlay'>Work</Link>
+            <Link to="/CNPWebsite/founders" className='fontGoldenAgeOverlay'>Founders</Link>
+
         </nav>
     );
 };

@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react'
 import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
 import OverlayMenu from './overlayMenu'
 import '../styles/Lobby.css'
+import MatrixTv from '../components/MatrixTv'
 import city from '../assets/Lobby/City.webp'
 import Godzilla from '../assets/Lobby/Godzilla.webp'
 import Gundam from '../assets/Lobby/Gundam.webp'
@@ -12,10 +13,9 @@ import Nube2 from '../assets/Lobby/Nube2.webp'
 import Nube3 from '../assets/Lobby/Nube3.webp'
 import Nube4 from '../assets/Lobby/Nube4.webp'
 import Nube5 from '../assets/Lobby/Nube5.webp'
-import Matrix from '../assets/Lobby/Matrix.webp'
+
 import IMG_Background from '../assets/Lobby/IMG_Background.webp'
 import IMG_PISO from '../assets/Lobby/IMG_PISO.webp'
-import FunLab from '../assets/Lobby/FunLab.webp'
 import Tv from '../assets/Lobby/Tv.webp'
 import Edificio1 from '../assets/Lobby/Edificio1.webp'
 import Edificio2 from '../assets/Lobby/Edificio2.webp'
@@ -29,10 +29,6 @@ import Alien_Yoga from '../assets/Lobby/Alien_Yoga.webp'
 import Tapete from '../assets/Lobby/Tapete.webp'
 import LobbyStars from '../assets/Lobby/LobbyStars.webp'
 import Brand_CNP from '../assets/Lobby/Brand_CNP.webp'
-// @ts-ignore
-import Crawl from 'react-star-wars-crawl'
-
-import 'react-star-wars-crawl/lib/index.css'
 
 export default function Lobby() {
   const parallax = useRef<IParallax>(null!)
@@ -144,35 +140,7 @@ export default function Lobby() {
             }}
           />
 
-          <ParallaxLayer offset={1.5} speed={0} factor={1}>
-            <div className="centerDiv" style={{ justifyContent: 'flex-start' }}>
-              <p
-                style={{
-                  fontSize: '15px',
-                  textAlign: 'center',
-                  position: 'relative',
-                  top: "1%",
-                  zIndex: 3,
-                  color: '#00B8E6',
-                }}
-                className="fontGoldenAge"
-              >
-                Que es CNP?
-              </p>
-              <img src={Matrix} style={{ position: 'relative', width: '100%', top: '-7%' }} />
-            </div>
 
-            <Crawl
-              title="Episode IV"
-              subTitle="A New Hope"
-              text="It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire. During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet. Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy…"
-            />
-            <img
-              src={FunLab}
-              className="lobby-Img"
-              style={{ width: '18%', top: '18%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 2 }}
-            />
-          </ParallaxLayer>
 
           <ParallaxLayer
             offset={2}
@@ -184,7 +152,7 @@ export default function Lobby() {
             }}
           />
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={1.5} speed={0.2} factor={1}>
+          <ParallaxLayer style={{ zIndex: 4 }} offset={1.5} speed={0.2} factor={1}>
             <div className="centerDiv">
               <img src={Tv} className="lobby-Img" style={{ width: '35%', paddingBottom: '65%' }} />
               <p
@@ -251,14 +219,14 @@ export default function Lobby() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={1.5} speed={0} factor={1}>
+          <ParallaxLayer style={{ zIndex: 2 }} offset={1.8} speed={0} factor={0.5}>
             <div className="centerDiv">
               <img
                 src={Tapete}
                 className="lobby-Img"
                 style={{ width: '12%', paddingBottom: '0%', position: 'relative', top: '5%' }}
               />
-              <img src={Alien_Yoga} className="lobby-Img floating" style={{ width: '15%', paddingBottom: '0%' }} />
+              <img src={Alien_Yoga} className="lobby-Img floating" style={{ width: '15%', paddingBottom: '5%' }} />
             </div>
           </ParallaxLayer>
 
@@ -271,6 +239,13 @@ export default function Lobby() {
               <p className="fontGoldenAge">Scroll To Explore</p>
             </div>
           </ParallaxLayer>
+
+          <ParallaxLayer style={{zIndex: 4}} offset={1.5} speed={0} factor={0.25}>
+            <div style={{ width: '100%', height: '100%', position: "relative", top: "-18vw" }}>
+              <MatrixTv />
+            </div>
+          </ParallaxLayer>
+
         </Parallax>
       </div>
       <OverlayMenu />

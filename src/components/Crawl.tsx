@@ -3,36 +3,18 @@
 import React, { Component } from "react";
 import "../styles/Crawl.css";
  
-const TXT = `It is a period of civil war.
-Rebel spaceships, striking
-from a hidden base, have won
-their first victory against
-the evil Galactic Empire.
-
-During the battle, Rebel
-spies managed to steal secret
-plans to the Empire's
-ultimate weapon, the DEATH
-STAR, an armored space
-station with enough power
-to destroy an entire planet.
-
-Pursued by the Empire's
-sinister agents, Princess
-Leia races home aboard her
-starship, custodian of the
-stolen plans that can save her
-people and restore
-freedom to the galaxy....`;
+const TXT = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book`;
 
 const styles: Record<string, React.CSSProperties> = {
   container: {
-    width: "100%",
-    height: "47%",
+    width: "80vw",
+    height: "24vw",
     position: "absolute",
     background: "#0000000",
     overflow: "hidden",
-    top: "12%"
+    top: "14%",
+    left: '50%',
+    transform: 'translate(-50%, 0%)',
   },
   fade: {
     position: "relative",
@@ -48,7 +30,7 @@ const styles: Record<string, React.CSSProperties> = {
     height: "800px",
     color: "#000000",
     fontFamily: "'Pathway Gothic One', sans-serif",
-    fontSize: "500%",
+    fontSize: "600%",
     fontWeight: "600",
     letterSpacing: "6px",
     lineHeight: "150%",
@@ -58,7 +40,7 @@ const styles: Record<string, React.CSSProperties> = {
   crawl: {
     position: "relative",
     transformOrigin: "50% 100%",
-    animation: "crawl 30s linear"
+    animation: "crawl 45s linear"
   },
   title: {
     fontSize: "90%",

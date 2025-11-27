@@ -42,10 +42,28 @@ body {
   text-decoration: none;
 }
 
+
+
+.fontGoldenAgeOverlay{
+  font-family: 'Golden Age', sans-serif;
+  color: #4fc3f7;
+  margin: 0px;
+  font-size: 24px;
+  text-decoration: none;
+}
+
 @media screen and (min-width: 650px) {
-  .overlayMenu
+  .fontGoldenAgeOverlay
   {
     font-size: 2.5rem;
+  }
+  
+}
+
+@media screen and (max-width: 649px) {
+  .fontGoldenAgeOverlay
+  {
+    font-size: 1.1rem;
   }
   
 }

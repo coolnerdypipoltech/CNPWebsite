@@ -1,35 +1,34 @@
 ﻿import React, { useState } from 'react'
 
 import Matrix from '../assets/Lobby/Matrix.webp'
-
+import FunLab from '../assets/Lobby/FunLab.webp'
 // @ts-ignore
-import Crawl from "./Crawl";
+import Crawl from './Crawl'
 
 export default function MatrixTv() {
-  const [showCrawl, setShowCrawl] = useState(false);
+  const [showCrawl, setShowCrawl] = useState(false)
 
   const handleTextClick = () => {
-    setShowCrawl(true);
-    
+    setShowCrawl(true)
+
     setTimeout(() => {
-      setShowCrawl(false);
-    }, 32000);
-  };
+      setShowCrawl(false)
+    }, 45000)
+  }
 
   return (
     <>
       <div
         style={{
           width: '100%',
-          height: '100%',
-          background: '#0f3460',
           color: 'white',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          padding: '2rem',
           position: 'absolute',
+          zIndex: 5,
+
         }}
       >
         <div
@@ -47,7 +46,7 @@ export default function MatrixTv() {
                 top: '35%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
-                fontSize: '2rem',
+                fontSize: '4vw',
                 color: '#00B8E6',
                 textAlign: 'center',
                 zIndex: 2,
@@ -59,14 +58,22 @@ export default function MatrixTv() {
             </p>
           )}
 
-          {showCrawl && (
-            <Crawl title="Episode IV" subTitle="A New Hope"/>
-          )}
+          {showCrawl && <Crawl title="Episode IV" subTitle="A New Hope" />}
 
           <img
             src={Matrix}
             style={{
               width: '100%',
+            }}
+          />
+
+          <img
+            src={FunLab}
+            style={{
+              position: 'absolute',
+              width: '20%',
+              left: '50%',
+              transform: 'translate(-50%, -80%)',
               display: 'block',
             }}
           />
@@ -75,5 +82,3 @@ export default function MatrixTv() {
     </>
   )
 }
-
-
