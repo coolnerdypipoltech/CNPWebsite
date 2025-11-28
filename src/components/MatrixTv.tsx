@@ -35,7 +35,6 @@ export default function MatrixTv() {
           style={{
             position: 'relative',
             width: '100%',
-            maxWidth: '1200px',
           }}
         >
           {!showCrawl && (

@@ -5,6 +5,9 @@ import LobbyTablet from './pages/LobbyTablet'
 import CultureMobil from './pages/Culture/CultureMobil'
 import CultureTablet from './pages/Culture/CultureTablet'
 import Culture from './pages/Culture/Culture'
+import Founders from './pages/Founders/Founders'
+import FoundersMobil from './pages/Founders/FoundersMobil'
+import FoundersTablet from './pages/Founders/FoundersTablet'
 import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
 
 export default function Main() {
@@ -12,33 +15,40 @@ export default function Main() {
 
   let tempLobby = null
   let tempCulture = null
+  let tempFounder = null
   let lobbyFactor = 5
   let cultureFactor = 5.5
+  let founderFactor = 6.5
 
   if (window.innerWidth < 550) {
     console.log('Mobil')
     lobbyFactor = 2.25
     cultureFactor = 3
+    founderFactor = 3
     tempLobby = <LobbyMobil />
     tempCulture = <CultureMobil />
+    tempFounder = <FoundersMobil />
   } else {
     if (window.innerWidth < 1024) {
       console.log('Tablet')
-      cultureFactor = 3
       lobbyFactor = 2.75
+      cultureFactor = 3
+      founderFactor = 3.5
       tempLobby = <LobbyTablet />
       tempCulture = <CultureTablet />
+      tempFounder = <FoundersTablet />
     } else {
       console.log('Desktop')
       tempLobby = <Lobby />
       tempCulture = <Culture />
+      tempFounder = <Founders />
     }
   }
 
   console.log('lobbyFactor:', lobbyFactor + ' cultureFactor:', cultureFactor)
 
   useEffect(() => {
-    parallax.current.scrollTo(lobbyFactor + cultureFactor)
+    parallax.current.scrollTo(lobbyFactor + cultureFactor + founderFactor)
   }, [])
 
   return (
@@ -53,19 +63,22 @@ export default function Main() {
           overflowY: 'scroll',
         }}
       >
-        <Parallax ref={parallax} pages={lobbyFactor + cultureFactor}>
-          <ParallaxLayer offset={0} speed={0} factor={cultureFactor}>
+        <Parallax ref={parallax} pages={lobbyFactor + cultureFactor + founderFactor}>
+          <ParallaxLayer offset={0} speed={0} factor={founderFactor}>
+            {tempFounder}
+          </ParallaxLayer>
+          <ParallaxLayer offset={founderFactor} speed={0} factor={cultureFactor}>
             {tempCulture}
           </ParallaxLayer>
-          <ParallaxLayer offset={cultureFactor} speed={0} factor={lobbyFactor}>
+          <ParallaxLayer offset={ founderFactor + cultureFactor} speed={0} factor={lobbyFactor}>
             {tempLobby}
           </ParallaxLayer>
         </Parallax>
       </div>
       <div className="overlayMenu">
-        <p onClick={() => parallax.current.scrollTo(cultureFactor + lobbyFactor)} className="fontGoldenAgeOverlay">Home</p>
-        <p onClick={() => parallax.current.scrollTo(cultureFactor)} className="fontGoldenAgeOverlay">Culture</p>
-        <p onClick={() => parallax.current.scrollTo(0)} className="fontGoldenAgeOverlay">Work</p>
+        <p onClick={() => parallax.current.scrollTo(cultureFactor + lobbyFactor + founderFactor)} className="fontGoldenAgeOverlay">Home</p>
+        <p onClick={() => parallax.current.scrollTo(founderFactor + cultureFactor)} className="fontGoldenAgeOverlay">Culture</p>
+        <p onClick={() => parallax.current.scrollTo(founderFactor - 0.5)} className="fontGoldenAgeOverlay">Work</p>
         <p onClick={() => parallax.current.scrollTo(0)} className="fontGoldenAgeOverlay">Founders</p>
       </div>
     </>

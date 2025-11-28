@@ -55,20 +55,20 @@ export default function Lobby() {
           }}
         />
 
-        <ParallaxLayer offset={0} speed={0.1} factor={1}>
+        <ParallaxLayer offset={0.5} speed={0.1} factor={1}>
           <div className="centerDiv">
             <img
               src={Nube1}
               className="lobby-Img"
-              style={{ width: '40%', top: '30%', left: '-30%', zIndex: 1, minWidth: '300px' }}
+              style={{ width: '40%', top: '0%', left: '-30%', zIndex: 1, minWidth: '300px' }}
             />
             <img
               src={Nube2}
               className="lobby-Img"
               style={{ width: '30%', top: '15%', right: '-40%', minWidth: '300px' }}
             />
-            <img src={Nube3} className="lobby-Img" style={{ width: '30%', top: '2%', minWidth: '300px' }} />
-            <img src={Nube4} className="lobby-Img" style={{ width: '100%', bottom: '-20%', minWidth: '600px' }} />
+            <img src={Nube3} className="lobby-Img" style={{ width: '30%', top: '-15%', minWidth: '300px' }} />
+            <img src={Nube4} className="lobby-Img" style={{ width: '100%', bottom: '15vw', minWidth: '600px' }} />
           </div>
         </ParallaxLayer>
 
@@ -89,7 +89,7 @@ export default function Lobby() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1.3} speed={0.1} factor={0.5}>
+        <ParallaxLayer offset={1.6} speed={0.1} factor={0.5}>
           <img
             src={Godzilla}
             className="lobby-Img"
@@ -134,7 +134,7 @@ export default function Lobby() {
           }}
         />
 
-        <ParallaxLayer style={{ zIndex: 4 }} offset={1.9} speed={0.2} factor={1}>
+        <ParallaxLayer style={{ zIndex: 4 }} offset={2.75} speed={0.2} factor={0.25}>
           <div className="centerDiv">
             <img src={Tv} className="lobby-Img" style={{ width: '35%', paddingBottom: '5%' }} />
             <p
@@ -152,14 +152,14 @@ export default function Lobby() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 2 }} offset={1.6} speed={0.05} factor={1}>
+        <ParallaxLayer style={{ zIndex: 2 }} offset={2.1} speed={0.05} factor={0.25}>
           <div className="splitCenterDiv" style={{ position: 'absolute', bottom: '0px' }}>
             <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-              <img src={LeftSide} style={{ width: '100%', height: '26vw', marginBottom: '-50%', scale: '-1 1 1' }} />
+              <img src={LeftSide} style={{ width: '100%', height: '26vw', marginBottom: '-5%', scale: '-1 1 1' }} />
             </div>
 
             <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-              <img src={RightSide} style={{ marginBottom: '-50%', width: '100%', height: '26vw' }} />
+              <img src={RightSide} style={{ marginBottom: '-5%', width: '100%', height: '26vw' }} />
             </div>
           </div>
         </ParallaxLayer>
@@ -194,10 +194,10 @@ export default function Lobby() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 1 }} offset={1.75} speed={0.1} factor={1}>
+        <ParallaxLayer style={{ zIndex: 1 }} offset={1.9} speed={0.1} factor={1}>
           <div className="splitCenterDiv">
-            <img src={Edificio1} style={{ width: '60%', paddingBottom: '40%', position: 'relative', left: '-30%' }} />
-            <img src={Edificio2} style={{ width: '60%', paddingBottom: '40%', position: 'relative', right: '-10%' }} />
+            <img src={Edificio1} style={{ width: '60%', paddingBottom: '0%', position: 'relative', left: '-30%' }} />
+            <img src={Edificio2} style={{ width: '60%', paddingBottom: '0%', position: 'relative', right: '-10%' }} />
           </div>
         </ParallaxLayer>
 
@@ -212,7 +212,7 @@ export default function Lobby() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 3 }} offset={2} speed={0} factor={0.25}>
+        <ParallaxLayer style={{ zIndex: 3 }} offset={4.75} speed={1} factor={0.75}>
           <div className="centerDiv" style={{ justifyContent: 'flex-end', gap: '0px', paddingBottom: '2%' }}>
             <img src={Brand_CNP} style={{ width: '10%' }} />
             <p style={{ marginTop: '20px' }} className="fontGoldenAge">
@@ -228,17 +228,17 @@ export default function Lobby() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 2 }} offset={3.4} speed={1} factor={0.25}>
+        <ParallaxLayer style={{ zIndex: 2 }} offset={4.75} speed={1} factor={0.75}>
           <div className="splitCenterDiv">
             <img
               src={workstation1}
               className="lobby-Img"
-              style={{ width: '40%', position: 'relative', left: '-24%', top: '-10%' }}
+              style={{ width: '40%', position: 'relative', left: '-24%', top: '50%' }}
             />
             <img
               src={workstation3}
               className="lobby-Img"
-              style={{ width: '40%', position: 'relative', right: '-27%', top: '-10%' }}
+              style={{ width: '40%', position: 'relative', right: '-27%', top: '50%' }}
             />
           </div>
         </ParallaxLayer>

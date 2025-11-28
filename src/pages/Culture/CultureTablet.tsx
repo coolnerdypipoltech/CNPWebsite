@@ -157,7 +157,7 @@ export default function CultureMobil() {
             }}
           />
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={0} speed={0.1} factor={0.5}>
+          <ParallaxLayer style={{ zIndex: 2 }} offset={0.25} speed={0.1} factor={0.5}>
             <div className="centerDiv" style={{ justifyContent: 'center', gap: '20px', paddingTop: '25%' }}>
               <div ref={glitch.ref} style={{ position: 'relative', width: '100%', height: '40vw', display: "flex", justifyContent: "center" }}>
                 <video
@@ -200,15 +200,15 @@ export default function CultureMobil() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={0.25} speed={0.25} factor={0.25}>
+          <ParallaxLayer style={{ zIndex: 2 }} offset={1} speed={0.25} factor={0.25}>
             <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
               <img src={Flecha} style={{ height: '100px', position: 'relative', top: '100%' }} />
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={0.75} speed={0.25} factor={0.5}>
+          <ParallaxLayer style={{ zIndex: 2 }} offset={1.5} speed={0.25} factor={0.5}>
             <div className="centerDiv" style={{}}>
-              <img src={Nube6} style={{ width: '95vw', minWidth: "500px", position: 'relative', top: '120%' }} />
+              <img src={Nube6} style={{ width: '95vw', minWidth: "500px", position: 'relative', top: '100%' }} />
               <img src={Nube5} style={{ width: '40vw', minWidth: "200px", position: 'relative', left: '-40%', top: '-30%' }} />
               <img src={Nube1} style={{ width: '40vw', minWidth: "200px", position: 'relative', left: '40%', top: '-40%' }} />
               <img src={nyanCat} style={{ width: '40vw', minWidth: "180px", position: 'relative', right: '20%', top: '-50%' }} />
@@ -217,7 +217,7 @@ export default function CultureMobil() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={1.25} speed={0.25} factor={0.5}>
+          <ParallaxLayer style={{ zIndex: 2 }} offset={2} speed={0.25} factor={0.5}>
             <div className="centerDiv" style={{}}>
               <img src={rose} style={{ width: '40vw', minWidth: "200px", position: 'relative', right: '-25%', top: '10%' }} />
               <img src={Nube4} style={{ width: '40vw', minWidth: "200px", position: 'relative', left: '-30%', top: '-20%' }} />
@@ -227,7 +227,7 @@ export default function CultureMobil() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={1.75} speed={0.3} factor={0.5}>
+          <ParallaxLayer style={{ zIndex: 3 }} offset={2.5} speed={0.3} factor={0.5}>
             <div className="centerDiv" style={{}}>
               <img src={Blackhorse} style={{ width: '40vw', minWidth: "200px", position: 'relative', right: '-25%', top: '-40%' }} />
               <img src={Angel} style={{ width: '40vw', minWidth: "150px", position: 'relative', left: '-25%', top: '-30%' }} />
@@ -235,7 +235,7 @@ export default function CultureMobil() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }}  offset={1.75} speed={0.25} factor={0.5}>
+          <ParallaxLayer style={{ zIndex: 2 }}  offset={2.5} speed={0.25} factor={0.5}>
             <div className="splitCenterDiv">
               <img
                 src={Nube5}
@@ -245,23 +245,23 @@ export default function CultureMobil() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={2} speed={0.25} factor={0.5}>
+          <ParallaxLayer style={{ zIndex: 2 }} offset={2.75} speed={0.25} factor={0.5}>
             <div className="splitCenterDiv">
               <img src={Nube4} style={{ width: '40vw', minWidth: "230px", marginLeft: '0%' }} />
               <img src={Dios} style={{ width: '50vw', minWidth: "300px", position: 'relative', right: '10%', top: '-5%' }} />
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={2.25} speed={0.25} factor={0.5}>
+          <ParallaxLayer style={{ zIndex: 2 }} offset={3} speed={0.25} factor={0.5}>
             <div className="splitCenterDiv">
               <img src={Nube3} style={{ width: '28vw', minWidth: "200px", marginLeft: '0%' }} />
               <img src={Nube2} style={{ width: '30vw', minWidth: "230px", position: 'relative', right: '-10%', top: '-5%' }} />
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={2.75} speed={0.5} factor={0.25}>
+          <ParallaxLayer style={{ zIndex: 2 }} offset={3.5} speed={0.5} factor={0.25}>
             <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
-              <img src={Flecha} style={{ height: '100px', position: 'relative', top: '-30%' }} />
+              <img src={Flecha} style={{ height: '100px', position: 'relative', top: '100%' }} />
             </div>
           </ParallaxLayer>
       </div>

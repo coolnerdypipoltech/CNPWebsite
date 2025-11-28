@@ -52,6 +52,12 @@ body {
   text-decoration: none;
 }
 
+.fontGoldenAgeOverlay:hover {
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
 @media screen and (min-width: 650px) {
   .fontGoldenAgeOverlay
   {

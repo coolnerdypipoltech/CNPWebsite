@@ -55,7 +55,7 @@ export default function Lobby() {
             }}
           />
 
-          <ParallaxLayer offset={0} speed={0.1} factor={1}>
+          <ParallaxLayer offset={0.5} speed={0.1} factor={1}>
             <div className="centerDiv">
               <img
                 src={Nube1}
@@ -68,7 +68,7 @@ export default function Lobby() {
                 style={{ width: '30%', top: '25%', right: '2%', minWidth: '300px' }}
               />
               <img src={Nube3} className="lobby-Img" style={{ width: '30%', top: '2%', minWidth: '300px' }} />
-              <img src={Nube4} className="lobby-Img" style={{ width: '100%', bottom: '-10%', minWidth: '600px' }} />
+              <img src={Nube4} className="lobby-Img" style={{ width: '100%', bottom: '-0%', minWidth: '600px' }} />
             </div>
           </ParallaxLayer>
 
@@ -89,7 +89,7 @@ export default function Lobby() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={1.25} speed={0.1} factor={0.5}>
+          <ParallaxLayer offset={1.6} speed={0.1} factor={0.5}>
             <img
               src={Godzilla}
               className="lobby-Img"
@@ -134,11 +134,11 @@ export default function Lobby() {
             }}
           />
 
-          <ParallaxLayer style={{ zIndex: 5 }} offset={2.3} speed={0.2} factor={0.25}>
+          <ParallaxLayer style={{ zIndex: 5 }} offset={3} speed={0.2} factor={0.25}>
             <div className="centerDiv">
-              <img src={Tv} className="lobby-Img" style={{ width: '35%', paddingBottom: '5%' }} />
+              <img src={Tv} className="lobby-Img" style={{ width: '35%', paddingBottom: '25%' }} />
               <p
-                style={{ paddingBottom: '0%', position: 'absolute', zIndex: 3, color: '#00B8E6', fontSize: '12px' }}
+                style={{ paddingBottom: '20%', position: 'absolute', zIndex: 3, color: '#00B8E6', fontSize: '12px' }}
                 className="fontGoldenAge"
               >
                 PLAY
@@ -152,10 +152,10 @@ export default function Lobby() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={2.25} speed={0.05} factor={0.25}>
+          <ParallaxLayer style={{ zIndex: 2 }} offset={2.4} speed={0.05} factor={0.25}>
             <div className="splitCenterDiv" style={{ position: 'absolute', bottom: '0px' }}>
               <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-                <img src={LeftSide} style={{ width: '100%', height: '26vw', marginBottom: '10%', scale: '-1 1 1' }} />
+                <img src={LeftSide} style={{ width: '100%', height: '26vw', marginBottom: '0%', scale: '-1 1 1' }} />
               </div>
 
               <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
@@ -194,14 +194,14 @@ export default function Lobby() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 1 }} offset={2} speed={0.1} factor={1}>
+          <ParallaxLayer style={{ zIndex: 1 }} offset={2.25} speed={0.1} factor={1}>
             <div className="splitCenterDiv">
-              <img src={Edificio1} style={{ width: '30%', paddingBottom: '30%' }} />
-              <img src={Edificio2} style={{ width: '30%', paddingBottom: '30%' }} />
+              <img src={Edificio1} style={{ width: '30%', paddingBottom: '10%' }} />
+              <img src={Edificio2} style={{ width: '30%', paddingBottom: '10%' }} />
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={3.75} speed={1} factor={0.75}>
+          <ParallaxLayer style={{ zIndex: 2 }} offset={5.5} speed={1} factor={0.5}>
             <div className="splitCenterDiv">
               <img
                 src={workstation1}
@@ -227,7 +227,7 @@ export default function Lobby() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={3.75} speed={1} factor={0.75}>
+          <ParallaxLayer style={{ zIndex: 2 }} offset={5.5} speed={1} factor={0.5}>
             <div className="centerDiv" style={{ justifyContent: 'flex-end', gap: '0px', paddingBottom: '2%' }}>
               <img src={Brand_CNP} style={{ width: '10%' }} />
               <p style={{ marginTop: '20px' }} className="fontGoldenAge">

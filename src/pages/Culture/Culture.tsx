@@ -149,7 +149,7 @@ export default function Culture() {
             }}
           />
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={0.05} speed={0.1} factor={1}>
+          <ParallaxLayer style={{ zIndex: 2 }} offset={0.5} speed={0.1} factor={1}>
             <div
               className="centerDiv"
               style={{ justifyContent: 'center', gap: '20px', paddingTop: '0%', justifyItems: 'center' }}
@@ -205,13 +205,13 @@ export default function Culture() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={1.2} speed={0.25} factor={0.25}>
+          <ParallaxLayer style={{ zIndex: 2 }} offset={2.2} speed={0.25} factor={0.25}>
             <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
               <img src={Flecha} style={{ height: '150px', position: 'relative', top: '0%' }} />
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={1.5} speed={0.25} factor={1}>
+          <ParallaxLayer style={{ zIndex: 2 }} offset={2.5} speed={0.25} factor={1}>
             <div className="centerDiv" style={{}}>
               <img src={Nube6} style={{ width: '80vw', position: 'relative', top: '90%' }} />
               <img src={Nube5} style={{ width: '25vw', position: 'relative', left: '-31%', top: '-25%' }} />
@@ -222,7 +222,7 @@ export default function Culture() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={2.5} speed={0.25} factor={1}>
+          <ParallaxLayer style={{ zIndex: 2 }} offset={3.5} speed={0.25} factor={1}>
             <div className="centerDiv" style={{}}>
               <img src={rose} style={{ width: '25vw', position: 'relative', right: '-25%', top: '5%' }} />
               <img src={Nube4} style={{ width: '25vw', position: 'relative', left: '-10%', top: '0%' }} />
@@ -232,7 +232,7 @@ export default function Culture() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={3.5} speed={0.3} factor={1}>
+          <ParallaxLayer style={{ zIndex: 3 }} offset={4.5} speed={0.3} factor={1}>
             <div className="centerDiv" style={{}}>
               <img src={Blackhorse} style={{ width: '25vw', position: 'relative', right: '-25%', top: '-40%' }} />
               <img src={Angel} style={{ width: '25vw', position: 'relative', left: '-25%', top: '-20%' }} />
@@ -240,7 +240,7 @@ export default function Culture() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={3.5} speed={0.25} factor={1}>
+          <ParallaxLayer style={{ zIndex: 2 }} offset={4.5} speed={0.25} factor={1}>
             <div className="splitCenterDiv">
               <img
                 src={Nube5}
@@ -250,21 +250,21 @@ export default function Culture() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={4} speed={0.25} factor={1}>
+          <ParallaxLayer style={{ zIndex: 2 }} offset={5} speed={0.25} factor={1}>
             <div className="splitCenterDiv">
               <img src={Nube4} style={{ width: '28vw', marginLeft: '20%' }} />
               <img src={Dios} style={{ width: '50vw', position: 'relative', right: '2%', top: '-5%' }} />
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={4.5} speed={0.25} factor={1}>
+          <ParallaxLayer style={{ zIndex: 2 }} offset={5.5} speed={0.25} factor={1}>
             <div className="splitCenterDiv">
               <img src={Nube3} style={{ width: '28vw', marginLeft: '2%' }} />
               <img src={Nube2} style={{ width: '30vw', position: 'relative', right: '-10%', top: '-5%' }} />
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 4 }} offset={5} speed={0.5} factor={0.25}>
+          <ParallaxLayer style={{ zIndex: 4 }} offset={7} speed={0.5} factor={0.25}>
             <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
               <img src={Flecha} style={{ height: '150px', position: 'relative', top: '-30%' }} />
             </div>
