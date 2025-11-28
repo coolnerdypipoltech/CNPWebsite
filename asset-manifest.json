@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CNPWebsite/static/css/main.1d1fe7b3.css",
-    "main.js": "/CNPWebsite/static/js/main.12f17804.js",
+    "main.js": "/CNPWebsite/static/js/main.f40ad981.js",
     "static/media/Video2.mp4": "/CNPWebsite/static/media/Video2.caae13fef2093eee3cdd.mp4",
     "static/media/Video1.mp4": "/CNPWebsite/static/media/Video1.dbc25de7359b39809802.mp4",
     "static/media/Video3.mp4": "/CNPWebsite/static/media/Video3.82e7fa9801806557aa52.mp4",
@@ -25,10 +25,10 @@
     "static/media/Edificio1.webp": "/CNPWebsite/static/media/Edificio1.9fea5873cd536d91ddd4.webp",
     "static/media/Edificio2.webp": "/CNPWebsite/static/media/Edificio2.df69761afc31e65fe605.webp",
     "static/media/Globe1.webp": "/CNPWebsite/static/media/Globe1.266471a5e334c032cdb2.webp",
+    "static/media/Tv.webp": "/CNPWebsite/static/media/Tv.8f46cd718121501c6c23.webp",
     "static/media/PingPong.webp": "/CNPWebsite/static/media/PingPong.9e76379becd5e6b15b7c.webp",
     "static/media/PopUp.webp": "/CNPWebsite/static/media/PopUp.68f5c2b382618dccbd49.webp",
     "static/media/Gundam.webp": "/CNPWebsite/static/media/Gundam.25b6d4a2d40cafa468c0.webp",
-    "static/media/Tv.webp": "/CNPWebsite/static/media/Tv.bd570c8a1e70e78fe135.webp",
     "static/media/IMG_PISO.webp": "/CNPWebsite/static/media/IMG_PISO.545aa0268fcd85c1c698.webp",
     "static/media/IMG_CAT.webp": "/CNPWebsite/static/media/IMG_CAT.ef0932465f001f78c743.webp",
     "static/media/Godzilla.webp": "/CNPWebsite/static/media/Godzilla.fb3a139ae43d75c48c28.webp",
@@ -60,17 +60,19 @@
     "static/media/IMG_Back.webp": "/CNPWebsite/static/media/IMG_Back.fcb79b30cfaeef087a0d.webp",
     "static/media/IMG_Nube1.webp": "/CNPWebsite/static/media/IMG_Nube1.b6cf9cae2d81f8a7caf7.webp",
     "static/media/IMG_Next.webp": "/CNPWebsite/static/media/IMG_Next.2000d305dd8cc578202e.webp",
+    "static/media/Pause_button.webp": "/CNPWebsite/static/media/Pause_button.31d87136dbb6079d1b51.webp",
     "static/media/IMG_Nube2.webp": "/CNPWebsite/static/media/IMG_Nube2.1df04789cf41f6bcd8d0.webp",
+    "static/media/Play_button.webp": "/CNPWebsite/static/media/Play_button.87fad21e8612b04a6b84.webp",
     "static/media/Asteroide.webp": "/CNPWebsite/static/media/Asteroide.f7ae5caf7e26e8009f02.webp",
     "static/media/Tapete.webp": "/CNPWebsite/static/media/Tapete.6d82722ae849f3dc8f05.webp",
     "static/media/Nube5.webp": "/CNPWebsite/static/media/Nube5.953327d52087107a46d0.webp",
     "static/media/IMG_Flecha.webp": "/CNPWebsite/static/media/IMG_Flecha.58465e9a8b7b171ae77d.webp",
     "index.html": "/CNPWebsite/index.html",
     "main.1d1fe7b3.css.map": "/CNPWebsite/static/css/main.1d1fe7b3.css.map",
-    "main.12f17804.js.map": "/CNPWebsite/static/js/main.12f17804.js.map"
+    "main.f40ad981.js.map": "/CNPWebsite/static/js/main.f40ad981.js.map"
   },
   "entrypoints": [
     "static/css/main.1d1fe7b3.css",
-    "static/js/main.12f17804.js"
+    "static/js/main.f40ad981.js"
   ]
 }
