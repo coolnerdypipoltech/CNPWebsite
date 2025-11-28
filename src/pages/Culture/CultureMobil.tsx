@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react'
-import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
-import OverlayMenu from '../overlayMenu'
+import { ParallaxLayer } from '@react-spring/parallax'
+
 import ovni from '../../assets/Lobby/ovni.webp'
 import LobbyStars from '../../assets/Lobby/LobbyStars.webp'
 import Flecha from '../../assets/Culture/IMG_Flecha.webp'
@@ -45,16 +45,11 @@ export default function CultureMobil() {
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
   },
 ]
-  const parallax = useRef<IParallax>(null!)
   const videoRef = useRef<HTMLVideoElement>(null!)
   const [currentVideo, setCurrentVideo] = useState(0)
   const [isPlaying, setIsPlaying] = useState(true)
   const glitch: GlitchHandle = useGlitch({ glitchTimeSpan: false })
-  useEffect(() => {
-    //parallax.current.scrollTo(5.5)
-  }, [])
 
-  
     useEffect(() => {
       startGlitchAndStopWithTimeout()
     })
@@ -94,17 +89,7 @@ export default function CultureMobil() {
   return (
     <>
       <div
-        style={{
-          width: '100%',
-          height: '100%',
-          background: '#253237',
-          display: 'flex',
-          flexDirection: 'column-reverse',
-          overflowX: 'hidden',
-          overflowY: 'scroll',
-        }}
       >
-        <Parallax ref={parallax} pages={3}>
           <ParallaxLayer
             offset={0}
             speed={0}
@@ -284,9 +269,9 @@ export default function CultureMobil() {
               <img src={Flecha} style={{ height: '100px', position: 'relative', top: '-30%' }} />
             </div>
           </ParallaxLayer>
-        </Parallax>
+
       </div>
-      <OverlayMenu />
+
     </>
   )
 }

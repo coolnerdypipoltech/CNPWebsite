@@ -1,6 +1,5 @@
-import React, { useRef, useEffect } from 'react'
-import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
-import OverlayMenu from './overlayMenu'
+import React from 'react'
+import { ParallaxLayer } from '@react-spring/parallax'
 import '../styles/Lobby.css'
 import city from '../assets/Lobby/City.webp'
 import Godzilla from '../assets/Lobby/Godzilla.webp'
@@ -9,7 +8,6 @@ import edificios from '../assets/Lobby/edificios.webp'
 import PopUp from '../assets/Lobby/PopUp.webp'
 import Nube1 from '../assets/Lobby/Nube1.webp'
 import Nube2 from '../assets/Lobby/Nube2.webp'
-import Nube3 from '../assets/Lobby/Nube3.webp'
 import Nube4 from '../assets/Lobby/Nube4.webp'
 import Nube5 from '../assets/Lobby/Nube5.webp'
 import IMG_Background from '../assets/Lobby/IMG_Background.webp'
@@ -31,26 +29,11 @@ import LobbyStars from '../assets/Lobby/LobbyStars.webp'
 import Brand_CNP from '../assets/Lobby/Brand_CNP.webp'
 import MatrixTv from '../components/MatrixTv'
 export default function Lobby() {
-  const parallax = useRef<IParallax>(null!)
-
-  useEffect(() => {
-    parallax.current.scrollTo(4)
-  }, [])
-
   return (
     <>
       <div
-        style={{
-          width: '100%',
-          height: '100%',
-          background: '#253237',
-          display: 'flex',
-          flexDirection: 'column-reverse',
-          overflowX: 'hidden',
-          overflowY: 'scroll',
-        }}
       >
-        <Parallax ref={parallax} pages={5}>
+        
           <ParallaxLayer
             offset={0}
             speed={0}
@@ -75,7 +58,7 @@ export default function Lobby() {
             <div className="centerDiv">
               <img src={Nube1} className="lobby-Img" style={{ width: '40%', top: '30%', left: '0%', zIndex: 1 }} />
               <img src={Nube2} className="lobby-Img" style={{ width: '30%', top: '25%', right: '2%' }} />
-              <img src={Nube3} className="lobby-Img" style={{ width: '30%', top: '2%' }} />
+
               <img src={Nube4} className="lobby-Img" style={{ width: '100%', top: '43%' }} />
             </div>
           </ParallaxLayer>
@@ -91,7 +74,7 @@ export default function Lobby() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={2} speed={0.1} factor={1}>
+          <ParallaxLayer offset={2.5} speed={0.1} factor={1}>
             <img
               src={Godzilla}
               className="lobby-Img"
@@ -142,11 +125,11 @@ export default function Lobby() {
             }}
           />
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={4} speed={0.2} factor={1}>
+          <ParallaxLayer style={{ zIndex: 5 }} offset={4.75} speed={0.2} factor={1}>
             <div className="centerDiv">
-              <img src={Tv} className="lobby-Img" style={{ width: '35%', paddingBottom: '65%' }} />
+              <img src={Tv} className="lobby-Img" style={{ width: '35%', paddingBottom: '50%' }} />
               <p
-                style={{ paddingBottom: '58%', position: 'absolute', zIndex: 3, color: '#00B8E6' }}
+                style={{ paddingBottom: '45%', position: 'absolute', zIndex: 3, color: '#00B8E6' }}
                 className="fontGoldenAge"
               >
                 PLAY
@@ -160,7 +143,7 @@ export default function Lobby() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={4} speed={0.05} factor={1}>
+          <ParallaxLayer style={{ zIndex: 2 }} offset={4.25} speed={0.05} factor={1}>
             <div className="splitCenterDiv" style={{ position: 'absolute', bottom: '0px' }}>
               <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
                 <img src={LeftSide} style={{ width: '100%', height: '26vw', marginBottom: '30%', scale: '-1 1 1' }} />
@@ -202,24 +185,24 @@ export default function Lobby() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 1 }} offset={4} speed={0.1} factor={1}>
+          <ParallaxLayer style={{ zIndex: 1 }} offset={4.5} speed={0.1} factor={1}>
             <div className="splitCenterDiv">
-              <img src={Edificio1} style={{ width: '30%', paddingBottom: '43%' }} />
-              <img src={Edificio2} style={{ width: '30%', paddingBottom: '43%' }} />
+              <img src={Edificio1} style={{ width: '30%', paddingBottom: '30%' }} />
+              <img src={Edificio2} style={{ width: '30%', paddingBottom: '30%' }} />
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={4} speed={1} factor={1}>
+          <ParallaxLayer style={{ zIndex: 2 }} offset={7} speed={1} factor={1}>
             <div className="splitCenterDiv">
               <img
                 src={workstation1}
                 className="lobby-Img"
-                style={{ width: '40%', position: 'relative', left: '-24%', top: '45%' }}
+                style={{ width: '40%', position: 'relative', left: '-24%', top: '0%' }}
               />
               <img
                 src={workstation3}
                 className="lobby-Img"
-                style={{ width: '40%', position: 'relative', right: '-27%', top: '47%' }}
+                style={{ width: '40%', position: 'relative', right: '-27%', top: '0%' }}
               />
             </div>
           </ParallaxLayer>
@@ -235,7 +218,7 @@ export default function Lobby() {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={4} speed={1} factor={1}>
+          <ParallaxLayer style={{ zIndex: 2 }} offset={7} speed={1} factor={0.5}>
             <div className="centerDiv" style={{ justifyContent: 'flex-end', gap: '0px', paddingBottom: '2%' }}>
               <img src={Brand_CNP} style={{ width: '10%' }} />
               <p style={{ marginTop: '20px' }} className="fontGoldenAge">
@@ -250,9 +233,9 @@ export default function Lobby() {
               <MatrixTv />
             </div>
           </ParallaxLayer>
-        </Parallax>
+
       </div>
-      <OverlayMenu />
+
     </>
   )
 }

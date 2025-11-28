@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react'
-import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
-import OverlayMenu from '../overlayMenu'
+import {  ParallaxLayer } from '@react-spring/parallax'
+
 import ovni from '../../assets/Lobby/ovni.webp'
 import LobbyStars from '../../assets/Lobby/LobbyStars.webp'
 import Flecha from '../../assets/Culture/IMG_Flecha.webp'
@@ -45,16 +45,11 @@ export default function CultureMobil() {
     description: 'Tercer video de ejemplo',
   },
 ]
-  const parallax = useRef<IParallax>(null!)
   const videoRef = useRef<HTMLVideoElement>(null!)
   const [currentVideo, setCurrentVideo] = useState(0)
   const [isPlaying, setIsPlaying] = useState(true)
   const glitch: GlitchHandle = useGlitch({ glitchTimeSpan: false })
-  useEffect(() => {
-    //parallax.current.scrollTo(5.5)
-  }, [])
 
-  
     useEffect(() => {
       startGlitchAndStopWithTimeout()
     })
@@ -91,17 +86,7 @@ export default function CultureMobil() {
   return (
     <>
       <div
-        style={{
-          width: '100%',
-          height: '100%',
-          background: '#253237',
-          display: 'flex',
-          flexDirection: 'column-reverse',
-          overflowX: 'hidden',
-          overflowY: 'scroll',
-        }}
       >
-        <Parallax ref={parallax} pages={3}>
           <ParallaxLayer
             offset={0}
             speed={0}
@@ -223,29 +208,29 @@ export default function CultureMobil() {
 
           <ParallaxLayer style={{ zIndex: 2 }} offset={0.75} speed={0.25} factor={0.5}>
             <div className="centerDiv" style={{}}>
-              <img src={Nube6} style={{ width: '95vw', minWidth: "500px", position: 'relative', top: '65%' }} />
-              <img src={Nube5} style={{ width: '25vw', minWidth: "200px", position: 'relative', left: '-40%', top: '-30%' }} />
-              <img src={Nube1} style={{ width: '25vw', minWidth: "200px", position: 'relative', left: '40%', top: '-40%' }} />
-              <img src={nyanCat} style={{ width: '25vw', minWidth: "180px", position: 'relative', right: '20%', top: '-50%' }} />
-              <img src={CAT} style={{ width: '25vw', minWidth: "150px", position: 'relative', right: '-22%', top: '-50%' }} />
+              <img src={Nube6} style={{ width: '95vw', minWidth: "500px", position: 'relative', top: '120%' }} />
+              <img src={Nube5} style={{ width: '40vw', minWidth: "200px", position: 'relative', left: '-40%', top: '-30%' }} />
+              <img src={Nube1} style={{ width: '40vw', minWidth: "200px", position: 'relative', left: '40%', top: '-40%' }} />
+              <img src={nyanCat} style={{ width: '40vw', minWidth: "180px", position: 'relative', right: '20%', top: '-50%' }} />
+              <img src={CAT} style={{ width: '40vw', minWidth: "150px", position: 'relative', right: '-22%', top: '-50%' }} />
               <img src={BOOK} style={{ width: '15vw', minWidth: "100px", position: 'relative', left: '-25%', top: '-60%' }} />
             </div>
           </ParallaxLayer>
 
           <ParallaxLayer style={{ zIndex: 2 }} offset={1.25} speed={0.25} factor={0.5}>
             <div className="centerDiv" style={{}}>
-              <img src={rose} style={{ width: '25vw', minWidth: "200px", position: 'relative', right: '-25%', top: '10%' }} />
-              <img src={Nube4} style={{ width: '25vw', minWidth: "200px", position: 'relative', left: '-30%', top: '-20%' }} />
-              <img src={Nube3} style={{ width: '25vw', minWidth: "200px", position: 'relative', left: '-22%', top: '15%' }} />
-              <img src={FIGHT} style={{ width: '25vw', minWidth: "200px", position: 'relative', left: '-25%', top: '-35%' }} />
-              <img src={Nube2} style={{ width: '25vw', minWidth: "200px", position: 'relative', right: '-30%', top: '-70%' }} />
+              <img src={rose} style={{ width: '40vw', minWidth: "200px", position: 'relative', right: '-25%', top: '10%' }} />
+              <img src={Nube4} style={{ width: '40vw', minWidth: "200px", position: 'relative', left: '-30%', top: '-20%' }} />
+              <img src={Nube3} style={{ width: '40vw', minWidth: "200px", position: 'relative', left: '-22%', top: '15%' }} />
+              <img src={FIGHT} style={{ width: '40vw', minWidth: "200px", position: 'relative', left: '-25%', top: '-35%' }} />
+              <img src={Nube2} style={{ width: '40vw', minWidth: "200px", position: 'relative', right: '-30%', top: '-70%' }} />
             </div>
           </ParallaxLayer>
 
           <ParallaxLayer style={{ zIndex: 2 }} offset={1.75} speed={0.3} factor={0.5}>
             <div className="centerDiv" style={{}}>
-              <img src={Blackhorse} style={{ width: '25vw', minWidth: "200px", position: 'relative', right: '-25%', top: '-40%' }} />
-              <img src={Angel} style={{ width: '25vw', minWidth: "150px", position: 'relative', left: '-25%', top: '-30%' }} />
+              <img src={Blackhorse} style={{ width: '40vw', minWidth: "200px", position: 'relative', right: '-25%', top: '-40%' }} />
+              <img src={Angel} style={{ width: '40vw', minWidth: "150px", position: 'relative', left: '-25%', top: '-30%' }} />
               <img src={ovni} style={{ width: '10vw', minWidth: "100px", position: 'relative', left: '5%', top: '-40%' }} />
             </div>
           </ParallaxLayer>
@@ -262,7 +247,7 @@ export default function CultureMobil() {
 
           <ParallaxLayer style={{ zIndex: 2 }} offset={2} speed={0.25} factor={0.5}>
             <div className="splitCenterDiv">
-              <img src={Nube4} style={{ width: '28vw', minWidth: "230px", marginLeft: '0%' }} />
+              <img src={Nube4} style={{ width: '40vw', minWidth: "230px", marginLeft: '0%' }} />
               <img src={Dios} style={{ width: '50vw', minWidth: "300px", position: 'relative', right: '10%', top: '-5%' }} />
             </div>
           </ParallaxLayer>
@@ -279,9 +264,7 @@ export default function CultureMobil() {
               <img src={Flecha} style={{ height: '100px', position: 'relative', top: '-30%' }} />
             </div>
           </ParallaxLayer>
-        </Parallax>
       </div>
-      <OverlayMenu />
     </>
   )
 }
