@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ParallaxLayer } from '@react-spring/parallax'
 
 import background from '../../assets/Founders/background.png'
@@ -10,11 +10,20 @@ import spaceship2 from '../../assets/Founders/spaceship2.webp'
 import ovni from '../../assets/Founders/ovni.webp'
 import desk from '../../assets/Founders/desk.webp'
 import founder1 from '../../assets/Founders/founder1.webp'
-import founder2 from '../../assets/Founders/founder2.webp'
+import founder2 from '../../assets/Founders/Andrea.webp'
 import table from '../../assets/Founders/table.webp'
 import tv from '../../assets/Founders/tv.webp'
 import Pantallas from '../../assets/Founders/Pantalas.webp'
+import PantallasCNP from '../../assets/Founders/PantallasCNP.png'
+import PantallasError from '../../assets/Founders/PantallasError.png'
+import IMG_back from '../../assets/Founders/IMG_back.png'
 export default function Founders() {
+    const pantallasImages = [Pantallas, PantallasError, Pantallas, PantallasCNP, Pantallas]
+  const [currentPantallaIndex, setCurrentPantallaIndex] = useState(0)
+
+  const handlePantallasClick = () => {
+    setCurrentPantallaIndex((prev) => (prev + 1) % pantallasImages.length)
+  }
   return (
     <>
       <div>
@@ -49,36 +58,57 @@ export default function Founders() {
         />
 
         <ParallaxLayer
-          offset={3}
+          offset={2.5}
           speed={0}
           factor={1}
           style={{
-            backgroundImage: `url(${background})`,
+            backgroundImage: `url(${IMG_back})`,
             backgroundSize: 'cover',
           }}
         />
 
-        <ParallaxLayer style={{ zIndex: 1 }} offset={0.25} speed={0} factor={0.25}>
-          <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
-            <img src={Pantallas} style={{ width: '90vw', position: 'relative', top: '40%' }} />
+        <ParallaxLayer style={{ zIndex: 0 }} offset={0.1} speed={0.2} factor={0.1}>
+          <div className="centerDiv" style={{ justifyContent: 'flex-start' }}>
+            <p style={{ fontSize: '24px' }} className="fontGoldenAge">
+              © 2025 Cool Nerdy People
+            </p>
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 2 }} offset={0.75} speed={0} factor={0.25}>
+        <ParallaxLayer style={{ zIndex: 1 }} offset={0.25} speed={0.1} factor={0.25}>
+          <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
+            <img src={pantallasImages[currentPantallaIndex]} 
+              onClick={handlePantallasClick}
+              style={{ width: '90vw', position: 'relative', top: '40%' }} />
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer style={{ zIndex: 2 }} offset={0.75} speed={0.1} factor={0.25}>
           <div className="centerDiv" style={{ justifyContent: 'flex-end', position: 'relative' }}>
-            <div style={{ position: 'relative', width: '70vw', display: 'flex', justifyContent: 'center', alignItems: 'center', top: '0%' }}>
-              <img src={tv} style={{ width: '100%', display: 'block' }} />
-              <div style={{ 
-                position: 'absolute',
-                top: '42%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
+            <div
+              style={{
+                position: 'relative',
+                width: '70vw',
                 display: 'flex',
-                flexDirection: 'column',
-                gap: '5px',
-                textAlign: 'center',
-                width: '80%'
-              }}>
+                justifyContent: 'center',
+                alignItems: 'center',
+                top: '0%',
+              }}
+            >
+              <img src={tv} style={{ width: '100%', display: 'block' }} />
+              <div
+                style={{
+                  position: 'absolute',
+                  top: '42%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '5px',
+                  textAlign: 'center',
+                  width: '80%',
+                }}
+              >
                 <p className="fontGoldenAgeOverlay" style={{ color: '#1148c9', fontSize: '6VW' }}>
                   CONTACT
                 </p>
@@ -102,23 +132,23 @@ export default function Founders() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 2 }} offset={0.95} speed={0} factor={0.5}>
+        <ParallaxLayer style={{ zIndex: 2 }} offset={0.95} speed={0.2} factor={0.5}>
           <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
             <img src={Globe1} style={{ width: '60vw', position: 'relative', top: '0%' }} />
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 2 }} offset={0.95} speed={0} factor={0.5}>
+        <ParallaxLayer style={{ zIndex: 2 }} offset={0.95} speed={0.1} factor={0.5}>
           <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
             <img src={table} style={{ width: '60vw' }} />
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 3 }} offset={1.1} speed={0} factor={0.5}>
+        <ParallaxLayer style={{ zIndex: 3 }} offset={1.1} speed={0.1} factor={0.5}>
           <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
             <div className="splitCenterDiv" style={{ width: '30vw', position: 'relative', top: '22vw' }}>
               <img src={founder1} style={{ width: '15vw' }} />
-              <img src={founder2} style={{ width: '15vw' }} />
+              <img src={founder2} style={{ width: '15vw', position: 'relative', top: '-10px' }} />
             </div>
             <img src={desk} style={{ width: '60vw' }} />
             <p
@@ -130,31 +160,31 @@ export default function Founders() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 3 }} offset={1.6} speed={0} factor={0.5}>
+        <ParallaxLayer style={{ zIndex: 3 }} offset={1.6} speed={0.1} factor={0.5}>
           <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
             <img src={ovni} style={{ width: '80vw', position: 'relative', left: '-45vw' }} />
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 3 }} offset={1.6} speed={0} factor={0.25}>
+        <ParallaxLayer style={{ zIndex: 3 }} offset={1.6} speed={0.2} factor={0.25}>
           <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
             <img src={spaceship2} style={{ width: '40vw', position: 'relative', right: '-30%', scale: '-1 1 1' }} />
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 3 }} offset={1.8} speed={0} factor={0.75}>
+        <ParallaxLayer style={{ zIndex: 3 }} offset={2} speed={0.1} factor={0.75}>
           <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
             <img src={Asteroide} style={{ width: '20vw', position: 'relative', right: '35%' }} />
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 3 }} offset={1.8} speed={0} factor={0.75}>
+        <ParallaxLayer style={{ zIndex: 3 }} offset={2} speed={0.1} factor={0.75}>
           <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
             <img src={spacheship1} style={{ width: '80vw', position: 'relative', left: '20%' }} />
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 2 }} offset={2.5} speed={0} factor={0.75}>
+        <ParallaxLayer style={{ zIndex: 2 }} offset={2.6} speed={0.2} factor={0.75}>
           <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
             <img src={Globe2} style={{ width: '130vw', position: 'relative', top: '0%' }} />
           </div>

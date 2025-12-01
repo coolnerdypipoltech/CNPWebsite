@@ -1,5 +1,5 @@
-import React, { useRef, useEffect, useState } from 'react'
-import {  ParallaxLayer } from '@react-spring/parallax'
+import React, { useEffect, useState } from 'react'
+import { ParallaxLayer } from '@react-spring/parallax'
 
 import ovni from '../../assets/Lobby/ovni.webp'
 import LobbyStars from '../../assets/Lobby/LobbyStars.webp'
@@ -21,249 +21,341 @@ import nyanCat from '../../assets/Culture/nyanCat.webp'
 import Marco from '../../assets/Culture/IMG_Marco.webp'
 import Back from '../../assets/Culture/IMG_Back.webp'
 import Next from '../../assets/Culture/IMG_Next.webp'
-
-import video1 from '../../assets/test/Video1.mp4'
-import video2 from '../../assets/test/Video2.mp4'
-import video3 from '../../assets/test/Video3.mp4'
 import { useGlitch, GlitchHandle } from 'react-powerglitch'
 
 export default function CultureMobil() {
   const videos = [
-  {
-    title: 'Video 1',
-    url: video1,
-    description: 'Primer video de ejemplo',
-  },
-  {
-    title: 'Video 2',
-    url: video2,
-    description: 'Segundo video de ejemplo',
-  },
-  {
-    title: 'Video 3',
-    url: video3,
-    description: 'Tercer video de ejemplo',
-  },
-]
-  const videoRef = useRef<HTMLVideoElement>(null!)
+    {
+      title: 'We are Cool Nerdy People',
+      
+      url: 'https://www.youtube.com/embed/ZiX4d7fwtdg?si=M_9xk4YuXF53D57y',
+      description: 'An AI Native & human-first company forging innovative paths for brands to align their purpose with commercial success in an attention-scarce world' + "/n" + 'We orchestrate creativity, technology, partnerships and emerging connection tools with conscious intention, never forgetting that human connection always comes first.',
+    },
+    {
+      title: 'ACT II',
+      url: 'https://www.youtube.com/embed/4OKFlupaB8k?si=1np5CBLUaRreF2az',
+      description: 'For ACTII’s Black Spicy campaign, we produced a hero video that merges AI-driven models with a green screen shoot, resulting in a visually impactful piece and a cutting-edge visual language.',
+    },
+    {
+      title: 'Costa Coffee',
+      url: 'https://www.youtube.com/embed/4XnUHykYAgY?si=JBp29E3R63a9URof',
+      description: 'We took over the physical space with an augmented reality experience layered over the real world. Through a simple QR code, guests unlocked a creative dimension of the Costa brand, immersive, emotional, and full of surprises. Every corner became an interactive portal, turning exploration into play and physical presence into digital engagement.',
+    },
+        {
+      title: 'Femenine Depend',
+      url: 'https://www.youtube.com/embed/ugICtFSwQgQ?si=q4SmhwvbGN5OdB2V',
+      description: "We design interactive games that connect with the target consumer through engagement and education. In this case, we created Eva — a guided, character-driven experience that explains the feminine care segment and walks users through each stage, making product understanding simple, dynamic, and memorable"
+    },
+    {
+      title: 'YoYo',
+      url: 'https://www.youtube.com/embed/rvFLh0HdQkQ?si=v6IeFupJQLCQKqE8',
+      description: 'We created an app that connects users with curated spots through a gamified journey, building a community that actively visits and engages with each venue. YoYo also generates valuable data while unlocking a hidden layer of the city — discover exclusive places, earn YoYo Credits, and redeem rewards inside its secret loop.',
+    },
+    {
+      title: 'AXESS BY AXE',
+      url: 'https://www.youtube.com/embed/QFPyvZ6eXmI?si=rSSn6gD3TO-eCA0K',
+      description: 'We imagined and built a gamified loyalty ecosystem that transforms entertainment into engagement - users compete inside a metaverse in virtual mini-games to earn points for exclusive concert access, creating a self-sustaining community of brand advocates. Results: 1M Active Users / 8/10 Users Rewarded',
+    },
+  ]
   const [currentVideo, setCurrentVideo] = useState(0)
-  const [isPlaying, setIsPlaying] = useState(true)
   const glitch: GlitchHandle = useGlitch({ glitchTimeSpan: false })
 
-    useEffect(() => {
-      startGlitchAndStopWithTimeout()
-    })
-    const playPauseVideo = () => {
-      if (videoRef.current) {
-        if (isPlaying) {
-          videoRef.current.pause()
-          setIsPlaying(false)
-        } else {
-          videoRef.current.play()
-          setIsPlaying(true)
-        }
-      }
-    }
-    
-    const nextVideo = () => {
-      setCurrentVideo(prev => (prev + 1) % videos.length)
-      startGlitchAndStopWithTimeout()
-    }
-  
-    const previousVideo = () => {
-      setCurrentVideo(prev => (prev - 1 + videos.length) % videos.length)
-      startGlitchAndStopWithTimeout()
-    }
-  
-    const startGlitchAndStopWithTimeout = () => {
-      glitch.startGlitch()
-      setTimeout(() => {
-        glitch.stopGlitch()
-      }, 500)
-    }
-  
+  useEffect(() => {
+    startGlitchAndStopWithTimeout()
+  })
+
+  const nextVideo = () => {
+    setCurrentVideo(prev => (prev + 1) % videos.length)
+    startGlitchAndStopWithTimeout()
+  }
+
+  const previousVideo = () => {
+    setCurrentVideo(prev => (prev - 1 + videos.length) % videos.length)
+    startGlitchAndStopWithTimeout()
+  }
+
+  const startGlitchAndStopWithTimeout = () => {
+    glitch.startGlitch()
+    setTimeout(() => {
+      glitch.stopGlitch()
+    }, 500)
+  }
 
   return (
     <>
-      <div
-      >
-          <ParallaxLayer
-            offset={0}
-            speed={0}
-            factor={0.5}
-            style={{
-              backgroundImage: `url(${LobbyStars})`,
-              backgroundSize: 'cover',
-            }}
-          />
+      <div>
+        <ParallaxLayer
+          offset={0}
+          speed={0}
+          factor={0.5}
+          style={{
+            backgroundImage: `url(${LobbyStars})`,
+            backgroundSize: 'cover',
+          }}
+        />
 
-          <ParallaxLayer
-            offset={0.5}
-            speed={0}
-            factor={0.5}
-            style={{
-              backgroundImage: `url(${LobbyStars})`,
-              backgroundSize: 'cover',
-            }}
-          />
+        <ParallaxLayer
+          offset={0.5}
+          speed={0}
+          factor={0.5}
+          style={{
+            backgroundImage: `url(${LobbyStars})`,
+            backgroundSize: 'cover',
+          }}
+        />
 
-          <ParallaxLayer
-            offset={1}
-            speed={0}
-            factor={0.5}
-            style={{
-              backgroundImage: `url(${LobbyStars})`,
-              backgroundSize: 'cover',
-            }}
-          />
+        <ParallaxLayer
+          offset={1}
+          speed={0}
+          factor={0.5}
+          style={{
+            backgroundImage: `url(${LobbyStars})`,
+            backgroundSize: 'cover',
+          }}
+        />
 
-          <ParallaxLayer
-            offset={1.5}
-            speed={0}
-            factor={0.5}
-            style={{
-              backgroundImage: `url(${LobbyStars})`,
-              backgroundSize: 'cover',
-            }}
-          />
+        <ParallaxLayer
+          offset={1.5}
+          speed={0}
+          factor={0.5}
+          style={{
+            backgroundImage: `url(${LobbyStars})`,
+            backgroundSize: 'cover',
+          }}
+        />
 
-          <ParallaxLayer
-            offset={2}
-            speed={0}
-            factor={0.5}
-            style={{
-              backgroundImage: `url(${LobbyStars})`,
-              backgroundSize: 'cover',
-            }}
-          />
+        <ParallaxLayer
+          offset={2}
+          speed={0}
+          factor={0.5}
+          style={{
+            backgroundImage: `url(${LobbyStars})`,
+            backgroundSize: 'cover',
+          }}
+        />
 
-          <ParallaxLayer
-            offset={2.5}
-            speed={0}
-            factor={0.5}
-            style={{
-              backgroundImage: `url(${LobbyStars})`,
-              backgroundSize: 'cover',
-            }}
-          />
+        <ParallaxLayer
+          offset={2.5}
+          speed={0}
+          factor={0.5}
+          style={{
+            backgroundImage: `url(${LobbyStars})`,
+            backgroundSize: 'cover',
+          }}
+        />
 
-          <ParallaxLayer
-            offset={3}
-            speed={0}
-            factor={0.5}
-            style={{
-              backgroundImage: `url(${LobbyStars})`,
-              backgroundSize: 'cover',
-            }}
-          />
+        <ParallaxLayer
+          offset={3}
+          speed={0}
+          factor={0.5}
+          style={{
+            backgroundImage: `url(${LobbyStars})`,
+            backgroundSize: 'cover',
+          }}
+        />
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={0.25} speed={0.1} factor={0.5}>
-            <div className="centerDiv" style={{ justifyContent: 'center', gap: '20px', paddingTop: '25%' }}>
-              <div ref={glitch.ref} style={{ position: 'relative', width: '100%', height: '40vw', display: "flex", justifyContent: "center" }}>
-                <video
-                  ref={videoRef}
-                  key={videos[currentVideo].url}
-                  style={{
-                    width: '100%',
-                    height: '40vw',
-                    objectFit: 'contain',
-                    borderRadius: '40px',
-                  }}
-                  src={videos[currentVideo].url}
-                  loop
-                  autoPlay
-                />
-                <img 
-                  src={Marco} 
-                  style={{ 
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '40vw',
-                    objectFit: 'contain',
-                    pointerEvents: 'none'
-                  }} 
-                />
-              </div>
-              <p className="fontGoldenAge" style={{ color: 'white' }}>
-                {videos[currentVideo].title}
-              </p>
-              <p className="fontGoldenAge" style={{ color: 'white', fontSize: '16px' }}>
-                {videos[currentVideo].description}
-              </p>
-              <div className="splitCenterDiv" style={{ width: '50%', height: '40px' }}>
-                <img src={Back} onClick={previousVideo} style={{ width: '100px' }} />
-                <img src={Next} onClick={playPauseVideo} style={{ width: '100px' }} />
-                <img src={Next} onClick={nextVideo} style={{ width: '100px' }} />
-              </div>
-            </div>
-          </ParallaxLayer>
+        <ParallaxLayer style={{ zIndex: 3 }} offset={0.4} speed={0.2} factor={0.1}>
+          <div className="centerDiv" style={{ justifyContent: 'flex-start' }}>
+            <p
+              className="fontGoldenAge"
+              style={{ fontSize: '36px', color: 'white', position: 'relative', bottom: '15px' }}
+            >
+              Our work
+            </p>
+          </div>
+        </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={1} speed={0.25} factor={0.25}>
-            <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
-              <img src={Flecha} style={{ height: '100px', position: 'relative', top: '100%' }} />
-            </div>
-          </ParallaxLayer>
-
-          <ParallaxLayer style={{ zIndex: 2 }} offset={1.5} speed={0.25} factor={0.5}>
-            <div className="centerDiv" style={{}}>
-              <img src={Nube6} style={{ width: '95vw', minWidth: "500px", position: 'relative', top: '100%' }} />
-              <img src={Nube5} style={{ width: '40vw', minWidth: "200px", position: 'relative', left: '-40%', top: '-30%' }} />
-              <img src={Nube1} style={{ width: '40vw', minWidth: "200px", position: 'relative', left: '40%', top: '-40%' }} />
-              <img src={nyanCat} style={{ width: '40vw', minWidth: "180px", position: 'relative', right: '20%', top: '-50%' }} />
-              <img src={CAT} style={{ width: '40vw', minWidth: "150px", position: 'relative', right: '-22%', top: '-50%' }} />
-              <img src={BOOK} style={{ width: '15vw', minWidth: "100px", position: 'relative', left: '-25%', top: '-60%' }} />
-            </div>
-          </ParallaxLayer>
-
-          <ParallaxLayer style={{ zIndex: 2 }} offset={2} speed={0.25} factor={0.5}>
-            <div className="centerDiv" style={{}}>
-              <img src={rose} style={{ width: '40vw', minWidth: "200px", position: 'relative', right: '-25%', top: '10%' }} />
-              <img src={Nube4} style={{ width: '40vw', minWidth: "200px", position: 'relative', left: '-30%', top: '-20%' }} />
-              <img src={Nube3} style={{ width: '40vw', minWidth: "200px", position: 'relative', left: '-22%', top: '15%' }} />
-              <img src={FIGHT} style={{ width: '40vw', minWidth: "200px", position: 'relative', left: '-25%', top: '-35%' }} />
-              <img src={Nube2} style={{ width: '40vw', minWidth: "200px", position: 'relative', right: '-30%', top: '-70%' }} />
-            </div>
-          </ParallaxLayer>
-
-          <ParallaxLayer style={{ zIndex: 3 }} offset={2.5} speed={0.3} factor={0.5}>
-            <div className="centerDiv" style={{}}>
-              <img src={Blackhorse} style={{ width: '40vw', minWidth: "200px", position: 'relative', right: '-25%', top: '-40%' }} />
-              <img src={Angel} style={{ width: '40vw', minWidth: "150px", position: 'relative', left: '-25%', top: '-30%' }} />
-              <img src={ovni} style={{ width: '10vw', minWidth: "100px", position: 'relative', left: '5%', top: '-40%' }} />
-            </div>
-          </ParallaxLayer>
-
-          <ParallaxLayer style={{ zIndex: 2 }}  offset={2.5} speed={0.25} factor={0.5}>
-            <div className="splitCenterDiv">
-              <img
-                src={Nube5}
-                style={{ width: '35vw', minWidth: "150px", marginLeft: '2%', position: 'relative', right: '-5%', top: '-45%' }}
+        <ParallaxLayer style={{ zIndex: 3 }} offset={0.25} speed={0.1} factor={0.5}>
+          <div
+            className="centerDiv"
+            style={{ justifyContent: 'center', gap: '20px', paddingTop: '0%', justifyItems: 'center' }}
+          >
+            <div
+              ref={glitch.ref}
+              style={{
+                position: 'relative',
+                width: '80vw',
+                height: '50vw',
+                display: 'flex',
+                justifyContent: 'center',
+              }}
+            >
+              <iframe
+                key={videos[currentVideo].url}
+                style={{
+                  width: '80vw',
+                  height: '50vw',
+                  borderRadius: '40px',
+                  border: 'none',
+                }}
+                src={videos[currentVideo].url}
+                title={videos[currentVideo].title}
+                allowFullScreen
               />
-              <img src={Nube1} style={{ width: '30vw', position: 'relative', right: '-5%', top: '-5%' }} />
+              <img
+                src={Marco}
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '80vw',
+                  height: '100%',
+                  pointerEvents: 'none',
+                }}
+              />
             </div>
-          </ParallaxLayer>
+            <p className="fontGoldenAge" style={{ color: 'white' }}>
+              {videos[currentVideo].title}
+            </p>
+            <p
+              className="fontGoldenAge"
+              style={{ color: 'white', fontSize: '16px', width: '80%', textAlign: 'center', paddingBottom: '20px' }}
+            >
+              {videos[currentVideo].description}
+            </p>
+            <div className="splitCenterDiv" style={{ width: '80%', height: '40px' }}>
+              <img src={Back} onClick={previousVideo} style={{ width: '150px' }} />
+              <img src={Next} onClick={nextVideo} style={{ width: '150px' }} />
+            </div>
+          </div>
+        </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={2.75} speed={0.25} factor={0.5}>
-            <div className="splitCenterDiv">
-              <img src={Nube4} style={{ width: '40vw', minWidth: "230px", marginLeft: '0%' }} />
-              <img src={Dios} style={{ width: '50vw', minWidth: "300px", position: 'relative', right: '10%', top: '-5%' }} />
-            </div>
-          </ParallaxLayer>
+        <ParallaxLayer style={{ zIndex: 2 }} offset={1} speed={0.25} factor={0.25}>
+          <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
+            <img src={Flecha} style={{ height: '100px', position: 'relative', top: '100%' }} />
+          </div>
+        </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={3} speed={0.25} factor={0.5}>
-            <div className="splitCenterDiv">
-              <img src={Nube3} style={{ width: '28vw', minWidth: "200px", marginLeft: '0%' }} />
-              <img src={Nube2} style={{ width: '30vw', minWidth: "230px", position: 'relative', right: '-10%', top: '-5%' }} />
-            </div>
-          </ParallaxLayer>
+        <ParallaxLayer style={{ zIndex: 4 }} offset={1.65} speed={0.3} factor={0.25}>
+                    <div className="centerDiv" style={{alignItems: "flex-end", paddingRight: "10%", justifyContent: "flex-end"}}>
+                      <p className='fontGoldenAge' style={{ color: 'white' }}>Think human, act AI native</p>
+                    </div>
+                  </ParallaxLayer>
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={3.5} speed={0.5} factor={0.25}>
-            <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
-              <img src={Flecha} style={{ height: '100px', position: 'relative', top: '100%' }} />
-            </div>
-          </ParallaxLayer>
+        <ParallaxLayer style={{ zIndex: 2 }} offset={1.5} speed={0.25} factor={0.5}>
+          <div className="centerDiv" style={{}}>
+            <img src={Nube6} style={{ width: '95vw', minWidth: '500px', position: 'relative', top: '100%' }} />
+            <img
+              src={Nube5}
+              style={{ width: '40vw', minWidth: '200px', position: 'relative', left: '-40%', top: '-30%' }}
+            />
+            <img
+              src={Nube1}
+              style={{ width: '40vw', minWidth: '200px', position: 'relative', left: '40%', top: '-40%' }}
+            />
+            <img
+              src={nyanCat}
+              style={{ width: '40vw', minWidth: '180px', position: 'relative', right: '20%', top: '-50%' }}
+            />
+            <img
+              src={CAT}
+              style={{ width: '40vw', minWidth: '150px', position: 'relative', right: '-22%', top: '-50%' }}
+            />
+            <img
+              src={BOOK}
+              style={{ width: '15vw', minWidth: '100px', position: 'relative', left: '-25%', top: '-60%' }}
+            />
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer style={{ zIndex: 2 }} offset={2} speed={0.25} factor={0.5}>
+          <div className="centerDiv" style={{}}>
+            <img
+              src={rose}
+              style={{ width: '40vw', minWidth: '200px', position: 'relative', right: '-25%', top: '10%' }}
+            />
+            <img
+              src={Nube4}
+              style={{ width: '40vw', minWidth: '200px', position: 'relative', left: '-30%', top: '-20%' }}
+            />
+            <img
+              src={Nube3}
+              style={{ width: '40vw', minWidth: '200px', position: 'relative', left: '-22%', top: '15%' }}
+            />
+            <img
+              src={FIGHT}
+              style={{ width: '40vw', minWidth: '200px', position: 'relative', left: '-25%', top: '-35%' }}
+            />
+            <img
+              src={Nube2}
+              style={{ width: '40vw', minWidth: '200px', position: 'relative', right: '-30%', top: '-70%' }}
+            />
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer style={{ zIndex: 5 }} offset={2.25} speed={0.3} factor={0.25}>
+          <div
+            className="centerDiv"
+            style={{ alignItems: 'flex-start', paddingLeft: '10%', paddingTop: '0px', justifyContent: 'flex-start' }}
+          >
+            <p className="fontGoldenAge" style={{ color: 'white', fontSize: '18px' }}>
+              Designing a smarter
+            </p>
+            <p className="fontGoldenAge" style={{ color: 'white', fontSize: '18px' }}>
+              future together
+            </p>
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer style={{ zIndex: 3 }} offset={2.5} speed={0.3} factor={0.5}>
+          <div className="centerDiv" style={{}}>
+            <img
+              src={Blackhorse}
+              style={{ width: '40vw', minWidth: '200px', position: 'relative', right: '-25%', top: '-40%' }}
+            />
+            <img
+              src={Angel}
+              style={{ width: '40vw', minWidth: '150px', position: 'relative', left: '-25%', top: '-30%' }}
+            />
+            <img
+              src={ovni}
+              style={{ width: '10vw', minWidth: '100px', position: 'relative', left: '5%', top: '-40%' }}
+            />
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer style={{ zIndex: 2 }} offset={2.5} speed={0.25} factor={0.5}>
+          <div className="splitCenterDiv">
+            <img
+              src={Nube5}
+              style={{
+                width: '35vw',
+                minWidth: '150px',
+                marginLeft: '2%',
+                position: 'relative',
+                right: '-5%',
+                top: '-45%',
+              }}
+            />
+            <img src={Nube1} style={{ width: '30vw', position: 'relative', right: '-5%', top: '-5%' }} />
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer style={{ zIndex: 2 }} offset={2.75} speed={0.25} factor={0.5}>
+          <div className="splitCenterDiv">
+            <img src={Nube4} style={{ width: '40vw', minWidth: '230px', marginLeft: '0%' }} />
+            <img
+              src={Dios}
+              style={{ width: '50vw', minWidth: '300px', position: 'relative', right: '10%', top: '-5%' }}
+            />
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer style={{ zIndex: 2 }} offset={3} speed={0.25} factor={0.5}>
+          <div className="splitCenterDiv">
+            <img src={Nube3} style={{ width: '28vw', minWidth: '200px', marginLeft: '0%' }} />
+            <img
+              src={Nube2}
+              style={{ width: '30vw', minWidth: '230px', position: 'relative', right: '-10%', top: '-5%' }}
+            />
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer style={{ zIndex: 2 }} offset={3.5} speed={0.5} factor={0.25}>
+          <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
+            <img src={Flecha} style={{ height: '100px', position: 'relative', top: '100%' }} />
+          </div>
+        </ParallaxLayer>
       </div>
     </>
   )

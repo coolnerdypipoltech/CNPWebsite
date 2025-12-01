@@ -137,12 +137,6 @@ export default function Lobby() {
           <ParallaxLayer style={{ zIndex: 5 }} offset={3} speed={0.2} factor={0.25}>
             <div className="centerDiv">
               <img src={Tv} className="lobby-Img" style={{ width: '35%', paddingBottom: '25%' }} />
-              <p
-                style={{ paddingBottom: '20%', position: 'absolute', zIndex: 3, color: '#00B8E6', fontSize: '12px' }}
-                className="fontGoldenAge"
-              >
-                PLAY
-              </p>
             </div>
           </ParallaxLayer>
 

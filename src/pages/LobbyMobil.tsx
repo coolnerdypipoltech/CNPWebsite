@@ -137,12 +137,6 @@ export default function Lobby() {
         <ParallaxLayer style={{ zIndex: 4 }} offset={2.75} speed={0.2} factor={0.25}>
           <div className="centerDiv">
             <img src={Tv} className="lobby-Img" style={{ width: '35%', paddingBottom: '5%' }} />
-            <p
-              style={{ paddingBottom: '0%', position: 'absolute', zIndex: 3, color: '#00B8E6', fontSize: '12px' }}
-              className="fontGoldenAge"
-            >
-              PLAY
-            </p>
           </div>
         </ParallaxLayer>
 
@@ -194,10 +188,10 @@ export default function Lobby() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 1 }} offset={1.9} speed={0.1} factor={1}>
+        <ParallaxLayer style={{ zIndex: 1 }} offset={2} speed={0.1} factor={1}>
           <div className="splitCenterDiv">
-            <img src={Edificio1} style={{ width: '60%', paddingBottom: '0%', position: 'relative', left: '-30%' }} />
-            <img src={Edificio2} style={{ width: '60%', paddingBottom: '0%', position: 'relative', right: '-10%' }} />
+            <img src={Edificio1} style={{ width: '60%', paddingBottom: '60vw', position: 'relative', left: '-30%' }} />
+            <img src={Edificio2} style={{ width: '60%', paddingBottom: '60vw', position: 'relative', right: '-10%' }} />
           </div>
         </ParallaxLayer>
 

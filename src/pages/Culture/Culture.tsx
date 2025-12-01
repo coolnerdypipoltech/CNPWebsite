@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {  ParallaxLayer } from '@react-spring/parallax'
 
 import ovni from '../../assets/Lobby/ovni.webp'
@@ -21,51 +21,49 @@ import nyanCat from '../../assets/Culture/nyanCat.webp'
 import Marco from '../../assets/Culture/IMG_Marco.webp'
 import Back from '../../assets/Culture/IMG_Back.webp'
 import Next from '../../assets/Culture/IMG_Next.webp'
-
-import video1 from '../../assets/test/Video1.mp4'
-import video2 from '../../assets/test/Video2.mp4'
-import video3 from '../../assets/test/Video3.mp4'
 import { useGlitch, GlitchHandle } from 'react-powerglitch'
 
 export default function Culture() {
   const videos = [
     {
-      title: 'Video 1',
-      url: video1,
-      description: 'Primer video de ejemplo',
+      title: 'We are Cool Nerdy People',
+      
+      url: 'https://www.youtube.com/embed/ZiX4d7fwtdg?si=M_9xk4YuXF53D57y',
+      description: 'An AI Native & human-first company forging innovative paths for brands to align their purpose with commercial success in an attention-scarce world' + "/n" + 'We orchestrate creativity, technology, partnerships and emerging connection tools with conscious intention, never forgetting that human connection always comes first.',
     },
     {
-      title: 'Video 2',
-      url: video2,
-      description: 'Segundo video de ejemplo',
+      title: 'ACT II',
+      url: 'https://www.youtube.com/embed/4OKFlupaB8k?si=1np5CBLUaRreF2az',
+      description: 'For ACTII’s Black Spicy campaign, we produced a hero video that merges AI-driven models with a green screen shoot, resulting in a visually impactful piece and a cutting-edge visual language.',
     },
     {
-      title: 'Video 3',
-      url: video3,
-      description: 'Tercer video de ejemplo',
+      title: 'Costa Coffee',
+      url: 'https://www.youtube.com/embed/4XnUHykYAgY?si=JBp29E3R63a9URof',
+      description: 'We took over the physical space with an augmented reality experience layered over the real world. Through a simple QR code, guests unlocked a creative dimension of the Costa brand, immersive, emotional, and full of surprises. Every corner became an interactive portal, turning exploration into play and physical presence into digital engagement.',
+    },
+        {
+      title: 'Femenine Depend',
+      url: 'https://www.youtube.com/embed/ugICtFSwQgQ?si=q4SmhwvbGN5OdB2V',
+      description: "We design interactive games that connect with the target consumer through engagement and education. In this case, we created Eva — a guided, character-driven experience that explains the feminine care segment and walks users through each stage, making product understanding simple, dynamic, and memorable"
+    },
+    {
+      title: 'YoYo',
+      url: 'https://www.youtube.com/embed/rvFLh0HdQkQ?si=v6IeFupJQLCQKqE8',
+      description: 'We created an app that connects users with curated spots through a gamified journey, building a community that actively visits and engages with each venue. YoYo also generates valuable data while unlocking a hidden layer of the city — discover exclusive places, earn YoYo Credits, and redeem rewards inside its secret loop.',
+    },
+    {
+      title: 'AXESS BY AXE',
+      url: 'https://www.youtube.com/embed/QFPyvZ6eXmI?si=rSSn6gD3TO-eCA0K',
+      description: 'We imagined and built a gamified loyalty ecosystem that transforms entertainment into engagement - users compete inside a metaverse in virtual mini-games to earn points for exclusive concert access, creating a self-sustaining community of brand advocates. Results: 1M Active Users / 8/10 Users Rewarded',
     },
   ]
 
-  const videoRef = useRef<HTMLVideoElement>(null!)
-  const [isPlaying, setIsPlaying] = useState(true)
   const [currentVideo, setCurrentVideo] = useState(0)
   const glitch: GlitchHandle = useGlitch({ glitchTimeSpan: false })
 
   useEffect(() => {
     startGlitchAndStopWithTimeout()
   })
-
-  const playPauseVideo = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause()
-        setIsPlaying(false)
-      } else {
-        videoRef.current.play()
-        setIsPlaying(true)
-      }
-    }
-  }
 
   const nextVideo = () => {
     setCurrentVideo(prev => (prev + 1) % videos.length)
@@ -149,7 +147,13 @@ export default function Culture() {
             }}
           />
 
-          <ParallaxLayer style={{ zIndex: 2 }} offset={0.5} speed={0.1} factor={1}>
+          <ParallaxLayer style={{ zIndex: 5 }} offset={1} speed={0.2} factor={0.1}>
+            <div className="centerDiv" style={{ justifyContent: 'flex-start' }}>
+              <p className='fontGoldenAge' style={{fontSize: '36px', color: "white", position: "relative", bottom: "80px"}}>Our work</p>
+            </div>
+          </ParallaxLayer>
+
+          <ParallaxLayer style={{ zIndex: 3 }} offset={0.5} speed={0.1} factor={1}>
             <div
               className="centerDiv"
               style={{ justifyContent: 'center', gap: '20px', paddingTop: '0%', justifyItems: 'center' }}
@@ -158,25 +162,26 @@ export default function Culture() {
                 ref={glitch.ref}
                 style={{
                   position: 'relative',
-                  width: '100%',
+                  width: '50vw',
                   height: '30vw',
                   display: 'flex',
                   justifyContent: 'center',
                 }}
               >
-                <video
-                  ref={videoRef}
+                <iframe
+                
                   key={videos[currentVideo].url}
                   style={{
-                    width: '100%',
-                    height: '30vw',
-                    objectFit: 'contain',
+                    width: '50vw',
+                    height: '29vw',
+                    paddingTop: '0.5vw',
                     borderRadius: '40px',
+                    border: 'none',
                   }}
                   src={videos[currentVideo].url}
-                  loop
-                  muted
-                  autoPlay
+                  title={videos[currentVideo].title}
+                  allowFullScreen
+                  
                 />
                 <img
                   src={Marco}
@@ -184,9 +189,8 @@ export default function Culture() {
                     position: 'absolute',
                     top: 0,
                     left: 0,
-                    width: '100%',
-                    height: '30vw',
-                    objectFit: 'contain',
+                    width: '50vw',
+                    height: '100%',
                     pointerEvents: 'none',
                   }}
                 />
@@ -194,12 +198,11 @@ export default function Culture() {
               <p className="fontGoldenAge" style={{ color: 'white' }}>
                 {videos[currentVideo].title}
               </p>
-              <p className="fontGoldenAge" style={{ color: 'white', fontSize: '16px' }}>
+              <p className="fontGoldenAge" style={{ color: 'white', fontSize: '16px', width: "80%", textAlign: "center", paddingBottom: "20px"  }}>
                 {videos[currentVideo].description}
               </p>
               <div className="splitCenterDiv" style={{ width: '45%', height: '40px' }}>
                 <img src={Back} onClick={previousVideo} style={{ width: '150px' }} />
-                <img src={Next} onClick={playPauseVideo} style={{ width: '150px' }} />
                 <img src={Next} onClick={nextVideo} style={{ width: '150px' }} />
               </div>
             </div>
@@ -208,6 +211,12 @@ export default function Culture() {
           <ParallaxLayer style={{ zIndex: 2 }} offset={2.2} speed={0.25} factor={0.25}>
             <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
               <img src={Flecha} style={{ height: '150px', position: 'relative', top: '0%' }} />
+            </div>
+          </ParallaxLayer>
+
+          <ParallaxLayer style={{ zIndex: 4 }} offset={2.9} speed={0.3} factor={0.25}>
+            <div className="centerDiv" style={{alignItems: "center", paddingLeft: "10%", justifyContent: "flex-end"}}>
+              <p className='fontGoldenAge' style={{ color: 'white' }}>Think human, act AI native</p>
             </div>
           </ParallaxLayer>
 
@@ -229,6 +238,12 @@ export default function Culture() {
               <img src={Nube3} style={{ width: '25vw', position: 'relative', left: '-22%', top: '15%' }} />
               <img src={FIGHT} style={{ width: '25vw', position: 'relative', left: '-25%', top: '-35%' }} />
               <img src={Nube2} style={{ width: '25vw', position: 'relative', right: '-30%', top: '-70%' }} />
+            </div>
+          </ParallaxLayer>
+
+          <ParallaxLayer style={{ zIndex: 2 }} offset={4.35} speed={0.3} factor={0.25}>
+            <div className="centerDiv" style={{alignItems: "flex-start", paddingLeft: "10%", justifyContent: "flex-start"}}>
+              <p className='fontGoldenAge' style={{ color: 'white' }}>Designing a smarter future together</p>
             </div>
           </ParallaxLayer>
 

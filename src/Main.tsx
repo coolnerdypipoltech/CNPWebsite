@@ -9,7 +9,7 @@ import Founders from './pages/Founders/Founders'
 import FoundersMobil from './pages/Founders/FoundersMobil'
 import FoundersTablet from './pages/Founders/FoundersTablet'
 import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
-
+import logo from './assets/Lobby/Brand_CNP.webp'
 export default function Main() {
   const parallax = useRef<IParallax>(null!)
 
@@ -73,13 +73,22 @@ export default function Main() {
           <ParallaxLayer offset={ founderFactor + cultureFactor} speed={0} factor={lobbyFactor}>
             {tempLobby}
           </ParallaxLayer>
+          <ParallaxLayer sticky={{ start: 0, end: cultureFactor + lobbyFactor + founderFactor - 1.2 }} style={{ alignItems: 'center', justifyContent: 'flex-end', height: "120px" }}>
+            <img src={logo} className='marginLogo' style={{ width: '10%', minWidth: '50px', maxWidth: "75px", marginLeft: '20px' }} />
+        </ParallaxLayer>
         </Parallax>
       </div>
       <div className="overlayMenu">
         <p onClick={() => parallax.current.scrollTo(cultureFactor + lobbyFactor + founderFactor)} className="fontGoldenAgeOverlay">Home</p>
         <p onClick={() => parallax.current.scrollTo(founderFactor + cultureFactor)} className="fontGoldenAgeOverlay">Culture</p>
-        <p onClick={() => parallax.current.scrollTo(founderFactor - 0.5)} className="fontGoldenAgeOverlay">Work</p>
+        <p onClick={() => parallax.current.scrollTo(founderFactor - 0.2)} className="fontGoldenAgeOverlay">Work</p>
         <p onClick={() => parallax.current.scrollTo(0)} className="fontGoldenAgeOverlay">Founders</p>
+      </div>
+      <div className='sideMenuOverlay'>
+        <img src={logo} style={{width: '5%', minWidth: '30px', maxWidth: "50px"}} />
+        <img src={logo} style={{width: '5%', minWidth: '30px', maxWidth: "50px"}} />
+        <img src={logo} style={{width: '5%', minWidth: '30px', maxWidth: "50px"}} />
+        <img src={logo} style={{width: '5%', minWidth: '30px', maxWidth: "50px"}} />
       </div>
     </>
   )
