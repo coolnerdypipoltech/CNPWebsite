@@ -245,6 +245,7 @@ export default function CultureMobil() {
             />
             <img
               src={nyanCat}
+              onClick={() => {window.open('https://www.tiktok.com/@animaldex/video/7442466728153451832?lang=es')}}
               style={{ width: '25vw', minWidth: '180px', position: 'relative', right: '20%', top: '-50%' }}
             />
             <img

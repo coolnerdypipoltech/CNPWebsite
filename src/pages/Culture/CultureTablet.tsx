@@ -228,7 +228,8 @@ export default function CultureMobil() {
 
         <ParallaxLayer style={{ zIndex: 4 }} offset={1.65} speed={0.3} factor={0.25}>
                     <div className="centerDiv" style={{alignItems: "flex-end", paddingRight: "10%", justifyContent: "flex-end"}}>
-                      <p className='grad1' style={{ color: 'white' }}>Think human, act AI native</p>
+                      <p className='grad1' style={{ color: 'white' }}>Think human,</p>
+                      <p className='grad1' style={{ color: 'white' }}> act AI native</p>
                     </div>
                   </ParallaxLayer>
 
@@ -245,6 +246,7 @@ export default function CultureMobil() {
             />
             <img
               src={nyanCat}
+              onClick={() => {window.open('https://www.tiktok.com/@animaldex/video/7442466728153451832?lang=es')}}
               style={{ width: '40vw', minWidth: '180px', position: 'relative', right: '20%', top: '-50%' }}
             />
             <img

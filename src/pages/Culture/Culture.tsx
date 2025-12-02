@@ -147,9 +147,9 @@ export default function Culture() {
             }}
           />
 
-          <ParallaxLayer style={{ zIndex: 5 }} offset={1} speed={0.2} factor={0.1}>
+          <ParallaxLayer style={{ zIndex: 5 }} offset={0.75} speed={0.1} factor={0.1}>
             <div className="centerDiv" style={{ justifyContent: 'flex-start' }}>
-              <p className='fontGoldenAge' style={{fontSize: '36px', color: "white", position: "relative", bottom: "80px"}}>Our work</p>
+              <p className='fontGoldenAge' style={{fontSize: '36px', color: "white", position: "relative", bottom: "150px"}}>Our work</p>
             </div>
           </ParallaxLayer>
 
@@ -225,15 +225,15 @@ export default function Culture() {
               <img src={Nube6} style={{ width: '80vw', position: 'relative', top: '90%' }} />
               <img src={Nube5} style={{ width: '25vw', position: 'relative', left: '-31%', top: '-25%' }} />
               <img src={Nube1} style={{ width: '25vw', position: 'relative', left: '40%', top: '-20%' }} />
-              <img src={nyanCat} style={{ width: '25vw', position: 'relative', right: '30%', top: '-50%' }} />
-              <img src={CAT} style={{ width: '25vw', position: 'relative', right: '-22%', top: '-63%' }} />
+              <img src={nyanCat} onClick={() => {window.open('https://www.tiktok.com/@animaldex/video/7442466728153451832?lang=es')}} style={{ width: '25vw', position: 'relative', right: '30%', top: '-45%' }} />
+              <img src={CAT} style={{ width: '20vw', position: 'relative', right: '-22%', top: '-63%' }} />
               <img src={BOOK} style={{ width: '15vw', position: 'relative', left: '-25%', top: '-60%' }} />
             </div>
           </ParallaxLayer>
 
           <ParallaxLayer style={{ zIndex: 2 }} offset={3.4} speed={0.25} factor={1}>
             <div className="centerDiv" style={{}}>
-              <img src={rose} style={{ width: '25vw', position: 'relative', right: '-25%', top: '5%' }} />
+              <img src={rose} style={{ width: '25vw', position: 'relative', right: '-25%', top: '-0%' }} />
               <img src={Nube4} style={{ width: '25vw', position: 'relative', left: '-10%', top: '0%' }} />
               <img src={Nube3} style={{ width: '25vw', position: 'relative', left: '-30%', top: '10%' }} />
               <img src={FIGHT} style={{ width: '25vw', position: 'relative', left: '-30%', top: '-40%' }} />
@@ -253,7 +253,7 @@ export default function Culture() {
               <img src={Nube3} style={{ width: '25vw', position: 'relative', right: '-30%', top: '0%' }} />
               <img src={Blackhorse} style={{ width: '25vw', position: 'relative', right: '-25%', top: '-35%' }} />
               <img src={Angel} style={{ width: '25vw', position: 'relative', left: '-25%', top: '-30%' }} />
-              <img src={ovni} style={{ width: '10vw', position: 'relative', left: '0%', top: '-25%' }} />
+              <img src={ovni} style={{ width: '15vw', position: 'relative', left: '0%', top: '-25%' }} />
               
             </div>
           </ParallaxLayer>
@@ -280,7 +280,7 @@ export default function Culture() {
           <ParallaxLayer style={{ zIndex: 2 }} offset={5} speed={0.25} factor={1}>
             <div className="splitCenterDiv">
               <img src={Nube4} style={{ width: '28vw', marginLeft: '20%' }} />
-              <img src={Dios} style={{ width: '50vw', position: 'relative', right: '2%', top: '-5%' }} />
+              <img src={Dios} style={{ width: '50vw', position: 'relative', right: '2%', top: '-5%' }} onClick={() => {window.open('https://www.youtube.com/watch?si=CLdTQAEINEfrjLQp&v=5nJZY7FbeP4&feature=youtu.be')}} />
             </div>
           </ParallaxLayer>
 

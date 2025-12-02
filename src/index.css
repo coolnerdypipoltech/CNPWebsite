@@ -35,7 +35,7 @@ body {
   display: flex;
   gap: 20px;
   justify-content: center;
-  top: 6%;
+  top: 8%;
 
   color: #4fc3f7;
   width: 100%;
@@ -75,50 +75,140 @@ body {
   transition: color 0.3s ease;
 }
 
+.LogoContainer{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 701px) {
+  .LogoContainer{
+    justify-content: flex-start;
+  }
+
+
+}
+
 @media screen and (min-width: 675px) {
   .fontGoldenAgeOverlay
   {
-    font-size: 2.5rem;
+    font-size: 25px;
   }
-  
 }
-@media screen and (max-width: 674px) {
+
+@media screen and (max-width: 701px) {
   .fontGoldenAgeOverlay
   {
-    font-size: 5vw;
+    margin-top: 30px;
+    font-size: 3.5vw;
   }
   
 }
+
+.NextButtonPopUp{
+  width: 120px;
+}
+
 
 
 .buttonContainerPopUp{
   top: 30vw;
   padding-right: 10vw;
-  gap: 2vw;
+  gap: 1vw;
 }
 .MatrixButtons{
   width: 100px;
 }
 
-@media screen and (max-width: 674px) {
-  .buttonContainerPopUp
+.fontGoldenAgePoPup{
+  font-family: 'Golden Age', sans-serif;
+  color: #000000;
+  margin: 0px;
+  font-size: 17px;
+}
+
+.textContainerPopUp{
+  width: 25vw;
+}
+
+
+
+
+@media screen and (max-width: 798px) {
+
+    .marginLogo{
+    margin-top: 0.5%;
+    width: 40px;
+  }
+  .NextButtonPopUp{
+  width: 120px;
+}
+ .buttonContainerPopUp
   {
-    top: 29vw;
+    top: 244px;
+    gap: 20px;
+    padding-right: 75px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+ .buttonContainerPopUp
+  {
+    top: 304px;
+    gap: 20px;
+    padding-right: 75px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+    .fontGoldenAgePoPup{
+    font-size: 16px;
+  }
+
+  .textContainerPopUp{
+    width: 290px;
   }
 
 }
 
-@media screen and (max-width: 544px) {
-  .buttonContainerPopUp
-  {
-    top: 154px;
-    gap: 0px;
-    padding-right: 50px;
+@media screen and (max-width: 1180px) {
+    .fontGoldenAgePoPup{
+    font-size: 14px;
   }
-  .MatrixButtons{
-    width: 60px;
+
+  .textContainerPopUp{
+    width: 270px;
   }
+
 }
+
+@media screen and (max-width: 900px) {
+    .fontGoldenAgePoPup{
+    font-size: 13px;
+  }
+
+  .textContainerPopUp{
+    width: 250px;
+  }
+
+}
+
+@media screen and (max-width: 780px) {
+    .fontGoldenAgePoPup{
+    font-size: 12px;
+  }
+
+  .textContainerPopUp{
+    width: 240px;
+  }
+
+}
+
+
+
+
 
 
 .fontGoldenAge{
@@ -158,14 +248,20 @@ body {
 
 .marginLogo{
   margin-top: 2.5%;
-  width: 60px;
+  width: 90px;
+  margin-left: 40px;
+}
+
+@media screen and (max-width: 701px) {
+
+  .marginLogo{
+    margin-top: 10px;
+    width: 60px;
+    margin-left: 0px;
+  }
 }
 
 @media screen and (max-width: 850px) {
-  .marginLogo{
-    margin-top: 0.5%;
-    width: 40px;
-  }
   .grad2
   {
     font-size: 2.5rem;

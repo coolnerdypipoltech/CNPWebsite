@@ -1,6 +1,6 @@
 ﻿import React, { useEffect, useState } from 'react'
 
-import FunLab from '../assets/Lobby/FunLab.webp'
+import FunLab from '../assets/Lobby/FunLab.png'
 import { useGlitch, GlitchHandle } from 'react-powerglitch'
 import CNP_1 from '../assets/Lobby/CNP/CNP_1.png'
 import CNP_2 from '../assets/Lobby/CNP/CNP_2.png'
@@ -14,7 +14,7 @@ export default function MatrixTv() {
   const images = [CNP_1, CNP_2, CNP_3, CNP_4, CNP_5]
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const firstTimeRef = React.useRef(true);
-  const glitch: GlitchHandle = useGlitch({ glitchTimeSpan: false })
+  const glitch: GlitchHandle = useGlitch({ glitchTimeSpan: false, shake: { velocity: 1, amplitudeX: 0.1 } })
   useEffect(() => {
     if(firstTimeRef.current) {
       firstTimeRef.current = false;
@@ -27,7 +27,7 @@ export default function MatrixTv() {
     glitch.startGlitch()
     setTimeout(() => {
       glitch.stopGlitch()
-    }, 500)
+    }, 250)
   }
 
   const handleNext = () => {
@@ -102,7 +102,8 @@ export default function MatrixTv() {
             src={FunLab}
             style={{
               position: 'absolute',
-              width: '20%',
+              width: '15%',
+              paddingBottom: "8vw",
               left: '50%',
               transform: 'translate(-50%, -80%)',
               display: 'block',

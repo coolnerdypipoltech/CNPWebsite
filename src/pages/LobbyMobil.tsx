@@ -209,12 +209,12 @@ export default function Lobby() {
 
         <ParallaxLayer style={{ zIndex: 3 }} offset={4.75} speed={1} factor={0.75}>
           <div className="centerDiv" style={{ justifyContent: 'flex-end', gap: '0px', paddingBottom: '2%' }}>
-            <img src={Brand_CNP} style={{ width: '10%' }} />
-            <p style={{ marginTop: '20px' }} className="fontGoldenAge">
-              △
-            </p>
-            <p className="fontGoldenAge">Scroll To Explore</p>
-          </div>
+              <img src={Brand_CNP} style={{ width: '13%' }} />
+              <p style={{ marginTop: '30px' }} className="fontGoldenAge">
+                △
+              </p>
+              <p className="fontGoldenAge" style={{fontSize: '12px'}}>Scroll Up To Explore</p>
+            </div>
         </ParallaxLayer>
 
         <ParallaxLayer style={{ zIndex: 4 }} offset={1.5} speed={0} factor={0.25}>

@@ -1,6 +1,8 @@
 ﻿import React, { useState } from 'react'
 
-import PopUp from '../assets/Lobby/PopUp.webp'
+import PopUp from '../assets/Lobby/PopUp.png'
+import buttonNext from '../assets/Lobby/Next_PopUp.png'
+import buttonBack from '../assets/Lobby/Back_PopUp.png'
 
 export default function PopUpComponent() {
   const texts = [
@@ -31,7 +33,7 @@ export default function PopUpComponent() {
           alignItems: 'center',
           position: 'absolute',
           zIndex: 5,
-          minWidth: "400px"
+          minWidth: "800px"
         }}
       >
         <div
@@ -47,28 +49,26 @@ export default function PopUpComponent() {
             src={PopUp}
             style={{
               width: '50%',
+              minWidth: '400px',
             }}
           />
 
           <div
+          className='textContainerPopUp'
             style={{
               position: 'absolute',
               top: '45%',
               left: '45%',
               transform: 'translate(-50%, -50%)',
-              width: '30vw',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              padding: '1rem',
             }}
           >
             <p
-              className="fontGoldenAge"
+              className="fontGoldenAgePoPup"
               style={{
-                color: 'black',
-                fontSize: '1vw',
                 textAlign: 'center',
                 lineHeight: '1.6',
                 margin: 0,
@@ -89,8 +89,10 @@ export default function PopUpComponent() {
                 position: "absolute",
               }}
             >
-              <button
+              <img
+                src={buttonBack}
                 onClick={handleBack}
+                className='NextButtonPopUp'
                 style={{
                   background: 'transparent',
                   color: 'white',
@@ -100,12 +102,12 @@ export default function PopUpComponent() {
                   fontWeight: 'bold',
                   borderColor: "transparent",
                 }}
-                className="fontGoldenAge"
               >
-                BACK
-              </button>
-              <button
+              </img>
+              <img
+                src={buttonNext}
                 onClick={handleNext}
+                className='NextButtonPopUp'
                 style={{
                   background: 'transparent',
                   color: 'white',
@@ -116,10 +118,8 @@ export default function PopUpComponent() {
                   borderColor: "transparent",
 
                 }}
-                className="fontGoldenAge"
               >
-                NEXT
-              </button>
+              </img>
             </div>
 
         </div>
