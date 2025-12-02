@@ -9,7 +9,7 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/CNPWebsite" element={<Main />} />
+        <Route path="/" element={<Main />} />
         <Route path="/CNPWebsite/dinogame" element={<DinoGame />} />
         <Route path="/CNPWebsite/test" element={<Test />} />
       </Routes>
