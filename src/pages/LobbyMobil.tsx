@@ -7,7 +7,7 @@ import city from '../assets/Lobby/City.webp'
 import Godzilla from '../assets/Lobby/Godzilla.webp'
 import Gundam from '../assets/Lobby/Gundam.webp'
 import edificios from '../assets/Lobby/edificios.webp'
-import PopUp from '../assets/Lobby/PopUp.webp'
+
 import Nube1 from '../assets/Lobby/Nube1.webp'
 import Nube2 from '../assets/Lobby/Nube2.webp'
 import Nube3 from '../assets/Lobby/Nube3.webp'
@@ -30,6 +30,7 @@ import Alien_Yoga from '../assets/Lobby/Alien_Yoga.webp'
 import Tapete from '../assets/Lobby/Tapete.webp'
 import LobbyStars from '../assets/Lobby/LobbyStars.webp'
 import Brand_CNP from '../assets/Lobby/Brand_CNP.webp'
+import PopUp from '../components/PopUp'
 
 export default function Lobby() {
   return (
@@ -72,9 +73,9 @@ export default function Lobby() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={0} speed={0} factor={1}>
+        <ParallaxLayer style={{ zIndex: 5 }} offset={0} speed={0} factor={1}>
           <div className="centerDiv">
-            <img src={PopUp} style={{ width: '50%', zIndex: 2, minWidth: '400px' }} />
+            <PopUp />
           </div>
         </ParallaxLayer>
 

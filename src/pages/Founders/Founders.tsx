@@ -18,6 +18,7 @@ import PantallasCNP from '../../assets/Founders/PantallasCNP.png'
 import PantallasError from '../../assets/Founders/PantallasError.png'
 import IMG_back from '../../assets/Founders/IMG_back.png'
 import textBubble from '../../assets/Founders/textBubble.webp'
+import Flecha from '../../assets/Culture/IMG_Flecha.webp'
 export default function Founders() {
   const pantallasImages = [Pantallas, PantallasError, Pantallas, PantallasCNP, Pantallas]
   const [currentPantallaIndex, setCurrentPantallaIndex] = useState(0)
@@ -110,9 +111,9 @@ export default function Founders() {
           }}
         />
 
-        <ParallaxLayer style={{ zIndex: 1 }} offset={0.1} speed={0.2} factor={0.25}>
-          <div className="centerDiv" style={{ justifyContent: 'flex-start' }}>
-            <p className='fontGoldenAge'>© 2025 Cool Nerdy People</p>
+        <ParallaxLayer style={{ zIndex: 1 }} offset={0.15} speed={0.2} factor={0.1}>
+          <div className="centerDiv" style={{ justifyContent: 'center' }}>
+            <p className='fontGoldenAge'> 2025 Cool Nerdy People ©</p>
           </div>
         </ParallaxLayer>
 
@@ -121,7 +122,7 @@ export default function Founders() {
             <img 
               src={pantallasImages[currentPantallaIndex]} 
               onClick={handlePantallasClick}
-              style={{ width: '65vw', position: 'relative', top: '40%', cursor: 'pointer' }} 
+              style={{ width: '65vw', position: 'relative', top: '10vw', cursor: 'pointer' }} 
             />
           </div>
         </ParallaxLayer>
@@ -193,9 +194,10 @@ export default function Founders() {
                       style={{ 
                         position: 'absolute',
                         color: 'black',
-                        fontSize: '1vw',
+                        fontSize: '10px',
                         textAlign: 'center',
                         width: '280px',
+                        padding: "10px",
                         paddingBottom: "30px"
                       }}
                     >
@@ -209,7 +211,7 @@ export default function Founders() {
                 <img 
                   src={founder2} 
                   onClick={handleFounder2Click}
-                  style={{ width: '15vw', position: "relative", top: "-10px", cursor: 'pointer' }} 
+                  style={{ width: '15vw', position: "relative", scale: "1 0.9 1", cursor: 'pointer' }} 
                 />
                 {showFounder2Text && (
                   <div style={{ position: 'absolute', top: '-25vh', marginLeft: "-220px", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -219,10 +221,12 @@ export default function Founders() {
                       style={{ 
                         position: 'absolute',
                         color: 'black',
-                        fontSize: '1vw',
+                        fontSize: '10px',
                         textAlign: 'center',
                         width: '280px',
-                        paddingBottom: "30px"
+                        padding: "10px",
+                        paddingBottom: "30px",
+                        
                       }}
                     >
                       Entrepreneur and business strategist with 10+ years of experience, building at the intersection of AI-native creativity, technology, and culture to shape the future of communication and entertainment.
@@ -246,6 +250,11 @@ export default function Founders() {
             <img src={ovni} style={{ width: '40vw', position: 'relative', left: '-40%' }} />
           </div>
         </ParallaxLayer>
+        <ParallaxLayer style={{ zIndex: 4 }} offset={3.5} speed={0.5} factor={0.25}>
+            <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
+              <img src={Flecha} style={{ height: '150px', position: 'relative', top: '0%' }} />
+            </div>
+          </ParallaxLayer>
 
         <ParallaxLayer style={{ zIndex: 3 }} offset={2.75} speed={0.1} factor={0.25}>
           <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>

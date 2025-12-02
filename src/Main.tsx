@@ -10,6 +10,9 @@ import FoundersMobil from './pages/Founders/FoundersMobil'
 import FoundersTablet from './pages/Founders/FoundersTablet'
 import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
 import logo from './assets/Lobby/Brand_CNP.webp'
+import Email from "./assets/Main/Email.png"
+import Instagram from "./assets/Main/Instagram.png"
+import Linkedin from "./assets/Main/LinkedIn.png"
 export default function Main() {
   const parallax = useRef<IParallax>(null!)
 
@@ -74,22 +77,26 @@ export default function Main() {
             {tempLobby}
           </ParallaxLayer>
           <ParallaxLayer sticky={{ start: 0, end: cultureFactor + lobbyFactor + founderFactor - 1.2 }} style={{ alignItems: 'center', justifyContent: 'flex-end', height: "120px" }}>
-            <img src={logo} className='marginLogo' style={{ width: '10%', minWidth: '50px', maxWidth: "75px", marginLeft: '20px' }} />
-        </ParallaxLayer>
+            <img src={logo} className='marginLogo' style={{ marginLeft: '26px' }} />
+            
+          </ParallaxLayer>
         </Parallax>
       </div>
       <div className="overlayMenu">
-        <p onClick={() => parallax.current.scrollTo(cultureFactor + lobbyFactor + founderFactor)} className="fontGoldenAgeOverlay">Home</p>
-        <p onClick={() => parallax.current.scrollTo(founderFactor + cultureFactor)} className="fontGoldenAgeOverlay">Culture</p>
-        <p onClick={() => parallax.current.scrollTo(founderFactor - 0.2)} className="fontGoldenAgeOverlay">Work</p>
-        <p onClick={() => parallax.current.scrollTo(0)} className="fontGoldenAgeOverlay">Founders</p>
+        <p onClick={() => parallax.current.scrollTo(cultureFactor + lobbyFactor + founderFactor)} className="fontGoldenAgeOverlay">· Home·</p>
+        <p onClick={() => parallax.current.scrollTo(founderFactor + cultureFactor)} className="fontGoldenAgeOverlay">Culture·</p>
+        <p onClick={() => parallax.current.scrollTo(founderFactor - 0.2)} className="fontGoldenAgeOverlay">Work·</p>
+        <p onClick={() => parallax.current.scrollTo(0)} className="fontGoldenAgeOverlay">Founders ·</p>
       </div>
-      <div className='sideMenuOverlay'>
-        <img src={logo} style={{width: '5%', minWidth: '30px', maxWidth: "50px"}} />
-        <img src={logo} style={{width: '5%', minWidth: '30px', maxWidth: "50px"}} />
-        <img src={logo} style={{width: '5%', minWidth: '30px', maxWidth: "50px"}} />
-        <img src={logo} style={{width: '5%', minWidth: '30px', maxWidth: "50px"}} />
-      </div>
+
+      <div className='sideMenuOverlay' style={{position: "absolute"}}>
+              <img src={Linkedin} style={{width: '5%', minWidth: '30px', maxWidth: "50px"}} />
+              <img src={Instagram} style={{width: '5%', minWidth: '30px', maxWidth: "50px"}} />
+              <img src={Email} style={{width: '5%', minWidth: '30px', maxWidth: "50px"}} />
+            
+            
+            </div>
+      
     </>
   )
 }

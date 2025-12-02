@@ -227,8 +227,8 @@ export default function CultureMobil() {
 
         <ParallaxLayer style={{ zIndex: 4 }} offset={1.55} speed={0.3} factor={0.25}>
           <div className="centerDiv" style={{alignItems: "flex-end", paddingRight: "15%", justifyContent: "flex-end", textAlign: "center"}}>
-            <p className='fontGoldenAge' style={{ color: 'white', fontSize: "14px" }}>Think human</p>
-            <p className='fontGoldenAge' style={{ color: 'white', fontSize: "14px" }}>act AI native</p>
+            <p className='grad1' style={{ color: 'white', fontSize: "14px" }}>Think human</p>
+            <p className='grad1' style={{ color: 'white', fontSize: "14px" }}>act AI native</p>
           </div>
         </ParallaxLayer>
 
@@ -285,8 +285,8 @@ export default function CultureMobil() {
 
         <ParallaxLayer style={{ zIndex: 2 }} offset={2.6} speed={0.3} factor={0.25}>
           <div className="centerDiv" style={{alignItems: "flex-start", paddingLeft: "10%", paddingTop: "20px",  justifyContent: "flex-start"}}>
-            <p className='fontGoldenAge' style={{ color: 'white', fontSize: "14px" }}>Designing a smarter</p>
-            <p className='fontGoldenAge' style={{ color: 'white', fontSize: "14px" }}>future together</p>
+            <p className='grad1' style={{ color: 'white', fontSize: "14px" }}>Designing a smarter</p>
+            <p className='grad1' style={{ color: 'white', fontSize: "14px" }}>future together</p>
           </div>
         </ParallaxLayer>
 

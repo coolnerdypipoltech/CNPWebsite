@@ -35,11 +35,14 @@ body {
   display: flex;
   gap: 20px;
   justify-content: center;
-  top: 5%;
+  top: 6%;
+
   color: #4fc3f7;
   width: 100%;
   text-decoration: none;
 }
+
+
 
 .sideMenuOverlay
 {
@@ -53,7 +56,6 @@ body {
   right: 20px;
   align-items: flex-end;
   color: #4fc3f7;
-  font-size: 4vw;
   text-decoration: none;
 }
 
@@ -61,27 +63,26 @@ body {
 
 .fontGoldenAgeOverlay{
   font-family: 'Golden Age', sans-serif;
-  color: #4fc3f7;
+  color: #ffffff;
   margin: 0px;
   font-size: 24px;
   text-decoration: none;
 }
 
 .fontGoldenAgeOverlay:hover {
-  color: #ffffff;
+  color: #4fc3f7;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 675px) {
   .fontGoldenAgeOverlay
   {
     font-size: 2.5rem;
   }
   
 }
-
-@media screen and (max-width: 649px) {
+@media screen and (max-width: 674px) {
   .fontGoldenAgeOverlay
   {
     font-size: 5vw;
@@ -89,18 +90,35 @@ body {
   
 }
 
-.marginLogo{
-  margin-top: 1%;
+
+.buttonContainerPopUp{
+  top: 30vw;
+  padding-right: 10vw;
+  gap: 2vw;
+}
+.MatrixButtons{
+  width: 100px;
 }
 
-@media screen and (max-width: 820px) {
-  .marginLogo
+@media screen and (max-width: 674px) {
+  .buttonContainerPopUp
   {
-    margin-top: 75px;
+    top: 29vw;
   }
-  
+
 }
 
+@media screen and (max-width: 544px) {
+  .buttonContainerPopUp
+  {
+    top: 154px;
+    gap: 0px;
+    padding-right: 50px;
+  }
+  .MatrixButtons{
+    width: 60px;
+  }
+}
 
 
 .fontGoldenAge{
@@ -109,3 +127,65 @@ body {
   margin: 0px;
   font-size: 24px;
 }
+
+
+.grad1 {
+  font-family: 'Golden Age', sans-serif;
+    background: red;
+    background: -webkit-linear-gradient(left, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
+    background: -o-linear-gradient(right, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
+    background: -moz-linear-gradient(right, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
+    background: linear-gradient(to right, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0px;
+  font-size: 38px;
+}
+
+.grad2 {
+  font-family: 'Golden Age', sans-serif;
+    background: red;
+    background: -webkit-linear-gradient(left, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
+    background: -o-linear-gradient(right, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
+    background: -moz-linear-gradient(right, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
+    background: linear-gradient(to right, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0px;
+    font-size: 24px;
+    gap: 20px;
+} 
+
+.marginLogo{
+  margin-top: 2.5%;
+  width: 60px;
+}
+
+@media screen and (max-width: 850px) {
+  .marginLogo{
+    margin-top: 0.5%;
+    width: 40px;
+  }
+  .grad2
+  {
+    font-size: 2.5rem;
+  }
+  .overlayMenu
+  {
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 649px) {
+  .grad2
+  {
+    font-size: 5vw;
+    
+  }
+  .overlayMenu
+  {
+    gap: 10px;
+  }
+}
+
+.grad2:hover{ -webkit-transform: scale(1.2); }

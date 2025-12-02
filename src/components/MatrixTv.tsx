@@ -1,19 +1,41 @@
-﻿import React, { useState } from 'react'
+﻿import React, { useEffect, useState } from 'react'
 
-import Matrix from '../assets/Lobby/Matrix.webp'
 import FunLab from '../assets/Lobby/FunLab.webp'
-// @ts-ignore
-import Crawl from './Crawl'
+import { useGlitch, GlitchHandle } from 'react-powerglitch'
+import CNP_1 from '../assets/Lobby/CNP/CNP_1.png'
+import CNP_2 from '../assets/Lobby/CNP/CNP_2.png'
+import CNP_3 from '../assets/Lobby/CNP/CNP_3.png'
+import CNP_4 from '../assets/Lobby/CNP/CNP_4.png'
+import CNP_5 from '../assets/Lobby/CNP/CNP_5.png' 
+import Button_back from '../assets/Lobby/Button_back.png'
+import Button_Next from '../assets/Lobby/Button_Next.png'
 
 export default function MatrixTv() {
-  const [showCrawl, setShowCrawl] = useState(false)
-
-  const handleTextClick = () => {
-    setShowCrawl(true)
-
+  const images = [CNP_1, CNP_2, CNP_3, CNP_4, CNP_5]
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const firstTimeRef = React.useRef(true);
+  const glitch: GlitchHandle = useGlitch({ glitchTimeSpan: false })
+  useEffect(() => {
+    if(firstTimeRef.current) {
+      firstTimeRef.current = false;
+      glitch
+      return;
+    }
+    startGlitchAndStopWithTimeout()
+  })
+  const startGlitchAndStopWithTimeout = () => {
+    glitch.startGlitch()
     setTimeout(() => {
-      setShowCrawl(false)
-    }, 45000)
+      glitch.stopGlitch()
+    }, 500)
+  }
+
+  const handleNext = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % images.length)
+  }
+
+  const handleBack = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length)
   }
 
   return (
@@ -37,36 +59,46 @@ export default function MatrixTv() {
             width: '100%',
           }}
         >
-          {!showCrawl && (
-            <p
-              onClick={handleTextClick}
-              style={{
-                position: 'absolute',
-                top: '35%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                fontSize: '4vw',
-                color: '#00B8E6',
-                textAlign: 'center',
-                zIndex: 2,
-                cursor: 'pointer',
-              }}
-              className="fontGoldenAge"
-            >
-              ¿What is CNP?
-            </p>
-          )}
-
-          {showCrawl && <Crawl title="Episode IV" subTitle="A New Hope" />}
-
           <img
-            src={Matrix}
+            ref={glitch.ref}
+            src={images[currentImageIndex]}
             style={{
               width: '100%',
             }}
           />
 
-          <img
+
+
+          <div
+            style={{
+              position: 'absolute',
+              bottom: '19vw',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              display: 'flex',
+              gap: '80px',
+              alignItems: 'center',
+            }}
+          >
+            <img
+              src={Button_back}
+              onClick={handleBack}
+              className='MatrixButtons'
+              style={{
+                cursor: 'pointer',
+              }}
+            />
+            <img
+              src={Button_Next}
+              onClick={handleNext}
+              className='MatrixButtons'
+              style={{
+                cursor: 'pointer',
+              }}
+            />
+          </div>
+
+                    <img
             src={FunLab}
             style={{
               position: 'absolute',

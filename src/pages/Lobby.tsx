@@ -5,7 +5,7 @@ import city from '../assets/Lobby/City.webp'
 import Godzilla from '../assets/Lobby/Godzilla.webp'
 import Gundam from '../assets/Lobby/Gundam.webp'
 import edificios from '../assets/Lobby/edificios.webp'
-import PopUp from '../assets/Lobby/PopUp.webp'
+
 import Nube1 from '../assets/Lobby/Nube1.webp'
 import Nube2 from '../assets/Lobby/Nube2.webp'
 import Nube4 from '../assets/Lobby/Nube4.webp'
@@ -28,6 +28,7 @@ import Tapete from '../assets/Lobby/Tapete.webp'
 import LobbyStars from '../assets/Lobby/LobbyStars.webp'
 import Brand_CNP from '../assets/Lobby/Brand_CNP.webp'
 import MatrixTv from '../components/MatrixTv'
+import PopUp from "../components/PopUp"
 export default function Lobby() {
   return (
     <>
@@ -111,7 +112,7 @@ export default function Lobby() {
 
           <ParallaxLayer offset={0} speed={0} factor={2}>
             <div className="centerDiv" style={{ justifyContent: 'flex-start' }}>
-              <img src={PopUp} style={{ width: '50%', paddingTop: '8%', zIndex: 2 }} />
+              <PopUp />
             </div>
           </ParallaxLayer>
 
