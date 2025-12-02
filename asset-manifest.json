@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/CNPWebsite/static/css/main.418083f8.css",
-    "main.js": "/CNPWebsite/static/js/main.95a65c20.js",
+    "main.css": "/CNPWebsite/static/css/main.24a71b8e.css",
+    "main.js": "/CNPWebsite/static/js/main.54da659f.js",
+    "static/media/CNP_1.png": "/CNPWebsite/static/media/CNP_1.ed2b9812ab0019705a5f.png",
     "static/media/CNP_4.png": "/CNPWebsite/static/media/CNP_4.2d85c7acf4041492dcc4.png",
+    "static/media/CNP_3.png": "/CNPWebsite/static/media/CNP_3.9426edb29f204a3424ec.png",
     "static/media/CNP_2.png": "/CNPWebsite/static/media/CNP_2.be703ada27287181fe7d.png",
-    "static/media/CNP_1.png": "/CNPWebsite/static/media/CNP_1.dfbb9a4ecc2a173e35f6.png",
-    "static/media/CNP_3.png": "/CNPWebsite/static/media/CNP_3.606fca721bde5a079294.png",
-    "static/media/CNP_5.png": "/CNPWebsite/static/media/CNP_5.d72af79129d551257e87.png",
+    "static/media/CNP_5.png": "/CNPWebsite/static/media/CNP_5.b400995271e38eafd012.png",
     "static/media/PantallasCNP.png": "/CNPWebsite/static/media/PantallasCNP.905529557ad65a3863ae.png",
     "static/media/City.webp": "/CNPWebsite/static/media/City.b38fe6999260bac6804d.webp",
     "static/media/IMG_Background.webp": "/CNPWebsite/static/media/IMG_Background.550fe3265f8ecad24a35.webp",
@@ -27,17 +27,18 @@
     "static/media/workstation4.webp": "/CNPWebsite/static/media/workstation4.c3bbe6fceb29530edbd6.webp",
     "static/media/Edificio1.webp": "/CNPWebsite/static/media/Edificio1.9fea5873cd536d91ddd4.webp",
     "static/media/Edificio2.webp": "/CNPWebsite/static/media/Edificio2.df69761afc31e65fe605.webp",
+    "static/media/FunLab.png": "/CNPWebsite/static/media/FunLab.71d5b232104c6d178bac.png",
     "static/media/Globe1.webp": "/CNPWebsite/static/media/Globe1.266471a5e334c032cdb2.webp",
     "static/media/PingPong.webp": "/CNPWebsite/static/media/PingPong.9e76379becd5e6b15b7c.webp",
     "static/media/Gundam.webp": "/CNPWebsite/static/media/Gundam.25b6d4a2d40cafa468c0.webp",
     "static/media/IMG_PISO.webp": "/CNPWebsite/static/media/IMG_PISO.545aa0268fcd85c1c698.webp",
+    "static/media/PopUp.png": "/CNPWebsite/static/media/PopUp.857be4f9c51bb8fb1d1a.png",
     "static/media/IMG_CAT.webp": "/CNPWebsite/static/media/IMG_CAT.ef0932465f001f78c743.webp",
     "static/media/PantallasError.png": "/CNPWebsite/static/media/PantallasError.946bb476cc52d91bbe56.png",
     "static/media/Godzilla.webp": "/CNPWebsite/static/media/Godzilla.fb3a139ae43d75c48c28.webp",
     "static/media/IMG_back.png": "/CNPWebsite/static/media/IMG_back.d28b837257f300816873.png",
     "static/media/IMG_Blackhorse.webp": "/CNPWebsite/static/media/IMG_Blackhorse.0937e017396c0d9834c5.webp",
     "static/media/IMG_ANGEL.webp": "/CNPWebsite/static/media/IMG_ANGEL.a3cfaf23ec47f3dadb83.webp",
-    "static/media/PopUp.webp": "/CNPWebsite/static/media/PopUp.65041fdb79b542693e75.webp",
     "static/media/desk.webp": "/CNPWebsite/static/media/desk.b086764296d52415992b.webp",
     "static/media/LeftSideCnp.webp": "/CNPWebsite/static/media/LeftSideCnp.cd898911741069b19f1a.webp",
     "static/media/spaceship2.webp": "/CNPWebsite/static/media/spaceship2.84eae99652a670a0eb0b.webp",
@@ -50,7 +51,6 @@
     "static/media/Alien_Yoga.webp": "/CNPWebsite/static/media/Alien_Yoga.df431ca0de0a5162d74b.webp",
     "static/media/CoffeBook.webp": "/CNPWebsite/static/media/CoffeBook.6c4d6c4c682f29a7d631.webp",
     "static/media/nyanCat.webp": "/CNPWebsite/static/media/nyanCat.2013a4cab4d83e1fdc12.webp",
-    "static/media/FunLab.webp": "/CNPWebsite/static/media/FunLab.fa434fcf77e11971be96.webp",
     "static/media/Brand_CNP.webp": "/CNPWebsite/static/media/Brand_CNP.6f862eb274b3f923c08f.webp",
     "static/media/IMG_Marco.webp": "/CNPWebsite/static/media/IMG_Marco.18133c930af453bbbf72.webp",
     "static/media/Painting.webp": "/CNPWebsite/static/media/Painting.447bba1f7d635aebd13b.webp",
@@ -73,11 +73,11 @@
     "static/media/Nube5.webp": "/CNPWebsite/static/media/Nube5.953327d52087107a46d0.webp",
     "static/media/IMG_Flecha.webp": "/CNPWebsite/static/media/IMG_Flecha.58465e9a8b7b171ae77d.webp",
     "index.html": "/CNPWebsite/index.html",
-    "main.418083f8.css.map": "/CNPWebsite/static/css/main.418083f8.css.map",
-    "main.95a65c20.js.map": "/CNPWebsite/static/js/main.95a65c20.js.map"
+    "main.24a71b8e.css.map": "/CNPWebsite/static/css/main.24a71b8e.css.map",
+    "main.54da659f.js.map": "/CNPWebsite/static/js/main.54da659f.js.map"
   },
   "entrypoints": [
-    "static/css/main.418083f8.css",
-    "static/js/main.95a65c20.js"
+    "static/css/main.24a71b8e.css",
+    "static/js/main.54da659f.js"
   ]
 }
