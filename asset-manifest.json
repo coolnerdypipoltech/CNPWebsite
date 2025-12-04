@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/CNPWebsite/static/css/main.2da0e4d7.css",
-    "main.js": "/CNPWebsite/static/js/main.a9c9747e.js",
+    "main.js": "/CNPWebsite/static/js/main.ebc671f7.js",
     "static/media/Mundo_CNP.png": "/CNPWebsite/static/media/Mundo_CNP.dde56246a2121138950e.png",
     "static/media/PantallasCNP.png": "/CNPWebsite/static/media/PantallasCNP.905529557ad65a3863ae.png",
     "static/media/City.webp": "/CNPWebsite/static/media/City.b38fe6999260bac6804d.webp",
+    "static/media/IMG_FIGHT.webp": "/CNPWebsite/static/media/IMG_FIGHT.977252ccfb45f7669757.webp",
     "static/media/background.png": "/CNPWebsite/static/media/background.2fa99679a203cdc6eb34.png",
     "static/media/Culture.png": "/CNPWebsite/static/media/Culture.3dedd0640c69f378d397.png",
     "static/media/cnp_2.webp": "/CNPWebsite/static/media/cnp_2.1e7c29876f8ed7c17c0a.webp",
@@ -26,7 +27,6 @@
     "static/media/spaceship1.webp": "/CNPWebsite/static/media/spaceship1.dc679a3e4f325a1ce1ff.webp",
     "static/media/Culture_3.webp": "/CNPWebsite/static/media/Culture_3.d01ae06924335dfd47a5.webp",
     "static/media/table.webp": "/CNPWebsite/static/media/table.3c6c6f509c6fddcdb082.webp",
-    "static/media/IMG_FIGHT.webp": "/CNPWebsite/static/media/IMG_FIGHT.826bef90f10db4a86c8c.webp",
     "static/media/workstation3.webp": "/CNPWebsite/static/media/workstation3.09a77918a1edd30a657f.webp",
     "static/media/Culture_7.webp": "/CNPWebsite/static/media/Culture_7.1bccbd08bf5d085b94c8.webp",
     "static/media/Culture_6.webp": "/CNPWebsite/static/media/Culture_6.b6e8ea6f0f7b8df022c3.webp",
@@ -84,10 +84,10 @@
     "index.html": "/CNPWebsite/index.html",
     "static/media/IMG_Flecha.webp": "/CNPWebsite/static/media/IMG_Flecha.58465e9a8b7b171ae77d.webp",
     "main.2da0e4d7.css.map": "/CNPWebsite/static/css/main.2da0e4d7.css.map",
-    "main.a9c9747e.js.map": "/CNPWebsite/static/js/main.a9c9747e.js.map"
+    "main.ebc671f7.js.map": "/CNPWebsite/static/js/main.ebc671f7.js.map"
   },
   "entrypoints": [
     "static/css/main.2da0e4d7.css",
-    "static/js/main.a9c9747e.js"
+    "static/js/main.ebc671f7.js"
   ]
 }
