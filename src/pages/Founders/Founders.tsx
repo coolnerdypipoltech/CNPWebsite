@@ -230,10 +230,10 @@ export default function Founders() {
               </div>
               
               {!showFounder2Text && (<div
-                className="floating "
-                style={{ width: '30vw', height: "20px", position: 'relative', top: '-27vw', left: '-9.5vw' }}
+                className="selectHover"
+                style={{ width: '30vw', height: "20px", position: 'relative', top: '-26vw', left: '-9.5vw' }}
               >
-                <img onClick={handleFounder2Click}  src={select} style={{ width: '50px' }} />
+                <img onClick={handleFounder2Click} className="floating "  src={select} style={{ width: '50px' }} />
               </div>)}
 
               {showFounder2Text && (<div
