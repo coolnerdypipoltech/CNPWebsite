@@ -17,7 +17,7 @@ import Flecha from './assets/Culture/IMG_Flecha.webp'
 export default function Main() {
   const parallax = useRef<IParallax>(null!)
   const mobileFlag = useRef(false);
-  
+
   const isMobileDevice = () => {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   };
@@ -29,9 +29,8 @@ export default function Main() {
   let cultureFactor = 5.5
   let founderFactor = 6.5
   let findCultureOffset = 5
-  console.log(isMobileDevice())
-  if (window.innerWidth < 550) {
-    console.log("ismobil")
+
+  if (window.innerWidth < 550 && isMobileDevice()) {
     mobileFlag.current = true
     lobbyFactor = 2.75
     cultureFactor = 4
