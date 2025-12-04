@@ -48,7 +48,7 @@ export default function Lobby() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 3 }} offset={4.5} speed={0.3} factor={0.5}>
+        <ParallaxLayer style={{ zIndex: 3 }} offset={4.4} speed={0.3} factor={0.5}>
           <div className="centerDiv" style={{ justifyContent: 'flex-start', gap: '0px', paddingTop: '4%' }}>
             <img src={Brand_CNP} style={{ width: '13%' }} />
             <p style={{ marginTop: '30px' }} className="fontGoldenAgeOG">
@@ -60,7 +60,7 @@ export default function Lobby() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 2 }}  offset={4.5} speed={0.3} factor={0.5}>
+        <ParallaxLayer style={{ zIndex: 2 }}  offset={4.4} speed={0.3} factor={0.5}>
           <div className="splitCenterDiv" style={{ alignItems: 'flex-start', gap: '0px', paddingBottom: '0%' }}>
             <img
               src={workstation1}
