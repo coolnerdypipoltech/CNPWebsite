@@ -1,18 +1,21 @@
 ﻿import React, { useEffect, useState } from 'react'
 
 import { useGlitch, GlitchHandle } from 'react-powerglitch'
-import CNP_1 from '../assets/Lobby/CNP/cnp_1.webp'
-import CNP_2 from '../assets/Lobby/CNP/cnp_2.webp'
-import CNP_3 from '../assets/Lobby/CNP/cnp_3.webp'
-import CNP_4 from '../assets/Lobby/CNP/cnp_4.webp'
-import CNP_5 from '../assets/Lobby/CNP/cnp_5.webp'
-import CNP_6 from '../assets/Lobby/CNP/cnp_6.webp'
-import CNP_7 from '../assets/Lobby/CNP/cnp_7.webp'
+import CNP_1 from '../assets/Lobby/CNP/cnp_1.png'
+import CNP_2 from '../assets/Lobby/CNP/cnp_2.png'
+import CNP_3 from '../assets/Lobby/CNP/cnp_3.png'
+import CNP_4 from '../assets/Lobby/CNP/cnp_4.png'
+import CNP_5 from '../assets/Lobby/CNP/cnp_5.png'
+import CNP_6 from '../assets/Lobby/CNP/cnp_6.png'
+import CNP_7 from '../assets/Lobby/CNP/cnp_7.png'
+import CNP_8 from '../assets/Lobby/CNP/cnp_8.png'
+import CNP_9 from '../assets/Lobby/CNP/cnp_9.png'
+import CNP_10 from '../assets/Lobby/CNP/cnp_10.png'
 import Button_back from '../assets/Lobby/Button_back.png'
 import Button_Next from '../assets/Lobby/Button_Next.png'
 
 export default function MatrixTv() {
-  const images = [CNP_1, CNP_2, CNP_3, CNP_4, CNP_5, CNP_6, CNP_7]
+  const images = [CNP_1, CNP_2, CNP_3, CNP_4, CNP_5, CNP_6, CNP_7, CNP_8, CNP_9, CNP_10]
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const firstTimeRef = React.useRef(true);
   const glitch: GlitchHandle = useGlitch({ glitchTimeSpan: false, shake: { velocity: 1, amplitudeX: 0.1 } })
