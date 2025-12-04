@@ -13,7 +13,7 @@ import founder2 from '../../assets/Founders/Andrea.webp'
 import table from '../../assets/Founders/table.webp'
 import tv from '../../assets/Founders/Tv.webp'
 import IMG_back from '../../assets/Founders/IMG_back.png'
-import textBubble from '../../assets/Founders/textBubble.webp'
+import textBubble from '../../assets/Founders/Mobil/Cuadro_dialogo.webp'
 import Flecha from '../../assets/Culture/IMG_Flecha.webp'
 import select from '../../assets/Founders/Select.webp'
 import Screens from '../../components/Screens'
@@ -152,24 +152,24 @@ export default function Founders() {
                   <div
                     style={{
                       position: 'absolute',
-                      top: '-22vh',
+                      top: '-40vh',
+                      marginRight: '-200px',
                       display: 'flex',
-                      marginRight: '-330px',
                       justifyContent: 'center',
                       alignItems: 'center',
                     }}
                   >
-                    <img src={textBubble} style={{ width: '450px', scale: '-1 1 1' }} />
+                    <img src={textBubble} style={{ width: '300px'}} />
                     <p
                       className="fontGoldenAgeOverlay"
                       style={{
                         position: 'absolute',
-                        color: 'black',
-                        fontSize: '13px',
+                        color: 'white',
+                        fontSize: '17px',
                         textAlign: 'center',
-                        width: '400px',
-                        padding: '10px',
-                        paddingBottom: '40px',
+                        width: '300px',
+                        padding: '30px',
+                        paddingBottom: '55px',
                       }}
                     >
                       I’m a creative technologist, storyteller, and modern polímata with 25 years exploring the intersection of culture, technology, and human behavior. I turn complexity into experiences people want to live and teach the next generation how to use AI with purpose.
@@ -201,24 +201,24 @@ export default function Founders() {
                   <div
                     style={{
                       position: 'absolute',
-                      top: '-20vh',
-                      marginLeft: '-330px',
+                      top: '-40vh',
+                      marginLeft: '-200px',
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
                     }}
                   >
-                    <img src={textBubble} style={{ width: '450px' }} />
+                    <img src={textBubble} style={{ width: '300px', scale: "-1 1 1" }} />
                     <p
                       className="fontGoldenAgeOverlay"
                       style={{
                         position: 'absolute',
-                        color: 'black',
-                        fontSize: '13px',
+                        color: 'white',
+                        fontSize: '17px',
                         textAlign: 'center',
-                        width: '400px',
-                        padding: '10px',
-                        paddingBottom: '40px',
+                        width: '300px',
+                        padding: '30px',
+                        paddingBottom: '55px',
                       }}
                     >
                       As Founder & CEO (aka Chief Energy Officer) at CNP, I lead with curiosity, creativity, and heart, shaping how brands and people connect through AI-native creativity, technology and entertainment. At the core of everything I build is a belief that performance and impact should always coexist with kindness, purpose, and authenticity.
