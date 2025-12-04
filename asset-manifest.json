@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/CNPWebsite/static/css/main.fc532808.css",
-    "main.js": "/CNPWebsite/static/js/main.a34c3aed.js",
-    "static/media/cnp_6.png": "/CNPWebsite/static/media/cnp_6.e36916641d3c26758928.png",
-    "static/media/cnp_2.png": "/CNPWebsite/static/media/cnp_2.4577081f62cf6dc49536.png",
-    "static/media/cnp_4.png": "/CNPWebsite/static/media/cnp_4.91ac6dd6880a2384c0e7.png",
-    "static/media/cnp_7.png": "/CNPWebsite/static/media/cnp_7.9d5012227160ca613d71.png",
-    "static/media/cnp_5.png": "/CNPWebsite/static/media/cnp_5.bf98ad7ce5399aa383a1.png",
-    "static/media/cnp_8.png": "/CNPWebsite/static/media/cnp_8.0c998307b51425b0002c.png",
-    "static/media/cnp_3.png": "/CNPWebsite/static/media/cnp_3.66ae5c9f55f78c88823a.png",
+    "main.js": "/CNPWebsite/static/js/main.ea87d89a.js",
+    "static/media/cnp_2.png": "/CNPWebsite/static/media/cnp_2.62d4fdbff45109ff6bf9.png",
+    "static/media/cnp_7.png": "/CNPWebsite/static/media/cnp_7.e36916641d3c26758928.png",
+    "static/media/cnp_3.png": "/CNPWebsite/static/media/cnp_3.4577081f62cf6dc49536.png",
+    "static/media/cnp_5.png": "/CNPWebsite/static/media/cnp_5.91ac6dd6880a2384c0e7.png",
+    "static/media/cnp_8.png": "/CNPWebsite/static/media/cnp_8.9d5012227160ca613d71.png",
+    "static/media/cnp_6.png": "/CNPWebsite/static/media/cnp_6.bf98ad7ce5399aa383a1.png",
+    "static/media/cnp_9.png": "/CNPWebsite/static/media/cnp_9.0c998307b51425b0002c.png",
+    "static/media/cnp_4.png": "/CNPWebsite/static/media/cnp_4.66ae5c9f55f78c88823a.png",
     "static/media/cnp_1.png": "/CNPWebsite/static/media/cnp_1.369abf72a35f3aeef8e8.png",
-    "static/media/cnp_9.png": "/CNPWebsite/static/media/cnp_9.ba341ca70783b7c90d0c.png",
     "static/media/cnp_10.png": "/CNPWebsite/static/media/cnp_10.e943cfd126ecbbc640cb.png",
     "static/media/Mundo_CNP.png": "/CNPWebsite/static/media/Mundo_CNP.dde56246a2121138950e.png",
     "static/media/PantallasCNP.png": "/CNPWebsite/static/media/PantallasCNP.905529557ad65a3863ae.png",
@@ -87,10 +87,10 @@
     "index.html": "/CNPWebsite/index.html",
     "static/media/IMG_Flecha.webp": "/CNPWebsite/static/media/IMG_Flecha.58465e9a8b7b171ae77d.webp",
     "main.fc532808.css.map": "/CNPWebsite/static/css/main.fc532808.css.map",
-    "main.a34c3aed.js.map": "/CNPWebsite/static/js/main.a34c3aed.js.map"
+    "main.ea87d89a.js.map": "/CNPWebsite/static/js/main.ea87d89a.js.map"
   },
   "entrypoints": [
     "static/css/main.fc532808.css",
-    "static/js/main.a34c3aed.js"
+    "static/js/main.ea87d89a.js"
   ]
 }
