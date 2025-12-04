@@ -107,14 +107,14 @@ export default function Founders() {
 
         <ParallaxLayer style={{ zIndex: 3 }} offset={0.9} speed={0}factor={0.5}>
           <div className="centerDiv" style={{ justifyContent: 'flex-end', position: 'relative' }}>
-            <div className="splitCenterDiv" style={{ width: '30vw', position: 'relative', top: '38%', left: "-2.5vw" }}>
+            <div className="splitCenterDiv" style={{ width: '50vw', position: 'relative', top: '35%', left: "-5vw", }}>
               <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <img src={founder1} onClick={handleFounder1Click} style={{ width: '15vw', cursor: 'pointer' }} />
+                <img src={founder1} onClick={handleFounder1Click} style={{ width: '25vw', cursor: 'pointer' }} />
                 {showFounder1Text && (
                   <div
                     style={{
                        position: 'absolute',
-                      top: '-29vh',
+                      top: '-27vh',
                       marginRight: '-130px',
                       display: 'flex',
                       justifyContent: 'center',
@@ -142,23 +142,23 @@ export default function Founders() {
               </div>
               {!showFounder1Text && (<div
                 className="splitCenterDiv"
-                style={{ width: '30vw', height: "20px", position: 'relative', top: '-15vw', left: '-10vw' }}
+                style={{ width: '30vw', height: "20px", position: 'relative', top: '-25vw', left: '-20vw' }}
               >
-                <img className="floating "  src={select} style={{ width: '20px' }} />
+                <img onClick={handleFounder1Click} className="floating "  src={select} style={{ width: '45px' }} />
               </div>)}
 
               {showFounder1Text && (<div
                 className="splitCenterDiv"
-                style={{ width: '30vw', height: "20px", position: 'relative', top: '-15vw', left: '-10vw' }}
+                style={{ width: '30vw', height: "20px", position: 'relative', top: '-15vw', left: '-1vw' }}
               >
-                <div style={{ minWidth: '20px' }} />
+                <div style={{ minWidth: '45px' }} />
               </div>)}
 
               <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <img
                   src={founder2}
                   onClick={handleFounder2Click}
-                  style={{ width: '15vw', position: 'relative', scale: '1 0.9 1', cursor: 'pointer' }}
+                  style={{ width: '25vw', position: 'relative', scale: '1 0.9 1', cursor: 'pointer' }}
                 />
                 {showFounder2Text && (
                   <div
@@ -193,19 +193,19 @@ export default function Founders() {
               
               {!showFounder2Text && (<div
                 className="splitCenterDiv"
-                style={{ width: '30vw', height: "20px", position: 'relative', top: '-15vw', left: '-10vw' }}
+                style={{ width: '30vw', height: "20px", position: 'relative', top: '-25vw', left: '-20vw' }}
               >
-                <img className="floating "  src={select} style={{ width: '20px' }} />
+                <img onClick={handleFounder2Click} className="floating "  src={select} style={{ width: '45px' }} />
               </div>)}
 
               {showFounder2Text && (<div
                 className="splitCenterDiv"
                 style={{ width: '30vw', height: "20px", position: 'relative', top: '-15vw', left: '-10vw' }}
               >
-                <div style={{ minWidth: '20px' }} />
+                <div style={{ minWidth: '45px' }} />
               </div>)}
             </div>
-            <img src={desk} style={{ width: '60vw' }} />
+            <img src={desk} style={{ width: '80vw' }} />
             <p
               className="fontGoldenAgeOverlay"
               style={{ color: 'white', fontSize: '40px', position: 'relative', top: '20%' }}

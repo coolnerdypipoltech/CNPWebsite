@@ -158,7 +158,7 @@ export default function CultureMobil() {
         <ParallaxLayer style={{ zIndex: 4 }} offset={0} speed={0} factor={0.2}>
           <div
             className="centerDiv"
-            style={{ alignItems: 'flex-end', paddingRight: '15%', justifyContent: 'flex-end', textAlign: 'center' }}
+            style={{ alignItems: 'flex-end', paddingRight: '5%', justifyContent: 'flex-end', textAlign: 'center', paddingBottom: "0%" }}
           >
             <p className="grad1" style={{ color: 'white', fontSize: '24px' }}>
               Think human

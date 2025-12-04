@@ -117,7 +117,7 @@ export default function Main() {
           Work
         </p>
         <p className="fontGoldenAgeOverlay">·</p>
-        <p onClick={() => parallax.current.scrollTo(1.5)} className="fontGoldenAgeOverlay">
+        <p onClick={() => parallax.current.scrollTo(0.75)} className="fontGoldenAgeOverlay">
           Founders
         </p>
         <p className="fontGoldenAgeOverlay">·</p>
