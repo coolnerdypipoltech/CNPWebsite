@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f644e260.css",
-    "main.js": "/static/js/main.1a396ac6.js",
+    "main.js": "/static/js/main.16e2a1ac.js",
     "static/media/Mundo_CNP.png": "/static/media/Mundo_CNP.405a3b4403967a1e4f79.png",
     "static/media/Culture.png": "/static/media/Culture.2210157f21b8b06cd5d4.png",
     "static/media/cnp_1.webp": "/static/media/cnp_1.946dcd9b41a119cb9897.webp",
@@ -70,7 +70,6 @@
     "static/media/IMG_Nube4.webp": "/static/media/IMG_Nube4.234f55f49093e89db9dd.webp",
     "static/media/Nube3.webp": "/static/media/Nube3.234f55f49093e89db9dd.webp",
     "static/media/Nube2.webp": "/static/media/Nube2.b01beebfca81e0e7367f.webp",
-    "static/media/textBubble.webp": "/static/media/textBubble.0935ab3bdbf8b97719d6.webp",
     "static/media/IMG_Back.webp": "/static/media/IMG_Back.fcb79b30cfaeef087a0d.webp",
     "static/media/IMG_Nube1.webp": "/static/media/IMG_Nube1.b6cf9cae2d81f8a7caf7.webp",
     "static/media/IMG_Next.webp": "/static/media/IMG_Next.2000d305dd8cc578202e.webp",
@@ -83,10 +82,10 @@
     "index.html": "/index.html",
     "static/media/IMG_Flecha.webp": "/static/media/IMG_Flecha.58465e9a8b7b171ae77d.webp",
     "main.f644e260.css.map": "/static/css/main.f644e260.css.map",
-    "main.1a396ac6.js.map": "/static/js/main.1a396ac6.js.map"
+    "main.16e2a1ac.js.map": "/static/js/main.16e2a1ac.js.map"
   },
   "entrypoints": [
     "static/css/main.f644e260.css",
-    "static/js/main.1a396ac6.js"
+    "static/js/main.16e2a1ac.js"
   ]
 }
