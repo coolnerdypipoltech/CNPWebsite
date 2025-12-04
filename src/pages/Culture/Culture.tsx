@@ -149,7 +149,7 @@ export default function Culture() {
 
           <ParallaxLayer style={{ zIndex: 5 }} offset={0.75} speed={0.1} factor={0.1}>
             <div className="centerDiv" style={{ justifyContent: 'flex-start' }}>
-              <p className='fontGoldenAge' style={{fontSize: '36px', color: "white", position: "relative", bottom: "150px"}}>Our work</p>
+              <p className='fontGoldenAgeOG' style={{fontSize: '36px', color: "white", position: "relative", bottom: "150px"}}>Our work</p>
             </div>
           </ParallaxLayer>
 
@@ -195,7 +195,7 @@ export default function Culture() {
                   }}
                 />
               </div>
-              <p className="fontGoldenAge" style={{ color: 'white' }}>
+              <p className="fontGoldenAgeOG" style={{ color: 'white' }}>
                 {videos[currentVideo].title}
               </p>
               <p className="fontGoldenAge" style={{ color: 'white', fontSize: '16px', width: "80%", textAlign: "center", paddingBottom: "20px"  }}>

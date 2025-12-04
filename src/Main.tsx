@@ -13,8 +13,14 @@ import logo from './assets/Lobby/Brand_CNP.webp'
 import Email from './assets/Main/Email.png'
 import Instagram from './assets/Main/Instagram.png'
 import Linkedin from './assets/Main/LinkedIn.png'
+import Flecha from './assets/Culture/IMG_Flecha.webp'
 export default function Main() {
   const parallax = useRef<IParallax>(null!)
+  const mobileFlag = useRef(false);
+  
+  const isMobileDevice = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  };
 
   let tempLobby = null
   let tempCulture = null
@@ -22,33 +28,35 @@ export default function Main() {
   let lobbyFactor = 5
   let cultureFactor = 5.5
   let founderFactor = 6.5
-
+  let findCultureOffset = 5
+  console.log(isMobileDevice())
   if (window.innerWidth < 550) {
-    console.log('Mobil')
-    lobbyFactor = 2.25
-    cultureFactor = 3
-    founderFactor = 3
+    console.log("ismobil")
+    mobileFlag.current = true
+    lobbyFactor = 2.75
+    cultureFactor = 4
+    founderFactor = 4.9
+    findCultureOffset = cultureFactor - 0.75
     tempLobby = <LobbyMobil />
     tempCulture = <CultureMobil />
     tempFounder = <FoundersMobil />
   } else {
     if (window.innerWidth < 1024) {
-      console.log('Tablet')
       lobbyFactor = 2.75
       cultureFactor = 3
       founderFactor = 3.5
+      findCultureOffset = cultureFactor + 0.15
       tempLobby = <LobbyTablet />
       tempCulture = <CultureTablet />
       tempFounder = <FoundersTablet />
     } else {
-      console.log('Desktop')
+      findCultureOffset = 5.5 + 0.8
       tempLobby = <Lobby />
       tempCulture = <Culture />
       tempFounder = <Founders />
     }
   }
 
-  console.log('lobbyFactor:', lobbyFactor + ' cultureFactor:', cultureFactor)
 
   useEffect(() => {
     parallax.current.scrollTo(lobbyFactor + cultureFactor + founderFactor)
@@ -73,6 +81,12 @@ export default function Main() {
           <ParallaxLayer offset={founderFactor} speed={0} factor={cultureFactor}>
             {tempCulture}
           </ParallaxLayer>
+          <ParallaxLayer style={{ zIndex: 4 }} offset={founderFactor + cultureFactor} speed={0.1} factor={0.25}>
+            {mobileFlag.current && (<div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
+              <img src={Flecha} style={{ height: '100px', position: 'relative', top: '-100%' }} />
+            </div>)}
+          </ParallaxLayer>
+          
           <ParallaxLayer offset={founderFactor + cultureFactor} speed={0} factor={lobbyFactor}>
             {tempLobby}
           </ParallaxLayer>
@@ -80,8 +94,8 @@ export default function Main() {
             sticky={{ start: 0, end: cultureFactor + lobbyFactor + founderFactor - 1.2 }}
             style={{ alignItems: 'center', justifyContent: 'flex-end', height: '120px' }}
           >
-            <div className='LogoContainer'>
-              <img src={logo} className="marginLogo" style={{  }} />
+            <div className="LogoContainer">
+              <img src={logo} className="marginLogo" style={{}} />
             </div>
           </ParallaxLayer>
         </Parallax>
@@ -99,7 +113,7 @@ export default function Main() {
           Culture
         </p>
         <p className="fontGoldenAgeOverlay">·</p>
-        <p onClick={() => parallax.current.scrollTo(founderFactor - 0.2)} className="fontGoldenAgeOverlay">
+        <p onClick={() => parallax.current.scrollTo(findCultureOffset)} className="fontGoldenAgeOverlay">
           Work
         </p>
         <p className="fontGoldenAgeOverlay">·</p>

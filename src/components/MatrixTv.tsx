@@ -1,17 +1,20 @@
 ﻿import React, { useEffect, useState } from 'react'
 
-import FunLab from '../assets/Lobby/FunLab.png'
 import { useGlitch, GlitchHandle } from 'react-powerglitch'
-import CNP_1 from '../assets/Lobby/CNP/CNP_1.png'
-import CNP_2 from '../assets/Lobby/CNP/CNP_2.png'
-import CNP_3 from '../assets/Lobby/CNP/CNP_3.png'
-import CNP_4 from '../assets/Lobby/CNP/CNP_4.png'
-import CNP_5 from '../assets/Lobby/CNP/CNP_5.png' 
+import CNP_1 from '../assets/Lobby/CNP/cnp_1.webp'
+import CNP_2 from '../assets/Lobby/CNP/cnp_2.webp'
+import CNP_3 from '../assets/Lobby/CNP/cnp_3.webp'
+import CNP_4 from '../assets/Lobby/CNP/cnp_4.webp'
+import CNP_5 from '../assets/Lobby/CNP/cnp_5.webp'
+import CNP_6 from '../assets/Lobby/CNP/cnp_6.webp'
+import CNP_7 from '../assets/Lobby/CNP/cnp_7.webp'
+import CNP_8 from '../assets/Lobby/CNP/cnp_8.webp'
+import CNP_9 from '../assets/Lobby/CNP/cnp_9.webp'
 import Button_back from '../assets/Lobby/Button_back.png'
 import Button_Next from '../assets/Lobby/Button_Next.png'
 
 export default function MatrixTv() {
-  const images = [CNP_1, CNP_2, CNP_3, CNP_4, CNP_5]
+  const images = [CNP_1, CNP_2, CNP_3, CNP_4, CNP_5, CNP_6, CNP_7, CNP_8, CNP_9]
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const firstTimeRef = React.useRef(true);
   const glitch: GlitchHandle = useGlitch({ glitchTimeSpan: false, shake: { velocity: 1, amplitudeX: 0.1 } })
@@ -24,10 +27,12 @@ export default function MatrixTv() {
     startGlitchAndStopWithTimeout()
   })
   const startGlitchAndStopWithTimeout = () => {
+    /*
     glitch.startGlitch()
     setTimeout(() => {
       glitch.stopGlitch()
     }, 250)
+    */
   }
 
   const handleNext = () => {
@@ -50,7 +55,6 @@ export default function MatrixTv() {
           alignItems: 'center',
           position: 'absolute',
           zIndex: 5,
-
         }}
       >
         <div
@@ -60,7 +64,6 @@ export default function MatrixTv() {
           }}
         >
           <img
-            ref={glitch.ref}
             src={images[currentImageIndex]}
             style={{
               width: '100%',
@@ -97,18 +100,6 @@ export default function MatrixTv() {
               }}
             />
           </div>
-
-                    <img
-            src={FunLab}
-            style={{
-              position: 'absolute',
-              width: '15%',
-              paddingBottom: "8vw",
-              left: '50%',
-              transform: 'translate(-50%, -80%)',
-              display: 'block',
-            }}
-          />
         </div>
       </div>
     </>

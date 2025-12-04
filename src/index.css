@@ -5,16 +5,34 @@
   font-style: normal;
 }
 
+@font-face {
+font-family:"carbon";
+src:url("https://use.typekit.net/af/6951fe/000000000000000077359647/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/6951fe/000000000000000077359647/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/6951fe/000000000000000077359647/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
+font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+html {
+  touch-action: manipulation;
+  -webkit-text-size-adjust: 100%;
+}
+
 html,
 body,
 #root {
   height: 100%;
   width: 100%;
+  background-color: black;
 }
 
 body {
   font-family: system-ui;
   margin: 0;
+  touch-action: pan-y;
 }
 
 *,
@@ -40,6 +58,27 @@ body {
   color: #4fc3f7;
   width: 100%;
   text-decoration: none;
+}
+
+.MatrixContainerMobil{
+  width: 100%;
+  top: -16vw;
+  position: relative;
+  scale: 1.3;
+}
+
+@media screen  and (min-width: 600px) {
+  .MatrixContainerMobil {
+    scale: 1.2;
+    top: -18vw;
+  }
+}
+
+@media screen  and (min-width: 800px) {
+  .MatrixContainerMobil {
+    scale: 1;
+    top: -18vw;
+  }
 }
 
 
@@ -113,7 +152,7 @@ body {
 
 
 .buttonContainerPopUp{
-  top: 30vw;
+  top: 33vw;
   padding-right: 10vw;
   gap: 1vw;
 }
@@ -122,42 +161,92 @@ body {
 }
 
 .fontGoldenAgePoPup{
-  font-family: 'Golden Age', sans-serif;
+  font-family: 'carbon', sans-serif;
   color: #000000;
   margin: 0px;
   font-size: 17px;
+    line-height: 1.2;
 }
+
+
+.fontGoldenAge{
+  font-family: 'carbon', sans-serif;
+  color: #00FF99;
+  margin: 0px;
+  font-size: 24px;
+}
+
+.fontGoldenAgeOG{
+  font-family: 'Golden Age', sans-serif;
+  color: #00FF99;
+  margin: 0px;
+  font-size: 24px;
+}
+
+
+
+.grad1 {
+  font-family: 'Golden Age', sans-serif;
+    background: red;
+    background: -webkit-linear-gradient(left, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
+    background: -o-linear-gradient(right, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
+    background: -moz-linear-gradient(right, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
+    background: linear-gradient(to right, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0px;
+  font-size: 38px;
+}
+
+.grad2 {
+  font-family: 'carbon', sans-serif;
+    background: red;
+    background: -webkit-linear-gradient(left, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
+    background: -o-linear-gradient(right, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
+    background: -moz-linear-gradient(right, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
+    background: linear-gradient(to right, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0px;
+    font-size: 24px;
+    gap: 20px;
+} 
 
 .textContainerPopUp{
   width: 25vw;
 }
 
-
-
-
-@media screen and (max-width: 798px) {
-
-    .marginLogo{
-    margin-top: 0.5%;
-    width: 40px;
+@media screen and (max-width: 740px) {
+  .MatrixButtons
+  {
+    width: 80px;
   }
-  .NextButtonPopUp{
-  width: 120px;
 }
+
+@media screen and (max-width: 530px) {
+  .MatrixButtons
+  {
+    position: relative;
+    top: 10px;
+    width: 60px;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
  .buttonContainerPopUp
   {
-    top: 244px;
     gap: 20px;
     padding-right: 75px;
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
 
  .buttonContainerPopUp
   {
-    top: 304px;
-    gap: 20px;
+    top: 263px;
+    gap: 5px;
     padding-right: 75px;
   }
 }
@@ -179,29 +268,29 @@ body {
   }
 
   .textContainerPopUp{
-    width: 270px;
+    width: 250px;
   }
 
 }
 
 @media screen and (max-width: 900px) {
     .fontGoldenAgePoPup{
-    font-size: 13px;
-  }
-
-  .textContainerPopUp{
-    width: 250px;
-  }
-
-}
-
-@media screen and (max-width: 780px) {
-    .fontGoldenAgePoPup{
     font-size: 12px;
   }
 
   .textContainerPopUp{
-    width: 240px;
+    width: 220px;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  .fontGoldenAgePoPup{
+    font-size: 11px;
+  }
+
+  .textContainerPopUp{
+    width: 220px;
   }
 
 }
@@ -211,40 +300,9 @@ body {
 
 
 
-.fontGoldenAge{
-  font-family: 'Golden Age', sans-serif;
-  color: #00FF99;
-  margin: 0px;
-  font-size: 24px;
-}
 
 
-.grad1 {
-  font-family: 'Golden Age', sans-serif;
-    background: red;
-    background: -webkit-linear-gradient(left, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
-    background: -o-linear-gradient(right, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
-    background: -moz-linear-gradient(right, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
-    background: linear-gradient(to right, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0px;
-  font-size: 38px;
-}
 
-.grad2 {
-  font-family: 'Golden Age', sans-serif;
-    background: red;
-    background: -webkit-linear-gradient(left, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
-    background: -o-linear-gradient(right, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
-    background: -moz-linear-gradient(right, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
-    background: linear-gradient(to right, #C594FA,#FF93BD, #FFF6B8, #B7FEF7, #99DFFF, #92A3F2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0px;
-    font-size: 24px;
-    gap: 20px;
-} 
 
 .marginLogo{
   margin-top: 2.5%;
@@ -282,6 +340,27 @@ body {
   {
     gap: 10px;
   }
+}
+
+.yt-lite{
+  width:  80vw !important;
+  height: 50vw !important;
+  border-radius: 15px !important;
+  border: none;
+  -webkit-border-radius: 15px !important;
+  -moz-border-radius: 15px !important;
+  -ms-border-radius: 15px !important;
+  -o-border-radius: 15px !important;
+}
+
+@media screen and (min-width: 550px) {
+  .yt-lite {
+    border-radius: 40px !important;
+    -webkit-border-radius: 40px !important;
+    -moz-border-radius: 40px !important;
+    -ms-border-radius: 40px !important;
+    -o-border-radius: 40px !important;
+}
 }
 
 .grad2:hover{ -webkit-transform: scale(1.2); }

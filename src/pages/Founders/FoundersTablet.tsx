@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { ParallaxLayer } from '@react-spring/parallax'
 
 import background from '../../assets/Founders/background.png'
@@ -12,24 +12,14 @@ import desk from '../../assets/Founders/desk.webp'
 import founder1 from '../../assets/Founders/founder1.webp'
 import founder2 from '../../assets/Founders/Andrea.webp'
 import table from '../../assets/Founders/table.webp'
-import tv from '../../assets/Founders/Tv.png'
-import PantallasCNP from '../../assets/Founders/PantallasCNP.png'
-import PantallasError from '../../assets/Founders/PantallasError.png'
+import tv from '../../assets/Founders/Tv.webp'
 import IMG_back from '../../assets/Founders/IMG_back.png'
-import { useGlitch, GlitchHandle } from 'react-powerglitch'
-import select from '../../assets/Founders/Select.png'
+import select from '../../assets/Founders/Select.webp'
 import textBubble from '../../assets/Founders/textBubble.webp'
+import Screens from '../../components/Screens'
 export default function Founders() {
-  const pantallasImages = [PantallasCNP, PantallasError]
-  const [currentPantallaIndex, setCurrentPantallaIndex] = useState(0)
   const [showFounder1Text, setShowFounder1Text] = useState(false)
   const [showFounder2Text, setShowFounder2Text] = useState(false)
-  const firstTimeRef = React.useRef(true)
-  const glitch: GlitchHandle = useGlitch({ glitchTimeSpan: false, shake: { velocity: 1, amplitudeX: 0.1 } })
-  const handlePantallasClick = () => {
-    setCurrentPantallaIndex(prev => (prev + 1) % pantallasImages.length)
-  }
-
   const handleFounder1Click = () => {
     setShowFounder1Text(!showFounder1Text)
     setShowFounder2Text(false)
@@ -38,21 +28,6 @@ export default function Founders() {
   const handleFounder2Click = () => {
     setShowFounder2Text(!showFounder2Text)
     setShowFounder1Text(false)
-  }
-
-  useEffect(() => {
-    if (firstTimeRef.current) {
-      firstTimeRef.current = false
-      glitch
-      return
-    }
-    startGlitchAndStopWithTimeout()
-  })
-  const startGlitchAndStopWithTimeout = () => {
-    glitch.startGlitch()
-    setTimeout(() => {
-      glitch.stopGlitch()
-    }, 250)
   }
   return (
     <>
@@ -97,7 +72,7 @@ export default function Founders() {
           }}
         />
 
-        <ParallaxLayer style={{ zIndex: 0 }} offset={0.1} speed={0.2} factor={0.1}>
+        <ParallaxLayer style={{ zIndex: 0 }} offset={0.15} speed={0.2} factor={0.1}>
           <div className="centerDiv" style={{ justifyContent: 'flex-start' }}>
             <p style={{ fontSize: '12px' }} className="fontGoldenAge">
               © 2025 Cool Nerdy People
@@ -106,13 +81,7 @@ export default function Founders() {
         </ParallaxLayer>
 
         <ParallaxLayer style={{ zIndex: 1 }} offset={0.25} speed={0.1} factor={0.25}>
-          <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
-            <img
-              src={pantallasImages[currentPantallaIndex]}
-              onClick={handlePantallasClick}
-              style={{ width: '90vw', position: 'relative', top: '40%' }}
-            />
-          </div>
+          <Screens width="100vw" top="40%" />
         </ParallaxLayer>
 
         <ParallaxLayer style={{ zIndex: 2 }} offset={0.75} speed={0.1} factor={0.25}>

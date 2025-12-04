@@ -1,24 +1,22 @@
 ﻿import React, { useState } from 'react'
 
-import PopUp from '../assets/Lobby/PopUp.png'
 import buttonNext from '../assets/Lobby/Next_PopUp.png'
 import buttonBack from '../assets/Lobby/Back_PopUp.png'
-
+import PopUp1 from '../assets/Lobby/PopUp/1.webp'
+import PopUp2 from '../assets/Lobby/PopUp/2.webp'
+import PopUp3 from '../assets/Lobby/PopUp/3.webp'
+import PopUp4 from '../assets/Lobby/PopUp/4.webp'
+import PopUp5 from '../assets/Lobby/PopUp/5.webp'
 export default function PopUpComponent() {
-  const texts = [
-    "Inside CNP, culture feels like a living organism that hums with restless curiosity. It isn't a handbook or a poster on a meeting room wall, it's a mood, a frequency, a shared belief that the future is something you build, not something you wait for.",
-    "People here speak in ideas the way others breathe, jumping between code, memes, deep theory, and street culture without ever losing the plot.",
-    "Everyone is both student and sensei. Experiments happen fast, humor is essential equipment, and every project is treated like a small portal to a more imaginative reality.",
-    "It's a place where the weird is welcomed, the nerd-core is celebrated, and collaboration feels less like teamwork and more like a creative jam session inside a tiny spaceship drifting through the unknown."
-  ]
+  const images = [PopUp1, PopUp2, PopUp3, PopUp4, PopUp5]
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
 
   const handleNext = () => {
-    setCurrentTextIndex((prev) => (prev + 1) % texts.length)
+    setCurrentTextIndex((prev) => (prev + 1) % images.length)
   }
-
+  
   const handleBack = () => {
-    setCurrentTextIndex((prev) => (prev - 1 + texts.length) % texts.length)
+    setCurrentTextIndex((prev) => (prev - 1 + images.length) % images.length)
   }
 
   return (
@@ -46,7 +44,7 @@ export default function PopUpComponent() {
             }}
         >
           <img
-            src={PopUp}
+            src={images[currentTextIndex]}
             style={{
               width: '50%',
               minWidth: '400px',
@@ -66,18 +64,6 @@ export default function PopUpComponent() {
               alignItems: 'center',
             }}
           >
-            <p
-              className="fontGoldenAgePoPup"
-              style={{
-                textAlign: 'center',
-                lineHeight: '1.6',
-                margin: 0,
-              }}
-            >
-              {texts[currentTextIndex]}
-            </p>
-
-            
           </div>
 
           <div

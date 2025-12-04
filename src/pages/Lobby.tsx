@@ -219,7 +219,7 @@ export default function Lobby() {
               <p style={{ marginTop: '30px' }} className="fontGoldenAge">
                 △
               </p>
-              <p className="fontGoldenAge" style={{fontSize: '12px'}}>Scroll Up To Explore</p>
+              <p className="fontGoldenAgeOG" style={{fontSize: '12px'}}>Scroll Up To Explore</p>
             </div>
           </ParallaxLayer>
 
