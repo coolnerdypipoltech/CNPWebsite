@@ -114,7 +114,7 @@ export default function Founders() {
                   <div
                     style={{
                        position: 'absolute',
-                      top: '-27vh',
+                      top: '-28.5vh',
                       marginRight: '-130px',
                       display: 'flex',
                       justifyContent: 'center',

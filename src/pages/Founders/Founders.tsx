@@ -180,7 +180,7 @@ export default function Founders() {
               {!showFounder1Text && (<div
                 className="selectHover"
                 
-                style={{ width: '30vw', height: "20px", position: 'relative', top: '-27vw', left: '-9vw' }}
+                style={{ width: '30vw', height: "20px", position: 'relative', top: '-26vw', left: '-9vw' }}
               >
                 <img onClick={handleFounder1Click} className="floating "  src={select} style={{ width: '50px' }} />
               </div>)}
