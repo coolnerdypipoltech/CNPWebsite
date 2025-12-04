@@ -10,12 +10,11 @@ import CNP_6 from '../assets/Lobby/CNP/cnp_6.png'
 import CNP_7 from '../assets/Lobby/CNP/cnp_7.png'
 import CNP_8 from '../assets/Lobby/CNP/cnp_8.png'
 import CNP_9 from '../assets/Lobby/CNP/cnp_9.png'
-import CNP_10 from '../assets/Lobby/CNP/cnp_10.png'
 import Button_back from '../assets/Lobby/Button_back.png'
 import Button_Next from '../assets/Lobby/Button_Next.png'
 
 export default function MatrixTv() {
-  const images = [CNP_1, CNP_2, CNP_3, CNP_4, CNP_5, CNP_6, CNP_7, CNP_8, CNP_9, CNP_10]
+  const images = [CNP_1, CNP_2, CNP_3, CNP_4, CNP_5, CNP_6, CNP_7, CNP_8, CNP_9]
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const firstTimeRef = React.useRef(true);
   const glitch: GlitchHandle = useGlitch({ glitchTimeSpan: false, shake: { velocity: 1, amplitudeX: 0.1 } })
