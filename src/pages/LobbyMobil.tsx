@@ -17,11 +17,13 @@ export default function Lobby() {
   return (
     <>
       <div>
-        <ParallaxLayer style={{ zIndex: 1 }} offset={0} speed={0} factor={2.75}>
-          <div className="centerDiv" style={{  height: '100%', transform: 'scale(0.77)' }}>
-            <img src={Mundo_CNP} />
-          </div>
-        </ParallaxLayer>
+        <ParallaxLayer offset={-0.5} speed={0} factor={3.25}
+          style={{
+            backgroundImage: `url(${Mundo_CNP})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
 
         <ParallaxLayer style={{ zIndex: 5 }} offset={1} speed={0.1} factor={0.75}>
           <div className="centerDiv">
@@ -35,7 +37,7 @@ export default function Lobby() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 5 }} offset={2.3} speed={0} factor={0.25}>
+        <ParallaxLayer style={{ zIndex: 5 }} offset={2.2} speed={0} factor={0.25}>
           <div className="centerDiv">
             <img
               src={Tapete}
@@ -49,7 +51,7 @@ export default function Lobby() {
         <ParallaxLayer style={{ zIndex: 3 }} offset={4.5} speed={0.3} factor={0.5}>
           <div className="centerDiv" style={{ justifyContent: 'flex-start', gap: '0px', paddingTop: '4%' }}>
             <img src={Brand_CNP} style={{ width: '13%' }} />
-            <p style={{ marginTop: '30px' }} className="fontGoldenAge">
+            <p style={{ marginTop: '30px' }} className="fontGoldenAgeOG">
               △
             </p>
             <p className="fontGoldenAgeOG" style={{ fontSize: '12px' }}>
@@ -73,7 +75,7 @@ export default function Lobby() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 4 }} offset={1.6} speed={0} factor={0.25}>
+        <ParallaxLayer style={{ zIndex: 4 }} offset={1.4} speed={0} factor={0.25}>
           <div className='MatrixContainerMobil' style={{ height: '100%', position: 'relative' }}>
             <MatrixTv />
           </div>

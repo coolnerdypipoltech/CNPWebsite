@@ -31,10 +31,11 @@ export default function Main() {
   let findCultureOffset = 5
 
   if (window.innerWidth < 550 && isMobileDevice()) {
+    console.log("MOBILE DEVICE DETECTED", isMobileDevice())
     mobileFlag.current = true
     lobbyFactor = 2.75
     cultureFactor = 4
-    founderFactor = 4.9
+    founderFactor = 4.5
     findCultureOffset = cultureFactor - 0.75
     tempLobby = <LobbyMobil />
     tempCulture = <CultureMobil />
@@ -116,7 +117,7 @@ export default function Main() {
           Work
         </p>
         <p className="fontGoldenAgeOverlay">·</p>
-        <p onClick={() => parallax.current.scrollTo(0)} className="fontGoldenAgeOverlay">
+        <p onClick={() => parallax.current.scrollTo(1.5)} className="fontGoldenAgeOverlay">
           Founders
         </p>
         <p className="fontGoldenAgeOverlay">·</p>

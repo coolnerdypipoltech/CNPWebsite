@@ -15,7 +15,7 @@ import table from '../../assets/Founders/table.webp'
 import tv from '../../assets/Founders/Tv.webp'
 import IMG_back from '../../assets/Founders/IMG_back.png'
 import select from '../../assets/Founders/Select.webp'
-import textBubble from '../../assets/Founders/textBubble.webp'
+import textBubble from '../../assets/Founders/Mobil/Cuadro_dialogo.webp'
 import Screens from '../../components/Screens'
 export default function Founders() {
   const [showFounder1Text, setShowFounder1Text] = useState(false)
@@ -103,13 +103,13 @@ export default function Founders() {
 
         <ParallaxLayer style={{ zIndex: 2 }} offset={0.95} speed={0.2} factor={0.5}>
           <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
-            <img src={Globe1} style={{ width: '60vw', position: 'relative', top: '0%' }} />
+            <img src={Globe1} style={{ width: '60vw', position: 'relative', top: '30%' }} />
           </div>
         </ParallaxLayer>
 
         <ParallaxLayer style={{ zIndex: 2 }} offset={0.95} speed={0.1} factor={0.5}>
           <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
-            <img src={table} style={{ width: '60vw' }} />
+            <img src={table} style={{ width: '60vw', position: 'relative', top: '20%' }} />
           </div>
         </ParallaxLayer>
 
@@ -124,29 +124,29 @@ export default function Founders() {
                 {showFounder1Text && (
                   <div
                     style={{
-                      position: 'absolute',
-                      top: '-25vh',
+                       position: 'absolute',
+                      top: '-29vh',
+                      marginRight: '-130px',
                       display: 'flex',
-                      marginRight: '-220px',
                       justifyContent: 'center',
                       alignItems: 'center',
                     }}
                   >
-                    <img src={textBubble} style={{ width: '300px', scale: '-1 1 1' }} />
+                    <img src={textBubble} style={{ width: '200px' }} />
                     <p
                       className="fontGoldenAgeOverlay"
                       style={{
                         position: 'absolute',
-                        color: 'black',
-                        fontSize: '10px',
+                        color: 'white',
+                        fontSize: '12px',
                         textAlign: 'center',
-                        width: '280px',
-                        padding: '10px',
-                        paddingBottom: '30px',
+                        width: '200px',
+                        padding: '20px',
+                        paddingBottom: '50px',
                       }}
+                    
                     >
-                      Creative technologist with 25 years in advertising, blending culture, art, and AI to reinvent
-                      communication.
+                      I’m a creative technologist, storyteller, and modern polímata with 25 years exploring the intersection of culture, technology, and human behavior. I turn complexity into experiences people want to live and teach the next generation how to use AI with purpose.
                     </p>
                   </div>
                 )}
@@ -154,54 +154,53 @@ export default function Founders() {
               {!showFounder1Text && (
                 <div
                   className="splitCenterDiv"
-                  style={{ width: '30vw', height: '20px', position: 'relative', top: '-15vw', left: '-10vw' }}
+                  style={{ minWidth: "15vw", height: '20px', position: 'relative', top: '-15vw', left: '-10vw' }}
                 >
-                  <img src={select} style={{ width: '50px' }} />
+                  <img className="floating " src={select} onClick={handleFounder1Click} style={{ width: '50px' }} />
                 </div>
               )}
 
               {showFounder1Text && (
                 <div
                   className="splitCenterDiv"
-                  style={{ width: '30vw', height: '20px', position: 'relative', top: '-15vw', left: '-10vw' }}
+                  style={{ minWidth: "15vw", height: '20px', position: 'relative', top: '-15vw', left: '-10vw' }}
                 >
                   <div style={{ minWidth: '50px' }} />
                 </div>
               )}
 
-              <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', right: "10vw" }}>
                 <img
                   src={founder2}
                   onClick={handleFounder2Click}
                   style={{ width: '15vw', position: 'relative', scale: '1 0.9 1', cursor: 'pointer' }}
                 />
                 {showFounder2Text && (
-                  <div
+                 <div
                     style={{
                       position: 'absolute',
-                      top: '-25vh',
-                      marginLeft: '-220px',
+                      top: '-29vh',
+                      marginLeft: '-130px',
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
+                      
                     }}
                   >
-                    <img src={textBubble} style={{ width: '300px' }} />
+                    <img src={textBubble} style={{ width: '200px', scale: '-1 1 1' }} />
                     <p
                       className="fontGoldenAgeOverlay"
                       style={{
                         position: 'absolute',
-                        color: 'black',
-                        fontSize: '10px',
+                        color: 'white',
+                        fontSize: '12px',
                         textAlign: 'center',
-                        width: '280px',
-                        padding: '10px',
-                        paddingBottom: '30px',
+                        width: '200px',
+                        padding: '20px',
+                        paddingBottom: '40px',
                       }}
                     >
-                      Entrepreneur and business strategist with 10+ years of experience, building at the intersection of
-                      AI-native creativity, technology, and culture to shape the future of communication and
-                      entertainment.
+                      As Founder & CEO (aka Chief Energy Officer) at CNP, I lead with curiosity, creativity, and heart, shaping how brands and people connect through AI-native creativity, technology and entertainment. At the core of everything I build is a belief that performance and impact should always coexist with kindness, purpose, and authenticity.
                     </p>
                   </div>
                 )}
@@ -209,17 +208,18 @@ export default function Founders() {
 
               {!showFounder2Text && (
                 <div
-                  className="splitCenterDiv"
-                  style={{ width: '30vw', height: '20px', position: 'relative', top: '-15vw', left: '-10vw' }}
+                
+                  className="centerDiv"
+                  style={{  minWidth: "15vw", height: '20px', position: 'relative', top: '-15vw', left: '-25.5vw' }}
                 >
-                  <img src={select} style={{ width: '50px' }} />
+                  <img className="floating " src={select} onClick={handleFounder2Click} style={{ width: '50px' }} />
                 </div>
               )}
 
               {showFounder2Text && (
                 <div
                   className="splitCenterDiv"
-                  style={{ width: '30vw', height: '20px', position: 'relative', top: '-15vw', left: '-10vw' }}
+                  style={{ minWidth: "15vw", height: '20px', position: 'relative', top: '-15vw', left: '-25.5vw' }}
                 >
                   <div style={{ minWidth: '50px' }} />
                 </div>

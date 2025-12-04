@@ -2,13 +2,19 @@
 
 import buttonNext from '../assets/Lobby/Next_PopUp.png'
 import buttonBack from '../assets/Lobby/Back_PopUp.png'
-import PopUp1 from '../assets/Lobby/PopUp/1.webp'
-import PopUp2 from '../assets/Lobby/PopUp/2.webp'
-import PopUp3 from '../assets/Lobby/PopUp/3.webp'
-import PopUp4 from '../assets/Lobby/PopUp/4.webp'
-import PopUp5 from '../assets/Lobby/PopUp/5.webp'
+import PopUp1 from '../assets/Lobby/PopUp/Culture_1.webp'
+import PopUp2 from '../assets/Lobby/PopUp/Culture_2.webp'
+import PopUp3 from '../assets/Lobby/PopUp/Culture_3.webp'
+import PopUp4 from '../assets/Lobby/PopUp/Culture_4.webp'
+import PopUp5 from '../assets/Lobby/PopUp/Culture_5.webp'
+import PopUp6 from '../assets/Lobby/PopUp/Culture_6.webp'
+import Popup7 from '../assets/Lobby/PopUp/Culture_7.webp'
+import Popup8 from '../assets/Lobby/PopUp/Culture_8.webp'
+import Popup9 from '../assets/Lobby/PopUp/Culture_9.webp'
+
+
 export default function PopUpComponent() {
-  const images = [PopUp1, PopUp2, PopUp3, PopUp4, PopUp5]
+  const images = [PopUp1, PopUp2, PopUp3, PopUp4, PopUp5, PopUp6, Popup7, Popup8, Popup9]
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
 
   const handleNext = () => {

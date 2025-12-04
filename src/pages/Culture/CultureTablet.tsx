@@ -228,7 +228,7 @@ export default function CultureMobil() {
                     </div>
                   </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 2 }} offset={1.5} speed={0.25} factor={0.5}>
+        <ParallaxLayer style={{ zIndex: 5 }} offset={1.5} speed={0.25} factor={0.5}>
           <div className="centerDiv" style={{}}>
             <img src={Nube6} style={{ width: '95vw', minWidth: '500px', position: 'relative', top: '100%' }} />
             <img
@@ -241,25 +241,48 @@ export default function CultureMobil() {
             />
             <img
               src={nyanCat}
-              onClick={() => {window.open('https://www.tiktok.com/@animaldex/video/7442466728153451832?lang=es')}}
-              style={{ width: '40vw', minWidth: '180px', position: 'relative', right: '20%', top: '-50%' }}
+                onClick={() => {window.open('https://www.youtube.com/watch?v=mEJ_jxFJU_0')}}
+              style={{ width: '40vw', minWidth: '180px', position: 'relative', right: '20%', top: '-100%' }}
             />
             <img
               src={CAT}
-              style={{ width: '40vw', minWidth: '150px', position: 'relative', right: '-22%', top: '-50%' }}
+               onClick={() => {window.open('https://www.tiktok.com/@animaldex/video/7442466728153451832?lang=es')}}
+              style={{ width: '20vw', minWidth: '150px', position: 'relative', right: '-22%', top: '-50%' }}
             />
             <img
               src={BOOK}
-              style={{ width: '15vw', minWidth: '100px', position: 'relative', left: '-25%', top: '-60%' }}
+              onClick={() => {
+                window.open('https://www.goodreads.com/choiceawards/best-fiction-books-2022')
+              }}
+              style={{ width: '15vw', minWidth: '100px', position: 'relative', left: '-25%', top: '-130%' }}
             />
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 2 }} offset={2} speed={0.25} factor={0.5}>
+        <ParallaxLayer style={{ zIndex: 5 }} offset={2.5} speed={0.2} factor={0.2}>
+                  <div
+                    className="centerDiv"
+                    style={{
+                      alignItems: 'flex-end',
+                      paddingRight: '15%',
+                      position: 'relative',
+                      top: '-0vw',
+                      justifyContent: 'flex-start',
+                    }}
+                  >
+                    <p className="grad1" style={{ color: 'white', fontSize: '24px' }}>Creativity in hyperdrive,</p>
+                    <p className="grad1" style={{ color: 'white', fontSize: '24px' }}> guided by cultural gravity</p>
+                  </div>
+                </ParallaxLayer>
+
+        <ParallaxLayer style={{  zIndex: 6 }} offset={2} speed={0.25} factor={0.5}>
           <div className="centerDiv" style={{}}>
             <img
               src={rose}
-              style={{ width: '40vw', minWidth: '200px', position: 'relative', right: '-25%', top: '10%' }}
+              onClick={() => {
+                window.open('https://www.youtube.com/watch?v=upDsr150ioc')
+              }}
+              style={{ width: '20vw', minWidth: '200px', position: 'relative', right: '-25%', top: '30%' }}
             />
             <img
               src={Nube4}
@@ -271,7 +294,10 @@ export default function CultureMobil() {
             />
             <img
               src={FIGHT}
-              style={{ width: '40vw', minWidth: '200px', position: 'relative', left: '-25%', top: '-35%' }}
+              onClick={() => {
+                window.open('https://www.youtube.com/watch?v=WiMBO0BKeA4')
+              }}
+              style={{ width: '25vw', minWidth: '200px', position: 'relative', left: '-25%', top: '-35%' }}
             />
             <img
               src={Nube2}
@@ -294,15 +320,21 @@ export default function CultureMobil() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 3 }} offset={2.5} speed={0.3} factor={0.5}>
+        <ParallaxLayer style={{ zIndex: 4 }} offset={2.5} speed={0.3} factor={0.5}>
           <div className="centerDiv" style={{}}>
             <img
               src={Blackhorse}
-              style={{ width: '40vw', minWidth: '200px', position: 'relative', right: '-25%', top: '-40%' }}
+                onClick={() => {
+                window.open('https://www.youtube.com/watch?v=ETYNfedQ2xk')
+              }}
+              style={{ width: '25vw', minWidth: '200px', position: 'relative', right: '-25%', top: '-40%' }}
             />
             <img
-              src={Angel}
-              style={{ width: '40vw', minWidth: '150px', position: 'relative', left: '-25%', top: '-30%' }}
+              src={Angel} onClick={() => {
+                window.open('https://www.youtube.com/watch?v=usDVuyx0Myc')
+              }} 
+              
+              style={{ width: '20vw', minWidth: '150px', position: 'relative', left: '-25%', top: '-30%' }}
             />
             <img
               src={ovni}
@@ -348,11 +380,12 @@ export default function CultureMobil() {
                   </div>
                 </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 2 }} offset={2.75} speed={0.25} factor={0.5}>
+        <ParallaxLayer style={{ zIndex: 3 }} offset={2.95} speed={0.25} factor={0.5}>
           <div className="splitCenterDiv">
             <img src={Nube4} style={{ width: '40vw', minWidth: '230px', marginLeft: '0%' }} />
             <img
               src={Dios}
+              onClick={() => {window.open('https://www.youtube.com/watch?si=CLdTQAEINEfrjLQp&v=5nJZY7FbeP4&feature=youtu.be')}}
               style={{ width: '50vw', minWidth: '300px', position: 'relative', right: '10%', top: '-5%' }}
             />
           </div>

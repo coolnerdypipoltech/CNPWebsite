@@ -67,6 +67,7 @@ body {
   scale: 1.3;
 }
 
+
 @media screen  and (min-width: 600px) {
   .MatrixContainerMobil {
     scale: 1.2;
@@ -149,15 +150,78 @@ body {
   width: 120px;
 }
 
+.buttonContainerMatrixTv{
+  bottom: 31%;
+  gap: 80px;
+}
+
+@media screen and (min-width: 1200px) {
+  .NextButtonPopUp
+  {
+    width: 150px;
+  }
+  .buttonContainerMatrixTv{
+    bottom: 19vw;
+  }
+}
+
 
 
 .buttonContainerPopUp{
-  top: 33vw;
+  top: 74%;
   padding-right: 10vw;
   gap: 1vw;
 }
+
+.founderHover{
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.founderHover:hover {
+  filter: brightness(1.2);
+  -webkit-filter: brightness(1.2);
+}
+
+
+.selectHover{
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.selectHover:hover {
+  transform: scale(1.15);
+  filter: brightness(1.6);
+  -webkit-filter: brightness(1.6);
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  -o-transform: scale(1.15);
+}
+.imgHover{
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.imgHover:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+  -webkit-filter: brightness(1.2);
+  transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+}
+
 .MatrixButtons{
-  width: 100px;
+  width: 150px;
 }
 
 .fontGoldenAgePoPup{
@@ -174,6 +238,7 @@ body {
   color: #00FF99;
   margin: 0px;
   font-size: 24px;
+  letter-spacing: 3px;
 }
 
 .fontGoldenAgeOG{
@@ -216,6 +281,13 @@ body {
   width: 25vw;
 }
 
+@media screen and (max-width: 1040px) {
+  .MatrixButtons
+  {
+    width: 120px;
+  }
+}
+
 @media screen and (max-width: 740px) {
   .MatrixButtons
   {
@@ -236,7 +308,8 @@ body {
 @media screen and (max-width: 1000px) {
  .buttonContainerPopUp
   {
-    gap: 20px;
+    top: 33vw;
+    gap: 5px;
     padding-right: 75px;
   }
 }

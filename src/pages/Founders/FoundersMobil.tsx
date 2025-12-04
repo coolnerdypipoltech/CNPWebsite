@@ -13,11 +13,10 @@ import founder1 from '../../assets/Founders/founder1.webp'
 import founder2 from '../../assets/Founders/Andrea.webp'
 import table from '../../assets/Founders/table.webp'
 import tv from '../../assets/Founders/Tv.webp'
-import IMG_back from '../../assets/Founders/IMG_back.png'
 import select from '../../assets/Founders/Select.webp'
 import textBubble from '../../assets/Founders/Mobil/Cuadro_dialogo.webp'
 import Screens from '../../components/Screens'
-
+import background2 from '../../assets/Founders/Mobil/background.png'
 export default function Founders() {
   const [showFounder1Text, setShowFounder1Text] = useState(false)
   const [showFounder2Text, setShowFounder2Text] = useState(false)
@@ -69,9 +68,9 @@ export default function Founders() {
         <ParallaxLayer
           offset={3}
           speed={0}
-          factor={0.5}
+          factor={1}
           style={{
-            backgroundImage: `url(${IMG_back})`,
+            backgroundImage: `url(${background2})`,
             backgroundSize: 'cover',
           }}
         />
@@ -145,7 +144,7 @@ export default function Founders() {
                 className="splitCenterDiv"
                 style={{ width: '30vw', height: "20px", position: 'relative', top: '-15vw', left: '-10vw' }}
               >
-                <img  src={select} style={{ width: '20px' }} />
+                <img className="floating "  src={select} style={{ width: '20px' }} />
               </div>)}
 
               {showFounder1Text && (<div
@@ -196,7 +195,7 @@ export default function Founders() {
                 className="splitCenterDiv"
                 style={{ width: '30vw', height: "20px", position: 'relative', top: '-15vw', left: '-10vw' }}
               >
-                <img  src={select} style={{ width: '20px' }} />
+                <img className="floating "  src={select} style={{ width: '20px' }} />
               </div>)}
 
               {showFounder2Text && (<div
