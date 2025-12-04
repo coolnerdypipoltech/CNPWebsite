@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CNPWebsite/static/css/main.2da0e4d7.css",
-    "main.js": "/CNPWebsite/static/js/main.80a9373f.js",
+    "main.js": "/CNPWebsite/static/js/main.9315fa08.js",
     "static/media/Mundo_CNP.png": "/CNPWebsite/static/media/Mundo_CNP.dde56246a2121138950e.png",
     "static/media/PantallasCNP.png": "/CNPWebsite/static/media/PantallasCNP.905529557ad65a3863ae.png",
     "static/media/City.webp": "/CNPWebsite/static/media/City.b38fe6999260bac6804d.webp",
@@ -71,6 +71,7 @@
     "static/media/IMG_Nube5.webp": "/CNPWebsite/static/media/IMG_Nube5.d227b08d6fb11ddf7454.webp",
     "static/media/IMG_Nube4.webp": "/CNPWebsite/static/media/IMG_Nube4.234f55f49093e89db9dd.webp",
     "static/media/Nube3.webp": "/CNPWebsite/static/media/Nube3.234f55f49093e89db9dd.webp",
+    "static/media/Select.webp": "/CNPWebsite/static/media/Select.d7f623e9807ab689ff50.webp",
     "static/media/Nube2.webp": "/CNPWebsite/static/media/Nube2.b01beebfca81e0e7367f.webp",
     "static/media/IMG_Back.webp": "/CNPWebsite/static/media/IMG_Back.fcb79b30cfaeef087a0d.webp",
     "static/media/IMG_Nube1.webp": "/CNPWebsite/static/media/IMG_Nube1.b6cf9cae2d81f8a7caf7.webp",
@@ -79,15 +80,14 @@
     "static/media/Cuadro_dialogo.webp": "/CNPWebsite/static/media/Cuadro_dialogo.593c9b0adce5d4eb6666.webp",
     "static/media/Asteroide.webp": "/CNPWebsite/static/media/Asteroide.f7ae5caf7e26e8009f02.webp",
     "static/media/Tapete.webp": "/CNPWebsite/static/media/Tapete.6d82722ae849f3dc8f05.webp",
-    "static/media/Select.webp": "/CNPWebsite/static/media/Select.92920f99e31d0072c6f9.webp",
     "static/media/Nube5.webp": "/CNPWebsite/static/media/Nube5.953327d52087107a46d0.webp",
     "index.html": "/CNPWebsite/index.html",
     "static/media/IMG_Flecha.webp": "/CNPWebsite/static/media/IMG_Flecha.58465e9a8b7b171ae77d.webp",
     "main.2da0e4d7.css.map": "/CNPWebsite/static/css/main.2da0e4d7.css.map",
-    "main.80a9373f.js.map": "/CNPWebsite/static/js/main.80a9373f.js.map"
+    "main.9315fa08.js.map": "/CNPWebsite/static/js/main.9315fa08.js.map"
   },
   "entrypoints": [
     "static/css/main.2da0e4d7.css",
-    "static/js/main.80a9373f.js"
+    "static/js/main.9315fa08.js"
   ]
 }
