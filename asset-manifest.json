@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CNPWebsite/static/css/main.aa44fa20.css",
-    "main.js": "/CNPWebsite/static/js/main.77cb2b03.js",
+    "main.js": "/CNPWebsite/static/js/main.37f38ce7.js",
     "static/media/cnp_2.png": "/CNPWebsite/static/media/cnp_2.20ae8387d57e566f6598.png",
     "static/media/cnp_5.png": "/CNPWebsite/static/media/cnp_5.cf54ac28151fef3dc331.png",
     "static/media/cnp_6.png": "/CNPWebsite/static/media/cnp_6.e36916641d3c26758928.png",
@@ -87,10 +87,10 @@
     "index.html": "/CNPWebsite/index.html",
     "static/media/IMG_Flecha.webp": "/CNPWebsite/static/media/IMG_Flecha.58465e9a8b7b171ae77d.webp",
     "main.aa44fa20.css.map": "/CNPWebsite/static/css/main.aa44fa20.css.map",
-    "main.77cb2b03.js.map": "/CNPWebsite/static/js/main.77cb2b03.js.map"
+    "main.37f38ce7.js.map": "/CNPWebsite/static/js/main.37f38ce7.js.map"
   },
   "entrypoints": [
     "static/css/main.aa44fa20.css",
-    "static/js/main.77cb2b03.js"
+    "static/js/main.37f38ce7.js"
   ]
 }
