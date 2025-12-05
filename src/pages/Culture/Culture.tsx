@@ -74,6 +74,11 @@ export default function Culture() {
         '<br />' +
         '8/10 Users Rewarded',
     },
+    {
+      title: 'AUDITORIO NACIONAL — Fake out of home',
+      url: 'https://www.youtube.com/embed/IwAFKUvgSA0?si=4-TunQ-97_zIBZwU',
+      description: "We created a digital mythical being—a symbolic ambassador for Mexico’s iconic venue Auditorio Nacional. Designed to live across Fake Out of Home, screens, and branded content, this entity connects the spirit of culture, music, and performance with the language of the future. It’s not just a mascot. It’s a living legend made of pixels and purpose."
+    }
   ]
 
   const [currentVideo, setCurrentVideo] = useState(0)
@@ -224,8 +229,8 @@ export default function Culture() {
               <span dangerouslySetInnerHTML={{ __html: videos[currentVideo].description }} />
             </p>
             <div className="splitCenterDiv" style={{ width: '45%', height: '40px' }}>
-              <img src={Back} onClick={previousVideo} style={{ width: '150px' }} />
-              <img src={Next} onClick={nextVideo} style={{ width: '150px' }} />
+              <img src={Back} className='videoButtons' onClick={previousVideo} style={{ width: '150px' }} />
+              <img src={Next} className='videoButtons' onClick={nextVideo} style={{ width: '150px' }} />
             </div>
           </div>
         </ParallaxLayer>

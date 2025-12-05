@@ -17,6 +17,7 @@ import IMG_back from '../../assets/Founders/IMG_back.png'
 import select from '../../assets/Founders/Select.webp'
 import textBubble from '../../assets/Founders/Mobil/Cuadro_dialogo.webp'
 import Screens from '../../components/Screens'
+import xButton from '../../assets/Founders/Mobil/Button_X.webp'
 export default function Founders() {
   const [showFounder1Text, setShowFounder1Text] = useState(false)
   const [showFounder2Text, setShowFounder2Text] = useState(false)
@@ -132,22 +133,26 @@ export default function Founders() {
                       alignItems: 'center',
                     }}
                   >
-                    <img src={textBubble} style={{ width: '200px' }} />
+                    <img src={textBubble} style={{ width: '220px' , scale: '-1 1 1' }} />
                     <p
-                      className="fontGoldenAgeOverlay"
+                      className="fontGoldenAgeBubble"
                       style={{
                         position: 'absolute',
                         color: 'white',
                         fontSize: '12px',
                         textAlign: 'center',
-                        width: '200px',
-                        padding: '20px',
-                        paddingBottom: '50px',
+                        width: '220px',
+                        padding: '10px',
+                        paddingLeft: "10px",
+                        paddingRight: "30px",
+                        paddingBottom: '30px',
                       }}
                     
                     >
                       I’m a creative technologist, storyteller, and modern polímata with 25 years exploring the intersection of culture, technology, and human behavior. I turn complexity into experiences people want to live and teach the next generation how to use AI with purpose.
                     </p>
+                    <img onClick={handleFounder1Click} className='xButtonFounder'  src={xButton} style={{ width: '25px', position: "relative", top: '-95px', left: '-10px', cursor: 'pointer' }} />
+                  
                   </div>
                 )}
               </div>
@@ -187,21 +192,25 @@ export default function Founders() {
                       
                     }}
                   >
-                    <img src={textBubble} style={{ width: '200px', scale: '-1 1 1' }} />
+                    <img src={textBubble} style={{ width: '220px' }} />
                     <p
-                      className="fontGoldenAgeOverlay"
+                      className="fontGoldenAgeBubble"
                       style={{
                         position: 'absolute',
                         color: 'white',
                         fontSize: '12px',
                         textAlign: 'center',
-                        width: '200px',
-                        padding: '20px',
-                        paddingBottom: '40px',
+                        width: '220px',
+                        padding: '10px',
+                        paddingLeft: "5px",
+                        paddingRight: "30px",
+                        paddingBottom: '30px',
                       }}
                     >
                       As Founder & CEO (aka Chief Energy Officer) at CNP, I lead with curiosity, creativity, and heart, shaping how brands and people connect through AI-native creativity, technology and entertainment. At the core of everything I build is a belief that performance and impact should always coexist with kindness, purpose, and authenticity.
                     </p>
+                    <img onClick={handleFounder2Click} className='xButtonFounder'  src={xButton} style={{ width: '25px', position: "relative", top: '-100px', right: '235px', cursor: 'pointer' }} />
+                  
                   </div>
                 )}
               </div>

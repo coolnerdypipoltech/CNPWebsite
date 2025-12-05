@@ -62,6 +62,11 @@ export default function CultureMobil() {
       description:
         'We imagined and built a gamified loyalty ecosystem that transforms entertainment into engagement - users compete inside a metaverse in virtual mini-games to earn points for exclusive concert access, creating a self-sustaining community of brand advocates. Results: 1M Active Users / 8/10 Users Rewarded',
     },
+        {
+      title: 'AUDITORIO NACIONAL — Fake out of home',
+      url: 'IwAFKUvgSA0',
+      description: "We created a digital mythical being—a symbolic ambassador for Mexico’s iconic venue Auditorio Nacional. Designed to live across Fake Out of Home, screens, and branded content, this entity connects the spirit of culture, music, and performance with the language of the future. It’s not just a mascot. It’s a living legend made of pixels and purpose."
+    }
   ]
   const [currentVideo, setCurrentVideo] = useState(0)
   const glitch: GlitchHandle = useGlitch({ glitchTimeSpan: false })

@@ -125,19 +125,22 @@ export default function Main() {
 
       <div className="sideMenuOverlay" style={{ position: 'absolute' }}>
         <img
+          className='socialMediaIcons'
           src={Linkedin}
           onClick={() => window.open('https://www.linkedin.com/company/coolnerdypeople', '_blank')}
-          style={{ width: '5%', minWidth: '30px', maxWidth: '50px' }}
+          style={{ width: '5%', minWidth: '35px', maxWidth: '50px' }}
         />
         <img
+          className='socialMediaIcons'
           src={Instagram}
           onClick={() => window.open('https://www.instagram.com/coolnerdypeople/', '_blank')}
-          style={{ width: '5%', minWidth: '30px', maxWidth: '50px' }}
+          style={{ width: '5%', minWidth: '35px', maxWidth: '50px' }}
         />
         <img
+          className='socialMediaIcons'
           src={Email}
           onClick={() => window.open('mailto:hola@coolnerdypipol.com')}
-          style={{ width: '5%', minWidth: '30px', maxWidth: '50px' }}
+          style={{ width: '5%', minWidth: '35px', maxWidth: '50px' }}
         />
       </div>
     </>
