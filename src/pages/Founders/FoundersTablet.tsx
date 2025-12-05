@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { ParallaxLayer } from '@react-spring/parallax'
 
 import background from '../../assets/Founders/background.png'
@@ -21,6 +21,47 @@ import xButton from '../../assets/Founders/Mobil/Button_X.webp'
 export default function Founders() {
   const [showFounder1Text, setShowFounder1Text] = useState(false)
   const [showFounder2Text, setShowFounder2Text] = useState(false)
+  const founder1BubbleRef = useRef<HTMLDivElement>(null)
+  const founder2BubbleRef = useRef<HTMLDivElement>(null)
+  const founder1ImgRef = useRef<HTMLImageElement>(null)
+  const founder2ImgRef = useRef<HTMLImageElement>(null)
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Node
+      
+      // Verificar si el click fue fuera del bubble 1 y su imagen
+      if (
+        showFounder1Text &&
+        founder1BubbleRef.current &&
+        !founder1BubbleRef.current.contains(target) &&
+        founder1ImgRef.current &&
+        !founder1ImgRef.current.contains(target)
+      ) {
+        setShowFounder1Text(false)
+      }
+      
+      // Verificar si el click fue fuera del bubble 2 y su imagen
+      if (
+        showFounder2Text &&
+        founder2BubbleRef.current &&
+        !founder2BubbleRef.current.contains(target) &&
+        founder2ImgRef.current &&
+        !founder2ImgRef.current.contains(target)
+      ) {
+        setShowFounder2Text(false)
+      }
+    }
+
+    // Agregar el event listener
+    document.addEventListener('mousedown', handleClickOutside)
+    
+    // Limpiar el event listener al desmontar
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [showFounder1Text, showFounder2Text])
+
   const handleFounder1Click = () => {
     setShowFounder1Text(!showFounder1Text)
     setShowFounder2Text(false)
@@ -121,9 +162,10 @@ export default function Founders() {
               style={{ width: '30vw', position: 'relative', top: '21vw', left: '-2.5vw' }}
             >
               <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <img src={founder1} onClick={handleFounder1Click} style={{ width: '15vw', cursor: 'pointer' }} />
+                <img ref={founder1ImgRef} src={founder1} onClick={handleFounder1Click} style={{ width: '15vw', cursor: 'pointer' }} />
                 {showFounder1Text && (
                   <div
+                    ref={founder1BubbleRef}
                     style={{
                        position: 'absolute',
                       top: '-29vh',
@@ -146,6 +188,7 @@ export default function Founders() {
                         paddingLeft: "10px",
                         paddingRight: "30px",
                         paddingBottom: '30px',
+                        lineHeight: "11px",
                       }}
                     
                     >
@@ -176,12 +219,14 @@ export default function Founders() {
 
               <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', right: "10vw" }}>
                 <img
+                  ref={founder2ImgRef}
                   src={founder2}
                   onClick={handleFounder2Click}
                   style={{ width: '15vw', position: 'relative', scale: '1 0.9 1', cursor: 'pointer' }}
                 />
                 {showFounder2Text && (
                  <div
+                    ref={founder2BubbleRef}
                     style={{
                       position: 'absolute',
                       top: '-29vh',
@@ -205,6 +250,7 @@ export default function Founders() {
                         paddingLeft: "5px",
                         paddingRight: "30px",
                         paddingBottom: '30px',
+                        lineHeight: "11px",
                       }}
                     >
                       As Founder & CEO (aka Chief Energy Officer) at CNP, I lead with curiosity, creativity, and heart, shaping how brands and people connect through AI-native creativity, technology and entertainment. At the core of everything I build is a belief that performance and impact should always coexist with kindness, purpose, and authenticity.

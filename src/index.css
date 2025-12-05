@@ -482,22 +482,17 @@ body {
 .yt-lite{
   width:  80vw !important;
   height: 50vw !important;
-  border-radius: 15px !important;
+  border-radius: 30px !important;
   border: none;
-  -webkit-border-radius: 15px !important;
-  -moz-border-radius: 15px !important;
-  -ms-border-radius: 15px !important;
-  -o-border-radius: 15px !important;
+  -webkit-border-radius: 30px !important;
+  -moz-border-radius: 30px !important;
+  -ms-border-radius: 30px !important;
+  -o-border-radius: 30px !important;
 }
 
-@media screen and (min-width: 550px) {
-  .yt-lite {
-    border-radius: 40px !important;
-    -webkit-border-radius: 40px !important;
-    -moz-border-radius: 40px !important;
-    -ms-border-radius: 40px !important;
-    -o-border-radius: 40px !important;
+.yt-lite > iframe{
+  border-radius: 30px !important;
 }
-}
+
 
 .grad2:hover{ -webkit-transform: scale(1.2); }

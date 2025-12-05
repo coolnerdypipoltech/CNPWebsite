@@ -29,7 +29,7 @@ export default function Main() {
   let cultureFactor = 5.5
   let founderFactor = 6.5
   let findCultureOffset = 5
-
+  let findFoundersOffset = 6.5
   if (window.innerWidth < 550 && isMobileDevice()) {
     console.log("MOBILE DEVICE DETECTED", isMobileDevice())
     mobileFlag.current = true
@@ -37,6 +37,7 @@ export default function Main() {
     cultureFactor = 4
     founderFactor = 4.5
     findCultureOffset = cultureFactor - 0.75
+    findFoundersOffset = 0.75
     tempLobby = <LobbyMobil />
     tempCulture = <CultureMobil />
     tempFounder = <FoundersMobil />
@@ -46,11 +47,13 @@ export default function Main() {
       cultureFactor = 3
       founderFactor = 3.5
       findCultureOffset = cultureFactor + 0.15
+      findFoundersOffset = 0.75
       tempLobby = <LobbyTablet />
       tempCulture = <CultureTablet />
       tempFounder = <FoundersTablet />
     } else {
       findCultureOffset = 5.5 + 0.8
+      findFoundersOffset = 1.5
       tempLobby = <Lobby />
       tempCulture = <Culture />
       tempFounder = <Founders />
@@ -117,7 +120,7 @@ export default function Main() {
           Work
         </p>
         <p className="fontGoldenAgeOverlay">·</p>
-        <p onClick={() => parallax.current.scrollTo(0.75)} className="fontGoldenAgeOverlay">
+        <p onClick={() => parallax.current.scrollTo(findFoundersOffset)} className="fontGoldenAgeOverlay">
           Founders
         </p>
         <p className="fontGoldenAgeOverlay">·</p>

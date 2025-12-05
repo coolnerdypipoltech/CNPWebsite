@@ -200,7 +200,7 @@ export default function Culture() {
                   width: '50vw',
                   height: '29vw',
                   paddingTop: '0.5vw',
-                  borderRadius: '40px',
+                  borderRadius: '60px',
                   border: 'none',
                 }}
                 src={videos[currentVideo].url}
