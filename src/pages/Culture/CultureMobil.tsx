@@ -110,7 +110,7 @@ export default function CultureMobil() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 3 }} offset={-1.25} speed={0} factor={0.5}>
+        <ParallaxLayer style={{ zIndex: 3 }} offset={-1.15} speed={0} factor={0.5}>
           <div
             className="centerDiv"
             style={{ justifyContent: 'center', gap: '20px', paddingTop: '0%', justifyItems: 'center' }}
