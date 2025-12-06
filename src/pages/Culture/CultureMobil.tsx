@@ -160,10 +160,10 @@ export default function CultureMobil() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 4 }} offset={0} speed={0} factor={0.2}>
+        <ParallaxLayer style={{ zIndex: 4 }} offset={-0.1} speed={0} factor={0.2}>
           <div
             className="centerDiv"
-            style={{ alignItems: 'flex-end', paddingRight: '5%', justifyContent: 'flex-end', textAlign: 'center', paddingBottom: "0%" }}
+            style={{ alignItems: 'center', justifyContent: 'flex-end', textAlign: 'center', paddingBottom: "0%" }}
           >
             <p className="grad1" style={{ color: 'white', fontSize: '24px' }}>
               Think human
@@ -283,8 +283,7 @@ export default function CultureMobil() {
           <div
             className="centerDiv"
             style={{
-              alignItems: 'flex-start',
-              paddingLeft: '15%',
+              alignItems: 'center',
               position: 'relative',
               top: '16vw',
               justifyContent: 'flex-start',

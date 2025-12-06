@@ -49,7 +49,7 @@ export default function Lobby() {
         </ParallaxLayer>
 
         <ParallaxLayer style={{ zIndex: 3 }} offset={4.4} speed={0.3} factor={0.5}>
-          <div className="centerDiv" style={{ justifyContent: 'flex-start', gap: '0px', paddingTop: '4%' }}>
+          <div className="centerDiv" style={{ justifyContent: 'flex-start', gap: '0px' }}>
             <img src={Brand_CNP} style={{ width: '13%' }} />
             <p style={{ marginTop: '30px' }} className="fontGoldenAgeOG">
               △
