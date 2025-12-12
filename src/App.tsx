@@ -9,8 +9,6 @@ export default function App() {
   const [showContent, setShowContent] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const [videoSource, setVideoSource] = useState<string>('')
-
-  // Detectar si es dispositivo móvil y cargar el video apropiado
   useEffect(() => {
     const checkMobile = () => {
       const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -19,10 +17,6 @@ export default function App() {
       const isSmallScreen = window.innerWidth < 768
       const mobile = isMobileDevice || isSmallScreen
       setIsMobile(mobile)
-      
-      console.log(`📹 Cargando video de ${mobile ? 'móvil' : 'PC'}...`)
-      
-      // Importar dinámicamente solo el video apropiado
       const loadVideo = async () => {
         try {
           let video
@@ -46,20 +40,14 @@ export default function App() {
     checkMobile()
   }, [])
 
-  // Precargar assets DESPUÉS de que el video esté cargado
   useEffect(() => {
     if (!videoLoaded) return
-
-    console.log('🚀 Video listo, iniciando precarga de assets...')
-    // Precargar todos los assets críticos
     preloadImages(criticalAssets)
       .then(() => {
-        console.log('✅ Todos los assets críticos se han cargado (' + criticalAssets.length + ' assets)')
         setAssetsLoaded(true)
       })
       .catch((error) => {
-        console.error('❌ Error cargando assets:', error)
-        setAssetsLoaded(true) // Continuamos de todas formas
+        setAssetsLoaded(true)
       })
   }, [videoLoaded])
 
@@ -68,15 +56,24 @@ export default function App() {
     setVideoEnded(true)
   }
 
-  // Cuando tanto el video termine como los assets estén cargados, mostramos el contenido
+  useEffect(() => {
+    if (!videoLoaded || videoEnded) return
+
+    const fallbackTimer = setTimeout(() => {
+      if (!videoEnded) {
+        handleVideoEnd()
+      }
+    }, 3000)
+
+    return () => clearTimeout(fallbackTimer)
+  }, [videoLoaded, videoEnded])
+
   useEffect(() => {
     if (assetsLoaded && videoEnded) {
-      console.log('✅ Todo listo! Mostrando contenido principal')
       setShowContent(true)
     }
   }, [assetsLoaded, videoEnded])
 
-  // Mostrar el loader mientras el video se carga, los assets se cargan o el video no ha terminado
   if (!showContent || !videoSource) {
     return (
       <div
@@ -97,21 +94,30 @@ export default function App() {
         {videoSource ? (
           <>
             <video
-              key={videoSource} // Forzar re-render si cambia el video
+              key={videoSource}
               autoPlay
               muted
               playsInline
               onEnded={handleVideoEnd}
+              onClick={(e) => {
+                // Intentar reproducir el video si el usuario hace click
+                const video = e.currentTarget
+                if (video.paused) {
+                  video.play().catch((err) => {
+                    console.log('No se pudo reproducir el video:', err)
+                  })
+                }
+              }}
               style={{
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
+                cursor: 'pointer',
               }}
             >
               <source src={videoSource} type="video/mp4" />
               Tu navegador no soporta videos HTML5.
             </video>
-            {/* Indicador de progreso de assets */}
             {videoLoaded && !assetsLoaded && (
               <div
                 style={{
@@ -130,7 +136,6 @@ export default function App() {
             )}
           </>
         ) : (
-          // Indicador de carga inicial del video
           <div
             style={{
               color: 'white',
