@@ -172,20 +172,20 @@ export default function Founders() {
                     ref={founder1BubbleRef}
                     style={{
                       position: 'absolute',
-                      top: '-33vh',
-                      marginLeft: '130px',
+                      top: '-190%',
+                      marginLeft: '40vw',
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
                       zIndex: 20,
                     }}
                   >
-                    <img src={IMG_Dial_Pez} style={{ width: '310px' }} />
+                    <img src={IMG_Dial_Pez} style={{ width: '80vw' }} />
                     <img
                       onClick={handleFounder1Click}
                       className="xButtonFounder"
                       src={xButton}
-                      style={{ width: '25px', position: 'relative', top: '-100px', left: '-10px', cursor: 'pointer' }}
+                      style={{ width: '25px', position: 'relative', top: '-27vw', left: '-10px', cursor: 'pointer' }}
                     />
                   </div>
                 )}
@@ -227,20 +227,20 @@ export default function Founders() {
                     ref={founder2BubbleRef}
                     style={{
                       position: 'absolute',
-                      top: '-33vh',
-                      marginLeft: '-100px',
+                      top: '-190%',
+                      marginLeft: '-34vw',
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
                       zIndex: 20,
                     }}
                   >
-                    <img src={IMG_Dial_Andrea} style={{ width: '310px' }} />
+                    <img src={IMG_Dial_Andrea} style={{ width: '80vw' }} />
                     <img
                       onClick={handleFounder2Click}
                       className="xButtonFounder"
                       src={xButton}
-                      style={{ width: '25px', position: 'relative', top: '-105px', right: '320px', cursor: 'pointer' }}
+                      style={{ width: '25px', position: 'relative', top: '-27vw', right: '82vw', cursor: 'pointer' }}
                     />
                   </div>
                 )}
