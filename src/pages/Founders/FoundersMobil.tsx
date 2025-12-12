@@ -30,7 +30,7 @@ export default function Founders() {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as Node
-      
+
       // Verificar si el click fue fuera del bubble 1 y su imagen
       if (
         showFounder1Text &&
@@ -41,7 +41,7 @@ export default function Founders() {
       ) {
         setShowFounder1Text(false)
       }
-      
+
       // Verificar si el click fue fuera del bubble 2 y su imagen
       if (
         showFounder2Text &&
@@ -56,13 +56,12 @@ export default function Founders() {
 
     // Agregar el event listener
     document.addEventListener('mousedown', handleClickOutside)
-    
+
     // Limpiar el event listener al desmontar
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [showFounder1Text, showFounder2Text])
-
 
   const handleFounder1Click = () => {
     setShowFounder1Text(!showFounder1Text)
@@ -119,7 +118,9 @@ export default function Founders() {
 
         <ParallaxLayer style={{ zIndex: 1 }} offset={0.15} speed={0} factor={0.1}>
           <div className="centerDiv" style={{ justifyContent: 'flex-start' }}>
-            <p style={{ fontSize: "12px", marginTop: "20px" }} className='fontGoldenAge'>© 2025 Cool Nerdy People</p>
+            <p style={{ fontSize: '12px', marginTop: '20px' }} className="fontGoldenAge">
+              © 2025 Cool Nerdy People
+            </p>
           </div>
         </ParallaxLayer>
 
@@ -129,7 +130,16 @@ export default function Founders() {
 
         <ParallaxLayer style={{ zIndex: 2 }} offset={0.7} speed={0} factor={0.25}>
           <div className="centerDiv" style={{ justifyContent: 'flex-end', position: 'relative' }}>
-            <div style={{ position: 'relative', width: '80vw', display: 'flex', justifyContent: 'center', alignItems: 'center', top: '0%' }}>
+            <div
+              style={{
+                position: 'relative',
+                width: '80vw',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                top: '0%',
+              }}
+            >
               <img src={tv} style={{ width: '100%', display: 'block' }} />
             </div>
           </div>
@@ -147,48 +157,63 @@ export default function Founders() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 3 }} offset={0.9} speed={0}factor={0.5}>
+        <ParallaxLayer style={{ zIndex: 3 }} offset={0.9} speed={0} factor={0.5}>
           <div className="centerDiv" style={{ justifyContent: 'flex-end', position: 'relative' }}>
-            <div className="splitCenterDiv" style={{ width: '50vw', position: 'relative', top: '35%', left: "-5vw", }}>
+            <div className="splitCenterDiv" style={{ width: '50vw', position: 'relative', top: '35%', left: '-5vw' }}>
               <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <img 
+                <img
                   ref={founder1ImgRef}
-                  src={founder1} 
-                  onClick={handleFounder1Click} 
-                  style={{ width: '25vw', cursor: 'pointer' }} 
+                  src={founder1}
+                  onClick={handleFounder1Click}
+                  style={{ width: '25vw', cursor: 'pointer' }}
                 />
                 {showFounder1Text && (
                   <div
                     ref={founder1BubbleRef}
                     style={{
-                       position: 'absolute',
+                      position: 'absolute',
                       top: '-33vh',
-                      marginRight: '-30%',
+                      marginLeft: '130px',
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
-                                              zIndex: 20,
+                      zIndex: 20,
                     }}
                   >
-                    <img src={IMG_Dial_Pez} style={{ width: '310px',  }} />
-                    <img onClick={handleFounder1Click} className='xButtonFounder'  src={xButton} style={{ width: '25px', position: "relative", top: '-100px', left: '-10px', cursor: 'pointer' }} />
-                  
+                    <img src={IMG_Dial_Pez} style={{ width: '310px' }} />
+                    <img
+                      onClick={handleFounder1Click}
+                      className="xButtonFounder"
+                      src={xButton}
+                      style={{ width: '25px', position: 'relative', top: '-100px', left: '-10px', cursor: 'pointer' }}
+                    />
                   </div>
                 )}
               </div>
-              {!showFounder1Text && (<div
-                className="splitCenterDiv"
-                style={{ width: '30vw', height: "20px", position: 'relative', top: '-25vw', left: '-18vw', zIndex: 5, }}
-              >
-                <img onClick={handleFounder1Click} className="floating "  src={select} style={{ width: '45px' }} />
-              </div>)}
+              {!showFounder1Text && (
+                <div
+                  className="splitCenterDiv"
+                  style={{
+                    width: '30vw',
+                    height: '20px',
+                    position: 'relative',
+                    top: '-25vw',
+                    left: '-18vw',
+                    zIndex: 5,
+                  }}
+                >
+                  <img onClick={handleFounder1Click} className="floating " src={select} style={{ width: '45px' }} />
+                </div>
+              )}
 
-              {showFounder1Text && (<div
-                className="splitCenterDiv"
-                style={{ width: '30vw', height: "20px", position: 'relative', top: '-15vw', left: '-1vw' }}
-              >
-                <div style={{ minWidth: '45px' }} />
-              </div>)}
+              {showFounder1Text && (
+                <div
+                  className="splitCenterDiv"
+                  style={{ width: '30vw', height: '20px', position: 'relative', top: '-15vw', left: '-1vw' }}
+                >
+                  <div style={{ minWidth: '45px' }} />
+                </div>
+              )}
 
               <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <img
@@ -211,25 +236,40 @@ export default function Founders() {
                     }}
                   >
                     <img src={IMG_Dial_Andrea} style={{ width: '310px' }} />
-                    <img onClick={handleFounder2Click} className='xButtonFounder'  src={xButton} style={{ width: '25px', position: "relative", top: '-105px', right: '320px', cursor: 'pointer' }} />
-                  
+                    <img
+                      onClick={handleFounder2Click}
+                      className="xButtonFounder"
+                      src={xButton}
+                      style={{ width: '25px', position: 'relative', top: '-105px', right: '320px', cursor: 'pointer' }}
+                    />
                   </div>
                 )}
               </div>
-              
-              {!showFounder2Text && (<div
-                className="splitCenterDiv"
-                style={{ width: '30vw', height: "20px", position: 'relative', top: '-25vw', left: '-19vw', zIndex: 5,}}
-              >
-                <img onClick={handleFounder2Click} className="floating "  src={select} style={{ width: '45px' }} />
-              </div>)}
 
-              {showFounder2Text && (<div
-                className="splitCenterDiv"
-                style={{ width: '30vw', height: "20px", position: 'relative', top: '-15vw', left: '-10vw' }}
-              >
-                <div style={{ minWidth: '45px' }} />
-              </div>)}
+              {!showFounder2Text && (
+                <div
+                  className="splitCenterDiv"
+                  style={{
+                    width: '30vw',
+                    height: '20px',
+                    position: 'relative',
+                    top: '-25vw',
+                    left: '-19vw',
+                    zIndex: 5,
+                  }}
+                >
+                  <img onClick={handleFounder2Click} className="floating " src={select} style={{ width: '45px' }} />
+                </div>
+              )}
+
+              {showFounder2Text && (
+                <div
+                  className="splitCenterDiv"
+                  style={{ width: '30vw', height: '20px', position: 'relative', top: '-15vw', left: '-10vw' }}
+                >
+                  <div style={{ minWidth: '45px' }} />
+                </div>
+              )}
             </div>
             <img src={desk} style={{ width: '80vw' }} />
             <p

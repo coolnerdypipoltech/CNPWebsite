@@ -125,7 +125,7 @@ export default function App() {
                   textAlign: 'center',
                 }}
               >
-                Cargando assets... ({isMobile ? 'Móvil' : 'PC'})
+                Loading...
               </div>
             )}
           </>
