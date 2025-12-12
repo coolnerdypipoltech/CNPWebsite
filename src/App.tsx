@@ -20,17 +20,20 @@ export default function App() {
       const mobile = isMobileDevice || isSmallScreen
       setIsMobile(mobile)
       
+      console.log(`📹 Cargando video de ${mobile ? 'móvil' : 'PC'}...`)
+      
       // Importar dinámicamente solo el video apropiado
       const loadVideo = async () => {
         try {
           let video
           if (mobile) {
-            video = await import('./assets/Main/loaderMobil.gif')
+            video = await import('./assets/Main/loaderMobil.mp4')
           } else {
             video = await import('./assets/Main/loaderPc.mp4')
           }
           setVideoSource(video.default)
           setVideoLoaded(true)
+          console.log('✅ Video cargado')
         } catch (error) {
           console.error('❌ Error cargando video:', error)
           setVideoLoaded(true) // Continuamos de todas formas
@@ -46,9 +49,12 @@ export default function App() {
   // Precargar assets DESPUÉS de que el video esté cargado
   useEffect(() => {
     if (!videoLoaded) return
+
+    console.log('🚀 Video listo, iniciando precarga de assets...')
     // Precargar todos los assets críticos
     preloadImages(criticalAssets)
       .then(() => {
+        console.log('✅ Todos los assets críticos se han cargado (' + criticalAssets.length + ' assets)')
         setAssetsLoaded(true)
       })
       .catch((error) => {
@@ -58,12 +64,14 @@ export default function App() {
   }, [videoLoaded])
 
   const handleVideoEnd = () => {
+    console.log('✅ Video de carga terminado')
     setVideoEnded(true)
   }
 
   // Cuando tanto el video termine como los assets estén cargados, mostramos el contenido
   useEffect(() => {
     if (assetsLoaded && videoEnded) {
+      console.log('✅ Todo listo! Mostrando contenido principal')
       setShowContent(true)
     }
   }, [assetsLoaded, videoEnded])
@@ -88,13 +96,7 @@ export default function App() {
       >
         {videoSource ? (
           <>
-            {isMobile ? (
-              <img
-                src={videoSource}
-                alt="Loading..."
-                style={{ width: '100vw', height: '100vh', objectFit: 'cover' }}
-              />
-            ) : (<video
+            <video
               key={videoSource} // Forzar re-render si cambia el video
               autoPlay
               muted
@@ -107,7 +109,8 @@ export default function App() {
               }}
             >
               <source src={videoSource} type="video/mp4" />
-            </video>)}
+              Tu navegador no soporta videos HTML5.
+            </video>
             {/* Indicador de progreso de assets */}
             {videoLoaded && !assetsLoaded && (
               <div
