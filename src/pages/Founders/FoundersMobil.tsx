@@ -14,7 +14,8 @@ import founder2 from '../../assets/Founders/Andrea.webp'
 import table from '../../assets/Founders/table.webp'
 import tv from '../../assets/Founders/Tv.webp'
 import select from '../../assets/Founders/Select.webp'
-import textBubble from '../../assets/Founders/Mobil/Cuadro_dialogo.webp'
+import IMG_Dial_Pez from '../../assets/Founders/IMG_Dial_Pez.webp'
+import IMG_Dial_Andrea from '../../assets/Founders/IMG_Dial_Andrea.webp'
 import Screens from '../../components/Screens'
 import background2 from '../../assets/Founders/Mobil/background.png'
 import xButton from '../../assets/Founders/Mobil/Button_X.webp'
@@ -161,34 +162,15 @@ export default function Founders() {
                     ref={founder1BubbleRef}
                     style={{
                        position: 'absolute',
-                      top: '-28.5vh',
-                      marginRight: '-180px',
+                      top: '-33vh',
+                      marginRight: '-30%',
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
                                               zIndex: 20,
                     }}
                   >
-                    <img src={textBubble} style={{ width: '230px' , scale: '-1 1 1' }} />
-                    <p
-                      className="fontGoldenAgeBubble"
-                      style={{
-                        position: 'absolute',
-                        color: 'white',
-                        fontSize: '11.5px',
-                        textAlign: 'center',
-                        width: '220px',
-                        padding: '10px',
-                        paddingLeft: "10px",
-                        paddingRight: "30px",
-                        paddingBottom: '30px',
-                        lineHeight: "11px",
-
-                      }}
-                    
-                    >
-                      I’m a creative technologist, storyteller, and modern polímata with 25 years exploring the intersection of culture, technology, and human behavior. I turn complexity into experiences people want to live and teach the next generation how to use AI with purpose.
-                    </p>
+                    <img src={IMG_Dial_Pez} style={{ width: '310px',  }} />
                     <img onClick={handleFounder1Click} className='xButtonFounder'  src={xButton} style={{ width: '25px', position: "relative", top: '-100px', left: '-10px', cursor: 'pointer' }} />
                   
                   </div>
@@ -220,34 +202,16 @@ export default function Founders() {
                     ref={founder2BubbleRef}
                     style={{
                       position: 'absolute',
-                      top: '-29vh',
-                      marginLeft: '-140px',
+                      top: '-33vh',
+                      marginLeft: '-100px',
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
                       zIndex: 20,
                     }}
                   >
-                    <img src={textBubble} style={{ width: '230px' }} />
-                    <p
-                      className="fontGoldenAgeBubble"
-                      style={{
-                        position: 'absolute',
-                        color: 'white',
-                        fontSize: '11.5px',
-                        textAlign: 'center',
-                        width: '220px',
-                        padding: '10px',
-                        paddingLeft: "5px",
-                        paddingRight: "30px",
-                        paddingBottom: '30px',
-                        lineHeight: "11px",
-
-                      }}
-                    >
-                      As Founder & CEO (aka Chief Energy Officer) at CNP, I lead with curiosity, creativity, and heart, shaping how brands and people connect through AI-native creativity, technology and entertainment. At the core of everything I build is a belief that performance and impact should always coexist with kindness, purpose, and authenticity.
-                    </p>
-                    <img onClick={handleFounder2Click} className='xButtonFounder'  src={xButton} style={{ width: '25px', position: "relative", top: '-105px', right: '245px', cursor: 'pointer' }} />
+                    <img src={IMG_Dial_Andrea} style={{ width: '310px' }} />
+                    <img onClick={handleFounder2Click} className='xButtonFounder'  src={xButton} style={{ width: '25px', position: "relative", top: '-105px', right: '320px', cursor: 'pointer' }} />
                   
                   </div>
                 )}

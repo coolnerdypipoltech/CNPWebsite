@@ -31,7 +31,6 @@ export default function Main() {
   let findCultureOffset = 5
   let findFoundersOffset = 6.5
   if (window.innerWidth < 550 && isMobileDevice()) {
-    console.log("MOBILE DEVICE DETECTED", isMobileDevice())
     mobileFlag.current = true
     lobbyFactor = 2.75
     cultureFactor = 4

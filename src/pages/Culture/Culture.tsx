@@ -34,7 +34,7 @@ export default function Culture() {
     },
     {
       title: 'ACT II Video Hero',
-      url: 'https://www.youtube.com/embed/4OKFlupaB8k?si=1np5CBLUaRreF2az',
+      url: 'https://www.youtube.com/embed/dmQfZWvi4rk?si=l1wBdMn_q5Esq6aj',
       description:
         'For ACTII’s Black Spicy campaign, we produced a hero video that merges AI-driven models with a green screen shoot, resulting in a visually impactful piece and a cutting-edge visual language.',
     },
