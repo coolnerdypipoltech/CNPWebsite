@@ -101,7 +101,6 @@ export default function App() {
               autoPlay
               muted
               playsInline
-              controls={false}
               onEnded={handleVideoEnd}
               style={{
                 width: '100%',
