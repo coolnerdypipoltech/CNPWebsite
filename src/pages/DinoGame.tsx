@@ -11,17 +11,24 @@ export default function DinoGame() {
     frameworkUrl: '/Build.framework.js',
     codeUrl: '/Build.wasm',
   })
+
   const audioContextRef = useRef<AudioContext | null>(null)
   const analyserRef = useRef<AnalyserNode | null>(null)
   const micStreamRef = useRef<MediaStream | null>(null)
-  const lastJumpTimeRef = useRef<number>(0)
-
-  const JUMP_THRESHOLD = 30 // Noise threshold to trigger jump
-  const JUMP_COOLDOWN = 500 // Milliseconds between jumps (0.5 seconds)
+  const unityReadyRef = useRef<boolean>(false)
+  
+  const JUMP_THRESHOLD = 30
 
   useEffect(() => {
-    setupMicrophone()
+    if (isLoaded && !unityReadyRef.current) {
+      setTimeout(() => {
+        unityReadyRef.current = true
+        setupMicrophone()
+      }, 1000)
+    }
+  }, [isLoaded])
 
+  useEffect(() => {
     return () => {
       if (micStreamRef.current) {
         micStreamRef.current.getTracks().forEach(track => track.stop())
@@ -53,7 +60,6 @@ export default function DinoGame() {
 
       monitorNoise()
     } catch (error) {
-      console.error('Error accessing microphone:', error)
     }
   }
 
@@ -78,15 +84,15 @@ export default function DinoGame() {
     checkNoise()
   }
 
+
   const jump = () => {
-    const now = Date.now()
-    const timeSinceLastJump = now - lastJumpTimeRef.current
-    
-    // Solo permitir salto si han pasado 0.5 segundos desde el último salto
-    if (timeSinceLastJump >= JUMP_COOLDOWN) {
-      sendMessage("Player", "SetJumpTrigger")
-      lastJumpTimeRef.current = now
+
+    if (!isLoaded || !unityReadyRef.current) {
+      return
     }
+
+    console.log(" Jump!")
+    sendMessage("Player", "SetJumpTrigger")
   }
 
   return <div style={{
@@ -101,7 +107,7 @@ export default function DinoGame() {
       }}>
         {/* Botón de regreso */}
         <button 
-          onClick={() => navigate('/CNPWebsite')} 
+          onClick={() => navigate('/')} 
           style={{
             position: 'fixed',
             top: '20px',
