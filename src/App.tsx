@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Main from './Main'
 import { criticalAssets, preloadImages } from './assetsPreloader'
 
-export default function App() {
+import DinoGame from './pages/DinoGame'
+
+function LoaderScreen() {
   const [assetsLoaded, setAssetsLoaded] = useState(false)
   const [videoLoaded, setVideoLoaded] = useState(false)
   const [videoEnded, setVideoEnded] = useState(false)
@@ -151,5 +154,18 @@ export default function App() {
     )
   }
 
-  return <Main />
+  return (
+    <Routes>
+      <Route path="/CNPWebsite" element={<Main />} />
+      <Route path="/game" element={<DinoGame />} />
+    </Routes>
+  )
+}
+
+export default function App() {
+  return (
+    <Router>
+      <LoaderScreen />
+    </Router>
+  )
 }
