@@ -157,6 +157,7 @@ function LoaderScreen() {
   return (
     <Routes>
       <Route path="/" element={<Main />} />
+      <Route path="/CNPWebsite" element={<Main />} />
       <Route path="/game" element={<DinoGame />} />
     </Routes>
   )

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
+//import { useNavigate } from 'react-router-dom'
 import Lobby from './pages/Lobby'
 import LobbyMobil from './pages/LobbyMobil'
 import LobbyTablet from './pages/LobbyTablet'
@@ -16,7 +16,8 @@ import Instagram from './assets/Main/Instagram.png'
 import Linkedin from './assets/Main/LinkedIn.png'
 import Flecha from './assets/Culture/IMG_Flecha.webp'
 export default function Main() {
-  const navigate = useNavigate()
+  
+  //const navigate = useNavigate()
   const parallax = useRef<IParallax>(null!)
   const mobileFlag = useRef(false);
 
@@ -125,10 +126,7 @@ export default function Main() {
           Founders
         </p>
         <p className="fontGoldenAgeOverlay">·</p>
-        <p onClick={() => navigate('/game')} className="fontGoldenAgeOverlay" style={{ cursor: 'pointer' }}>
-          Game
-        </p>
-        <p className="fontGoldenAgeOverlay">·</p>
+
       </div>
 
       <div className="sideMenuOverlay" style={{ position: 'absolute' }}>

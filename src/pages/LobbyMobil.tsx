@@ -9,10 +9,9 @@ import Alien_Yoga from '../assets/Lobby/Alien_Yoga.webp'
 import Tapete from '../assets/Lobby/Tapete.webp'
 import Brand_CNP from '../assets/Lobby/Brand_CNP.webp'
 import PopUp from '../components/PopUp'
-import workstation3 from '../assets/Lobby/workstation3.webp'
-import workstation1 from '../assets/Lobby/workstation.webp'
-
-
+import workstation3 from '../assets/Lobby/Forground_2.webp'
+import workstation1 from '../assets/Lobby/Forground_1.webp'
+import Cuadro_Game from '../assets/Lobby/Cuadro_Game.webp'
 export default function Lobby() {
   return (
     <>
@@ -42,9 +41,10 @@ export default function Lobby() {
             <img
               src={Tapete}
               className="lobby-Img"
-              style={{ width: '12%', paddingBottom: '0%', position: 'relative', top: '15%' }}
+              style={{ width: '33%', paddingBottom: '0%', position: 'relative', top: '15%' }}
             />
-            <img src={Alien_Yoga} className="lobby-Img floating" style={{ width: '15%', paddingBottom: '0%' }} />
+            <img src={Alien_Yoga} className="lobby-Img floating" style={{ width: '40%', paddingBottom: '16%', paddingLeft: "10px" }} />
+            <img src={Cuadro_Game} className="lobby-Img floating" style={{ width: '10%', paddingBottom: '62%' }} />
           </div>
         </ParallaxLayer>
 
@@ -65,12 +65,12 @@ export default function Lobby() {
             <img
               src={workstation1}
               className="lobby-Img"
-              style={{ width: '40%', position: 'relative', left: '-24%', top: '20%' }}
+              style={{ width: '40%', position: 'relative', left: '0%', top: '8%' }}
             />
             <img
               src={workstation3}
               className="lobby-Img"
-              style={{ width: '40%', position: 'relative', right: '-27%', top: '20%' }}
+              style={{ width: '40%', position: 'relative', right: '0%', top: '8%' }}
             />
           </div>
         </ParallaxLayer>
@@ -80,6 +80,7 @@ export default function Lobby() {
             <MatrixTv />
           </div>
         </ParallaxLayer>
+
       </div>
     </>
   )

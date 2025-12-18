@@ -1,6 +1,6 @@
 {
-  "homepage": "https://coolnerdypeople.com/",
   "name": "Cool Nerdy People",
+  "private": true,
   "description": "A cool website about cool nerdy people.",
   "keywords": [
     "Parallax",
