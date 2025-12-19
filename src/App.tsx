@@ -4,6 +4,7 @@ import Main from './Main'
 import { criticalAssets, preloadImages } from './assetsPreloader'
 
 import DinoGame from './pages/DinoGame'
+import NotFound from './pages/NotFound'
 
 function LoaderScreen() {
   const [assetsLoaded, setAssetsLoaded] = useState(false)
@@ -159,6 +160,7 @@ function LoaderScreen() {
       <Route path="/" element={<Main />} />
       <Route path="/CNPWebsite" element={<Main />} />
       <Route path="/game" element={<DinoGame />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   )
 }

@@ -12,7 +12,9 @@ import PopUp from '../components/PopUp'
 import workstation3 from '../assets/Lobby/Forground_2.webp'
 import workstation1 from '../assets/Lobby/Forground_1.webp'
 import Cuadro_Game from '../assets/Lobby/Cuadro_Game.webp'
+import { useNavigate } from 'react-router-dom'
 export default function Lobby() {
+  const navigate = useNavigate()
   return (
     <>
       <div>
@@ -37,7 +39,7 @@ export default function Lobby() {
         </ParallaxLayer>
 
         <ParallaxLayer style={{ zIndex: 5 }} offset={2.2} speed={0} factor={0.25}>
-          <div className="centerDiv">
+          <div className="centerDiv" onClick={() => navigate('/game')} style={{ cursor: 'pointer' }}>
             <img
               src={Tapete}
               className="lobby-Img"

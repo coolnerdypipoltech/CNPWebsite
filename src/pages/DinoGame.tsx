@@ -52,7 +52,7 @@ export default function DinoGame() {
       }
 
       const analyser = audioContext.createAnalyser()
-      analyser.fftSize = 256
+      analyser.fftSize = 64
       analyserRef.current = analyser
 
       const source = audioContext.createMediaStreamSource(stream)
@@ -75,7 +75,7 @@ export default function DinoGame() {
       const average = dataArray.reduce((sum, value) => sum + value, 0) / dataArray.length
 
       if (average > JUMP_THRESHOLD) {
-        jump()
+        jump(average)
       }
 
       requestAnimationFrame(checkNoise)
@@ -85,14 +85,14 @@ export default function DinoGame() {
   }
 
 
-  const jump = () => {
+  const jump = (average: number) => {
 
     if (!isLoaded || !unityReadyRef.current) {
       return
     }
 
     console.log(" Jump!")
-    sendMessage("Player", "SetJumpTrigger")
+    sendMessage("Player", "SetJumpTriggerForce", average)
   }
 
   return <div style={{

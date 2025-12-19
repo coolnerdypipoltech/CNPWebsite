@@ -33,7 +33,10 @@ import Cuadro_Game from '../assets/Lobby/Cuadro_Game.webp'
 import Arbolnavidad from '../assets/Lobby/Arbolnavidad.webp'
 import FCLeft from '../assets/Lobby/FCLeft.webp'
 import FCRight from '../assets/Lobby/FCRight.webp'
+
+import { useNavigate } from 'react-router-dom'
 export default function Lobby() {
+  const navigate = useNavigate()
   return (
     <>
       <div>
@@ -206,8 +209,8 @@ export default function Lobby() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 3 }} offset={4} speed={0} factor={1}>
-          <div className="centerDiv">
+        <ParallaxLayer style={{ zIndex: 5 }} offset={4} speed={0} factor={1}>
+          <div className="centerDiv" onClick={() => navigate('/game')} style={{ cursor: 'pointer' }}>
             <img
               src={Tapete}
               className="lobby-Img"
