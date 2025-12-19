@@ -216,7 +216,7 @@ export default function Lobby() {
         </ParallaxLayer>
 
         <ParallaxLayer style={{ zIndex: 5 }} offset={1.75} speed={0} factor={1}>
-          <div className="centerDiv" onClick={() => navigate('/game')}>
+          <div className="centerDiv">
             <img
               src={Tapete}
               className="lobby-Img"
@@ -224,10 +224,11 @@ export default function Lobby() {
             />
             <img
               src={Alien_Yoga}
+              onClick={() => navigate('/game')}
               className="lobby-Img floating"
               style={{ width: '23%', paddingBottom: '0%', paddingLeft: '20px' }}
             />
-            <img src={Cuadro_Game} className="lobby-Img floating" style={{ width: '5%', paddingBottom: '28%' }} />
+            <img src={Cuadro_Game} onClick={() => navigate('/game')} className="lobby-Img floating" style={{ width: '5%', paddingBottom: '28%' }} />
           </div>
         </ParallaxLayer>
 

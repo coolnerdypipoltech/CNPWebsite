@@ -109,12 +109,12 @@ export default function DinoGame() {
         <button 
           onClick={() => navigate('/')} 
           style={{
-            position: 'fixed',
+            position: 'fixed',fontFamily: "Golden Age",
             top: '20px',
             left: '20px',
             padding: '10px 20px',
-            backgroundColor: '#333',
-            color: 'white',
+            backgroundColor: '#9841E9',
+            color: '#E8FF70',
             border: 'none',
             borderRadius: '5px',
             cursor: 'pointer',
@@ -122,8 +122,8 @@ export default function DinoGame() {
             zIndex: 1000,
             transition: 'background-color 0.3s',
           }}
-          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#555'}
-          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#333'}
+          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#8438ca'}
+          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#9841E9'}
         >
           ← Back
         </button>
@@ -137,7 +137,7 @@ export default function DinoGame() {
             transform: 'translate(-50%, -50%)',
             color: 'white',
             fontSize: '18px',
-            textAlign: 'center',
+            textAlign: 'center',fontFamily: "Golden Age",
             zIndex: 999,
           }}>
             <div>Loading...</div>
