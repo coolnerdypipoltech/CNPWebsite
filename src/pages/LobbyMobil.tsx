@@ -32,7 +32,7 @@ export default function Lobby() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 4 }} offset={2.75} speed={0.1} factor={0.25}>
+        <ParallaxLayer style={{ zIndex: 4 }} offset={2.65} speed={0.1} factor={0.25}>
           <div className="centerDiv">
             <img src={Tv} className="lobby-Img" style={{ width: '45%', paddingBottom: '0%' }} />
           </div>

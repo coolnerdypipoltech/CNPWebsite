@@ -102,19 +102,14 @@ export default function CultureMobil() {
           }}
         />
 
-        <ParallaxLayer style={{ zIndex: 6 }} offset={-1.5} speed={0} factor={0.1}>
-          <div className="centerDiv" style={{ justifyContent: 'flex-start', marginTop: '40px' }}>
-            <p className="fontGoldenAgeOG" style={{ fontSize: '36px', color: 'white' }}>
-              Our work
-            </p>
-          </div>
-        </ParallaxLayer>
-
         <ParallaxLayer style={{ zIndex: 3 }} offset={-1.15} speed={0} factor={0.5}>
           <div
             className="centerDiv"
             style={{ justifyContent: 'center', gap: '20px', paddingTop: '0%', justifyItems: 'center' }}
           >
+            <p className="fontGoldenAgeOG" style={{ fontSize: '36px', color: 'white', textAlign: "center" }}>
+              Our work
+            </p>
             <div
               ref={glitch.ref}
               style={{

@@ -168,18 +168,13 @@ export default function Culture() {
           }}
         />
 
-        <ParallaxLayer style={{ zIndex: 5 }} offset={0.5} speed={0.1} factor={0.1}>
-          <div className="centerDiv" style={{ justifyContent: 'flex-start' }}>
-            <p
+        <ParallaxLayer style={{ zIndex: 3 }} offset={0.5} speed={0.1} factor={1}>
+           <p
               className="fontGoldenAgeOG"
-              style={{ fontSize: '36px', color: 'white', position: 'relative' }}
+              style={{ fontSize: '36px', color: 'white', position: 'relative', textAlign: "center" }}
             >
               Our work
             </p>
-          </div>
-        </ParallaxLayer>
-
-        <ParallaxLayer style={{ zIndex: 3 }} offset={0.5} speed={0.1} factor={1}>
           <div
             className="centerDiv"
             style={{ justifyContent: 'center', gap: '20px', paddingTop: '0%', justifyItems: 'center' }}

@@ -215,7 +215,7 @@ export default function Founders() {
                     }}
                   >
                     <img  src={IMG_Dial_Pez} style={{ width: '30VW' }} />
-                    <img onClick={handleFounder2Click} className='xButtonFounder'  src={xButton} style={{ width: '40px', position: "relative", top: '-10.5vw', left: '-1vw', cursor: 'pointer' }} />
+                    <img onClick={handleFounder1Click} className='xButtonFounder'  src={xButton} style={{ width: '40px', position: "relative", top: '-10.5vw', left: '-1vw', cursor: 'pointer' }} />
                    </div>
                 )}
               </div>
