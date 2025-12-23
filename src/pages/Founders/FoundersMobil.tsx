@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { ParallaxLayer } from '@react-spring/parallax'
-
+import ContactUs from '../../assets/Founders/ContactUs.png'
 import background from '../../assets/Founders/background.png'
 import Globe1 from '../../assets/Founders/Globe1.webp'
 import Globe2 from '../../assets/Founders/Globe2.webp'
@@ -128,7 +128,7 @@ export default function Founders() {
           <Screens width="100vw" top="45%" />
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 2 }} offset={0.7} speed={0} factor={0.25}>
+        <ParallaxLayer style={{ zIndex: 3 }} offset={0.7} speed={0} factor={0.25}>
           <div className="centerDiv" style={{ justifyContent: 'flex-end', position: 'relative' }}>
             <div
               style={{
@@ -141,6 +141,11 @@ export default function Founders() {
               }}
             >
               <img src={tv} style={{ width: '100%', display: 'block' }} />
+              <img
+                src={ContactUs}
+                style={{ width: '35%', position: 'absolute', top: '68%' }}
+                onClick={() => window.open('mailto:hola@coolnerdypipol.com')}
+              />
             </div>
           </div>
         </ParallaxLayer>

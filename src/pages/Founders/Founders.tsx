@@ -19,6 +19,7 @@ import Flecha from '../../assets/Culture/IMG_Flecha.webp'
 import select from '../../assets/Founders/Select.webp'
 import Screens from '../../components/Screens'
 import xButton from '../../assets/Founders/Mobil/Button_X.webp'
+import ContactUs from '../../assets/Founders/ContactUs.png'
 export default function Founders() {
   const [showFounder1Text, setShowFounder1Text] = useState(false)
   const [showFounder2Text, setShowFounder2Text] = useState(false)
@@ -171,6 +172,11 @@ export default function Founders() {
               }}
             >
               <img src={tv} style={{ width: '100%', display: 'block' }} />
+              <img
+                src={ContactUs}
+                style={{ width: '30%', position: 'absolute', top: '65%' }}
+                onClick={() => window.open('mailto:hola@coolnerdypipol.com')}
+              />
             </div>
           </div>
         </ParallaxLayer>
