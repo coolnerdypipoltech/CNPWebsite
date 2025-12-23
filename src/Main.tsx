@@ -128,14 +128,15 @@ export default function Main() {
           Founders
         </p>
         <p className="fontGoldenAgeOverlay">·</p>
-        <div style={{ display: 'flex', flexFlow: "row", gap: "10px" }}>
-          {window.innerWidth < 702 && (<p className="fontGoldenAgeOverlay">·</p>)}
+        {window.innerWidth > 702 && (        <div style={{ display: 'flex', flexFlow: "row", gap: "10px" }}>
           <p onClick={() => parallax.current.scrollTo(contactOffset)} className="fontGoldenAgeOverlay">
           Contact
-        </p>
-        </div>
+          </p>
+           <p className="fontGoldenAgeOverlay">·</p>
+        </div>)}
+
         
-        <p className="fontGoldenAgeOverlay">·</p>
+       
       </div>
 
       <div className="sideMenuOverlay" style={{ position: 'absolute' }}>

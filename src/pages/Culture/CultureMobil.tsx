@@ -193,7 +193,7 @@ export default function CultureMobil() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 2 }} offset={0.75} speed={0} factor={0.5}>
+        <ParallaxLayer style={{ zIndex: 6 }} offset={0.75} speed={0} factor={0.5}>
           <div className="centerDiv" style={{}}>
             <img
               src={rose}
@@ -251,7 +251,7 @@ export default function CultureMobil() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 4 }} offset={1.75} speed={0} factor={0.5}>
+        <ParallaxLayer style={{ zIndex: 6 }} offset={1.75} speed={0} factor={0.5}>
           <div className="centerDiv" style={{}}>
             <img
               src={Blackhorse}
