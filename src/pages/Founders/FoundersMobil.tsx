@@ -124,7 +124,7 @@ export default function Founders() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 1 }} offset={0.3} speed={0} factor={0.25}>
+        <ParallaxLayer style={{ zIndex: 1 }} offset={0.35} speed={0} factor={0.25}>
           <Screens width="100vw" top="58%" />
         </ParallaxLayer>
 
