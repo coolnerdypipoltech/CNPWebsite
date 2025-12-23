@@ -23,6 +23,9 @@ export default function DinoGame() {
     if (isLoaded && !unityReadyRef.current) {
       setTimeout(() => {
         unityReadyRef.current = true
+        if(window.screen.width < 800){
+          sendMessage("GameManager", "isMobile")
+        }
         setupMicrophone()
       }, 1000)
     }
