@@ -174,6 +174,7 @@ export default function Founders() {
               <img src={tv} style={{ width: '100%', display: 'block' }} />
               <img
                 src={ContactUs}
+                className='MatrixButtons'
                 style={{ width: '30%', position: 'absolute', top: '80%' }}
                 onClick={() => window.open('mailto:hola@coolnerdypipol.com')}
               />
