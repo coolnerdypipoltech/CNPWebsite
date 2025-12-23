@@ -159,7 +159,7 @@ export default function Founders() {
           <Screens width="65vw" top="10vw" />
         </ParallaxLayer>
 
-        <ParallaxLayer style={{ zIndex: 2 }} offset={1} speed={0.2} factor={0.25}>
+        <ParallaxLayer style={{ zIndex: 2 }} offset={1} speed={0.1} factor={0.25}>
           <div className="centerDiv" style={{ justifyContent: 'flex-end', position: 'relative' }}>
             <div
               style={{
@@ -174,7 +174,7 @@ export default function Founders() {
               <img src={tv} style={{ width: '100%', display: 'block' }} />
               <img
                 src={ContactUs}
-                style={{ width: '30%', position: 'absolute', top: '65%' }}
+                style={{ width: '30%', position: 'absolute', top: '80%' }}
                 onClick={() => window.open('mailto:hola@coolnerdypipol.com')}
               />
             </div>

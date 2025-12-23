@@ -143,7 +143,7 @@ export default function Founders() {
               <img src={tv} style={{ width: '100%', display: 'block' }} />
               <img
                 src={ContactUs}
-                style={{ width: '35%', position: 'absolute', top: '68%' }}
+                style={{ width: '35%', position: 'absolute', top: '78%' }}
                 onClick={() => window.open('mailto:hola@coolnerdypipol.com')}
               />
             </div>
