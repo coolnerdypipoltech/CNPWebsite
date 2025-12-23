@@ -177,7 +177,7 @@ export default function Culture() {
             </p>
           <div
             className="centerDiv"
-            style={{ justifyContent: 'center', gap: '20px', paddingTop: '0%', justifyItems: 'center' }}
+            style={{ justifyContent: 'center', gap: '20px', paddingTop: '0%', justifyItems: 'center',  }}
           >
             <div
               ref={glitch.ref}
@@ -186,6 +186,8 @@ export default function Culture() {
                 width: '50vw',
                 height: '30vw',
                 display: 'flex',
+                maxWidth: "900px",
+                maxHeight: "522px",
                 justifyContent: 'center',
               }}
             >
@@ -195,7 +197,9 @@ export default function Culture() {
                   width: '50vw',
                   height: '29vw',
                   paddingTop: '0.5vw',
-                  borderRadius: '60px',
+                  borderRadius: '30px',
+                  maxWidth: "900px",
+                  maxHeight: "522px",
                   border: 'none',
                 }}
                 src={videos[currentVideo].url}
@@ -210,6 +214,8 @@ export default function Culture() {
                   left: 0,
                   width: '50vw',
                   height: '100%',
+                  maxWidth: "900px",
+                  maxHeight: "522px",
                   pointerEvents: 'none',
                 }}
               />
