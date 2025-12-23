@@ -16,14 +16,13 @@ import Instagram from './assets/Main/Instagram.png'
 import Linkedin from './assets/Main/LinkedIn.png'
 import Flecha from './assets/Culture/IMG_Flecha.webp'
 export default function Main() {
-  
   //const navigate = useNavigate()
   const parallax = useRef<IParallax>(null!)
-  const mobileFlag = useRef(false);
+  const mobileFlag = useRef(false)
 
   const isMobileDevice = () => {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  };
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+  }
 
   let tempLobby = null
   let tempCulture = null
@@ -33,6 +32,7 @@ export default function Main() {
   let founderFactor = 6.5
   let findCultureOffset = 5
   let findFoundersOffset = 6.5
+  let contactOffset = 0.5
   if (window.innerWidth < 550 && isMobileDevice()) {
     mobileFlag.current = true
     lobbyFactor = 2.75
@@ -48,6 +48,7 @@ export default function Main() {
       lobbyFactor = 2.75
       cultureFactor = 3
       founderFactor = 3.5
+      contactOffset = 0.25
       findCultureOffset = cultureFactor + 0.15
       findFoundersOffset = 0.75
       tempLobby = <LobbyTablet />
@@ -61,7 +62,6 @@ export default function Main() {
       tempFounder = <Founders />
     }
   }
-
 
   useEffect(() => {
     parallax.current.scrollTo(lobbyFactor + cultureFactor + founderFactor)
@@ -87,11 +87,13 @@ export default function Main() {
             {tempCulture}
           </ParallaxLayer>
           <ParallaxLayer style={{ zIndex: 4 }} offset={founderFactor + cultureFactor} speed={0.1} factor={0.25}>
-            {mobileFlag.current && (<div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
-              <img src={Flecha} style={{ height: '100px', position: 'relative', top: '-100%' }} />
-            </div>)}
+            {mobileFlag.current && (
+              <div className="centerDiv" style={{ justifyContent: 'flex-end' }}>
+                <img src={Flecha} style={{ height: '100px', position: 'relative', top: '-100%' }} />
+              </div>
+            )}
           </ParallaxLayer>
-          
+
           <ParallaxLayer offset={founderFactor + cultureFactor} speed={0} factor={lobbyFactor}>
             {tempLobby}
           </ParallaxLayer>
@@ -126,24 +128,31 @@ export default function Main() {
           Founders
         </p>
         <p className="fontGoldenAgeOverlay">·</p>
-
+        <div style={{ display: 'flex', flexFlow: "row", gap: "10px" }}>
+          {window.innerWidth < 702 && (<p className="fontGoldenAgeOverlay">·</p>)}
+          <p onClick={() => parallax.current.scrollTo(contactOffset)} className="fontGoldenAgeOverlay">
+          Contact
+        </p>
+        </div>
+        
+        <p className="fontGoldenAgeOverlay">·</p>
       </div>
 
       <div className="sideMenuOverlay" style={{ position: 'absolute' }}>
         <img
-          className='socialMediaIcons'
+          className="socialMediaIcons"
           src={Linkedin}
           onClick={() => window.open('https://www.linkedin.com/company/coolnerdypeople', '_blank')}
           style={{ width: '5%', minWidth: '35px', maxWidth: '50px' }}
         />
         <img
-          className='socialMediaIcons'
+          className="socialMediaIcons"
           src={Instagram}
           onClick={() => window.open('https://www.instagram.com/coolnerdypeople/', '_blank')}
           style={{ width: '5%', minWidth: '35px', maxWidth: '50px' }}
         />
         <img
-          className='socialMediaIcons'
+          className="socialMediaIcons"
           src={Email}
           onClick={() => window.open('mailto:hola@coolnerdypipol.com')}
           style={{ width: '5%', minWidth: '35px', maxWidth: '50px' }}

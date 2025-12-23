@@ -117,7 +117,7 @@ export default function Founders() {
 
         <ParallaxLayer style={{ zIndex: 0 }} offset={0.15} speed={0.2} factor={0.1}>
           <div className="centerDiv" style={{ justifyContent: 'flex-start' }}>
-            <p style={{ fontSize: '12px' }} className="fontGoldenAge">
+            <p style={{ fontSize: '12px', fontWeight: 'bold' }} className="fontGoldenAge">
               © 2025 Cool Nerdy People
             </p>
           </div>

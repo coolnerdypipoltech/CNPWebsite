@@ -118,7 +118,7 @@ export default function Founders() {
 
         <ParallaxLayer style={{ zIndex: 1 }} offset={0.15} speed={0} factor={0.1}>
           <div className="centerDiv" style={{ justifyContent: 'flex-start' }}>
-            <p style={{ fontSize: '12px', marginTop: '20px' }} className="fontGoldenAge">
+            <p style={{ fontSize: '12px', marginTop: '20px', fontWeight: 'bold' }} className="fontGoldenAge">
               © 2025 Cool Nerdy People
             </p>
           </div>
@@ -274,7 +274,7 @@ export default function Founders() {
             <img src={desk} style={{ width: '80vw' }} />
             <p
               className="fontGoldenAgeOverlay"
-              style={{ color: 'white', fontSize: '40px', position: 'relative', top: '20%' }}
+              style={{ color: 'white', fontSize: '40px', position: 'relative', top: '20%', marginTop: "30px" }}
             >
               Founders
             </p>
