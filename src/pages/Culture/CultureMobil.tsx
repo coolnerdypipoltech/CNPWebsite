@@ -269,6 +269,7 @@ export default function CultureMobil() {
             />
             <img
               src={ovni}
+              className="ovni-floating"
               style={{ width: '10vw', minWidth: '100px', position: 'relative', left: '5%', top: '-40%' }}
             />
           </div>

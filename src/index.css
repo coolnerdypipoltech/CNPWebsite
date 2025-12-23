@@ -498,3 +498,26 @@ body {
 
 
 .grad2:hover{ -webkit-transform: scale(1.2); }
+
+/* Animación del OVNI flotando y moviéndose de izquierda a derecha */
+.ovni-floating {
+  animation: ovniFloat 8s ease-in-out infinite;
+}
+
+@keyframes ovniFloat {
+  0% {
+    transform: translateX(-30px) translateY(0px) rotate(-5deg);
+  }
+  25% {
+    transform: translateX(15px) translateY(-15px) rotate(2deg);
+  }
+  50% {
+    transform: translateX(30px) translateY(0px) rotate(5deg);
+  }
+  75% {
+    transform: translateX(15px) translateY(-10px) rotate(-2deg);
+  }
+  100% {
+    transform: translateX(-30px) translateY(0px) rotate(-5deg);
+  }
+}

@@ -81,8 +81,11 @@ export default function Culture() {
     }
   ]
 
+  
+
   const [currentVideo, setCurrentVideo] = useState(0)
   const glitch: GlitchHandle = useGlitch({ glitchTimeSpan: false })
+  
 
   useEffect(() => {
     startGlitchAndStopWithTimeout()
@@ -324,7 +327,12 @@ export default function Culture() {
             <img className="imgHover" src={Angel} onClick={() => {
                 window.open('https://www.youtube.com/watch?v=usDVuyx0Myc')
               }} style={{ width: '25vw', position: 'relative', left: '-25%', top: '-30%' }} />
-            <img src={ovni} style={{ width: '15vw', position: 'relative', left: '0%', top: '-25%' }} />
+            <img 
+
+              src={ovni} 
+              className="ovni-floating"
+              style={{ width: '15vw', position: 'relative', left: '0%', top: '-25%' }} 
+            />
           </div>
         </ParallaxLayer>
 

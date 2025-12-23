@@ -137,7 +137,7 @@ export default function Founders() {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                top: '0%',
+                top: '-10%',
               }}
             >
               <img src={tv} style={{ width: '100%', display: 'block' }} />
