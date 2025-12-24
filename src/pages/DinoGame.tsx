@@ -121,6 +121,7 @@ export default function DinoGame() {
             position: 'fixed',fontFamily: "Golden Age",
             top: '20px',
             left: '20px',
+            height: '38px',
             padding: '10px 20px',
             backgroundColor: '#9841E9',
             color: '#E8FF70',
@@ -141,8 +142,8 @@ export default function DinoGame() {
           onClick={howToPlay} 
           style={{
             position: 'fixed',fontFamily: "Golden Age",
-            top: '20px',
-            left: '130px',
+            top: '70px',
+            left: '20px',
             padding: '10px 20px',
             height: '38px',
             backgroundColor: '#9841E9',
