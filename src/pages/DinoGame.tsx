@@ -23,9 +23,6 @@ export default function DinoGame() {
     if (isLoaded && !unityReadyRef.current) {
       setTimeout(() => {
         unityReadyRef.current = true
-        if(window.screen.width < 800){
-          sendMessage("GameManager", "isMobile")
-        }
         setupMicrophone()
       }, 1000)
     }
@@ -41,6 +38,15 @@ export default function DinoGame() {
       }
     }
   }, [])
+
+  const howToPlay = () => {
+    sendMessage("GameManager", "PauseGame")
+    if(window.screen.width < 800){
+          sendMessage("GameManager", "isMobile")
+        } else{
+          sendMessage("GameManager", "isPc")
+        }
+  }
 
   const setupMicrophone = async () => {
     try {
@@ -129,6 +135,29 @@ export default function DinoGame() {
           onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#9841E9'}
         >
           ← Back
+        </button>
+
+        <button 
+          onClick={howToPlay} 
+          style={{
+            position: 'fixed',fontFamily: "Golden Age",
+            top: '20px',
+            left: '130px',
+            padding: '10px 20px',
+            height: '38px',
+            backgroundColor: '#9841E9',
+            color: '#E8FF70',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            fontSize: '16px',
+            zIndex: 1000,
+            transition: 'background-color 0.3s',
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#8438ca'}
+          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#9841E9'}
+        >
+          How to Play
         </button>
   
         {/* Indicador de carga */}
