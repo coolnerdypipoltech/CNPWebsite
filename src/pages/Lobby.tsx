@@ -30,7 +30,7 @@ import Brand_CNP from '../assets/Lobby/Brand_CNP.webp'
 import MatrixTv from '../components/MatrixTv'
 import PopUp from '../components/PopUp'
 import Cuadro_Game from '../assets/Lobby/Cuadro_Game.webp'
-import Arbolnavidad from '../assets/Lobby/Arbolnavidad.webp'
+
 import FCLeft from '../assets/Lobby/FCLeft.webp'
 import FCRight from '../assets/Lobby/FCRight.webp'
 
@@ -241,16 +241,6 @@ export default function Lobby() {
         <ParallaxLayer style={{ zIndex: 4 }} offset={3} speed={0} factor={0.25}>
           <div style={{ width: '100%', height: '100%', position: 'relative', top: '-18vw' }}>
             <MatrixTv />
-          </div>
-        </ParallaxLayer>
-
-        <ParallaxLayer style={{ zIndex: 2 }} offset={4.25} speed={0} factor={0.25}>
-          <div className="centerDiv">
-            <img
-              src={Arbolnavidad}
-              className="lobby-Img"
-              style={{ width: '25%', paddingBottom: '0%', position: 'relative', top: '30%', right: "10%" }}
-            />
           </div>
         </ParallaxLayer>
 
