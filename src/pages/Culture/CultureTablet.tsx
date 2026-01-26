@@ -225,8 +225,8 @@ export default function CultureMobil() {
 
         <ParallaxLayer style={{ zIndex: 4 }} offset={1.5} speed={0.3} factor={0.25}>
                     <div className="centerDiv" style={{alignItems: "flex-end", paddingRight: "10%", justifyContent: "flex-end"}}>
-                      <p className='grad1' style={{ color: 'white', fontSize: '24px' }}>Think human,</p>
-                      <p className='grad1' style={{ color: 'white', fontSize: '24px' }}> act AI native</p>
+                      <p className='grad1' style={{ color: 'white', fontSize: '24px' }}>Coolture isn’t a vibe.</p>
+                      <p className='grad1' style={{ color: 'white', fontSize: '24px' }}>It’s how we build.</p>
                     </div>
                   </ParallaxLayer>
 

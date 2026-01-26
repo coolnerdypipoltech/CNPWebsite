@@ -161,10 +161,10 @@ export default function CultureMobil() {
             style={{ alignItems: 'center', justifyContent: 'flex-end', textAlign: 'center', paddingBottom: "0%" }}
           >
             <p className="grad1" style={{ color: 'white', fontSize: '24px' }}>
-              Think human
+              Coolture isn’t a vibe.
             </p>
             <p className="grad1" style={{ color: 'white', fontSize: '24px' }}>
-              act AI native
+              It’s how we build.
             </p>
           </div>
         </ParallaxLayer>

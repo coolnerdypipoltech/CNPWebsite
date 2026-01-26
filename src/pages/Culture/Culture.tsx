@@ -251,7 +251,7 @@ export default function Culture() {
             style={{ alignItems: 'center', paddingLeft: '0%', justifyContent: 'flex-end', paddingTop: '15%' }}
           >
             <p className="grad1" style={{ color: 'white' }}>
-              Think human, act AI native
+              Coolture isn’t a vibe. It’s how we build.
             </p>
           </div>
         </ParallaxLayer>
